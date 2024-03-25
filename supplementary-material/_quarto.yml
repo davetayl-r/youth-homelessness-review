@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Supplementary material for a systematic review of housing and support interventions to improve housing, health, social, wellbeing and economic outcomes for homeless youth in high-income countries"
+  description: ""
+  site-url: "https://davetayl-r.github.io/youth-homelessness-review"
+  repo-url: https://github.com/davetayl-r/youth-homelessness-review
+
+  open-graph: true
+
+  page-footer:
+    right: "Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)"
+    background: "#212529"
+    
+format:
+  html:
+    theme: 
+     - cosmo
+     - theme.scss
+    css: styles.css
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+editor: visual    
+    
+freeze: auto
