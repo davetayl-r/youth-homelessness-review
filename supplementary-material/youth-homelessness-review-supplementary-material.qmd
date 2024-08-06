@@ -734,6 +734,8 @@ write_csv(
   )
 ```
 
+
+
 ## Risk of bias assessments
 
 In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.

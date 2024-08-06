@@ -17,6 +17,36 @@ kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale
 kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale-Brief (WHOQOL-BREF) — Psychological Health,6,Average Treatment Effect (ATE),0.01,-0.97,0.99,65,Positive,imprecise,very small,Favours intervention
 kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale-Brief (WHOQOL-BREF) — Social Health,6,Average Treatment Effect (ATE),0.08,-0.9,1.05,65,Positive,imprecise,very small,Favours intervention
 kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale-Brief (WHOQOL-BREF) — Environmental Health,6,Average Treatment Effect (ATE),-0.19,-1.17,0.79,65,Positive,imprecise,very small,Favours comparison
+thulien_2022,Stable Housing,Housing Quality,Perceived Housing Quality Scale,18,Average Treatment Effect (ATE),-0.12,-0.93,0.68,24,Positive,imprecise,very small,Favours comparison
+thulien_2022,Social and Emotional Wellbeing,Sense of Belonging,Community Integration Scale — Psychological,18,Average Treatment Effect (ATE),-0.55,-1.37,0.26,24,Positive,imprecise,medium,Favours comparison
+thulien_2022,Social and Emotional Wellbeing,Global Self-Worth,Rosenberg Self-Esteem Scale,18,Average Treatment Effect (ATE),-0.27,-1.07,0.54,24,Positive,imprecise,small,Favours comparison
+thulien_2022,Social and Emotional Wellbeing,Belongingness,Social Connectedness Scale,18,Average Treatment Effect (ATE),-0.12,-0.92,0.69,24,Positive,imprecise,very small,Favours comparison
+thulien_2022,Social and Emotional Wellbeing,Motivation and expectations about future,Beck Hopelessness Scale,18,Average Treatment Effect (ATE),-0.23,-1.03,0.58,24,Negative,imprecise,small,Favours intervention
+thulien_2022,Social and Emotional Wellbeing,Degree to which self-concept is defined by homelessness,Modified Engulfment Scale,18,Average Treatment Effect (ATE),-0.41,-1.22,0.4,24,Negative,imprecise,small,Favours intervention
+slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,3,Average Treatment Effect (ATE),0.03,-0.29,0.35,150,Positive,imprecise,very small,Favours intervention
+slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,6,Average Treatment Effect (ATE),0.2,-0.12,0.53,146,Positive,imprecise,small,Favours intervention
+slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,9,Average Treatment Effect (ATE),0.03,-0.3,0.37,134,Positive,imprecise,very small,Favours intervention
+slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,12,Average Treatment Effect (ATE),0.07,-0.26,0.41,137,Positive,imprecise,very small,Favours intervention
+thulien_2022,Health,Presence and frequency of psychiatric symptoms,Colorado Symptom Index,18,Average Treatment Effect (ATE),-0.15,-0.95,0.66,24,Negative,imprecise,very small,Favours intervention
+slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,3,Average Treatment Effect (ATE),-0.09,-0.4,0.23,154,Negative,imprecise,very small,Favours intervention
+slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,6,Average Treatment Effect (ATE),-0.37,-0.69,-0.04,150,Negative,precise,small,Favours intervention
+slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,9,Average Treatment Effect (ATE),-0.17,-0.5,0.16,140,Negative,imprecise,very small,Favours intervention
+slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,12,Average Treatment Effect (ATE),-0.22,-0.54,0.11,146,Negative,imprecise,small,Favours intervention
+kidd_2020,Stable Housing,Stable housing,"Researcher assessed — gained (improved stability), sustained (same residence) or lost (homeless) housing status",6,Average Treatment Effect (ATE),0.37,-0.47,1.21,65,Positive,imprecise,small,Favours intervention
+slesnick_2023,Stable Housing,Access to Housing,Access to Housing,6,Average Treatment Effect (ATE),0.15,-0.31,0.61,160,Positive,imprecise,very small,Favours intervention
+slesnick_2023,Stable Housing,Access to Housing,Access to Housing,9,Average Treatment Effect (ATE),-0.06,-0.41,0.29,160,Positive,imprecise,very small,Favours comparison
+slesnick_2023,Stable Housing,Access to Housing,Access to Housing,12,Average Treatment Effect (ATE),0.22,-0.12,0.57,160,Positive,imprecise,small,Favours intervention
+raithel_2015,Stable Housing,Homeless services use,Single adult shelter use,24,Average Treatment Effect on the Treated (ATT),-0.39,-0.7,-0.08,297,Negative,precise,small,Favours intervention
+raithel_2015,Stable Housing,Homeless services use,Family shelter use,24,Average Treatment Effect on the Treated (ATT),-0.43,-0.91,0.04,297,Negative,imprecise,small,Favours intervention
+raithel_2015,Legal and Justice,Incarcerated,Jail stay,24,Average Treatment Effect on the Treated (ATT),-0.57,-1.01,-0.13,297,Negative,precise,medium,Favours intervention
+kidd_2020,Health,Mental Health,"Researcher assessed — gained (cessation of pattern of distress), sustained (unchanged) or lost (experienced crisis) mental health status",6,Average Treatment Effect (ATE),0.47,-0.21,1.15,65,Positive,imprecise,small,Favours intervention
+raithel_2015,Health,Health services use,Medicaid use,24,Average Treatment Effect on the Treated (ATT),-0.06,-0.36,0.23,297,Positive,imprecise,very small,Favours comparison
+kidd_2020,Employment and Earnings,Employment or Education,"Researcher assessed — gained (on either measure), sustained (on both measures) or lost (on either measure) employment or education status",6,Average Treatment Effect (ATE),0.39,-0.2,0.98,65,Positive,imprecise,small,Favours intervention
+kozloff_2016,Employment and Earnings,Employment,Vocational Time-Line Follow-Back Inventory,24,Average Treatment Effect (ATE),-0.23,-0.59,0.14,156,Positive,imprecise,small,Favours comparison
+thulien_2022,Employment and Earnings,Employment and Earnings,"Education, Employment, and Income Questionnaire",18,Average Treatment Effect (ATE),-0.15,-1.05,0.75,24,Positive,imprecise,very small,Favours comparison
+raithel_2015,Employment and Earnings,Public assistance use,Cash assistance use,24,Average Treatment Effect on the Treated (ATT),-0.25,-0.52,0.03,297,Positive,imprecise,small,Favours comparison
+raithel_2015,Employment and Earnings,Public assistance use,Supplemental Nutrition Assistance Program (SNAP) use,24,Average Treatment Effect on the Treated (ATT),0.2,-0.09,0.48,297,Positive,imprecise,small,Favours intervention
+thulien_2022,Education,Academic and vocational participation,"Education, Employment, and Income Questionnaire",18,Average Treatment Effect (ATE),-0.27,-1.23,0.68,24,Positive,imprecise,small,Favours comparison
 kozloff_2016,Stable Housing,Housing Stability,Residential Time-Line Follow-Back Inventory,3,Average Treatment Effect (ATE),0.56,0.25,0.88,156,Positive,precise,medium,Favours intervention
 kozloff_2016,Stable Housing,Housing Stability,Residential Time-Line Follow-Back Inventory,6,Average Treatment Effect (ATE),1.19,0.88,1.51,156,Positive,precise,large,Favours intervention
 kozloff_2016,Stable Housing,Housing Stability,Residential Time-Line Follow-Back Inventory,9,Average Treatment Effect (ATE),1.11,0.8,1.44,156,Positive,precise,large,Favours intervention
@@ -28,14 +58,6 @@ kozloff_2016,Living Skills and Independence,Community Functioning,Multnomah Comm
 kozloff_2016,Living Skills and Independence,Community Functioning,Multnomah Community Ability Scale,12,Average Treatment Effect (ATE),-0.03,-0.35,0.28,156,Positive,imprecise,very small,Favours comparison
 kozloff_2016,Living Skills and Independence,Community Functioning,Multnomah Community Ability Scale,18,Average Treatment Effect (ATE),0.17,-0.15,0.48,156,Positive,imprecise,very small,Favours intervention
 kozloff_2016,Living Skills and Independence,Community Functioning,Multnomah Community Ability Scale,24,Average Treatment Effect (ATE),0.03,-0.29,0.34,156,Positive,imprecise,very small,Favours intervention
-kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),0.21,-0.11,0.52,156,Negative,imprecise,small,Favours comparison
-kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),0.23,-0.08,0.55,156,Negative,imprecise,small,Favours comparison
-kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),0.23,-0.09,0.54,156,Negative,imprecise,small,Favours comparison
-kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),0.23,-0.09,0.54,156,Negative,imprecise,small,Favours comparison
-kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,6,Average Treatment Effect (ATE),0.31,-0.01,0.62,156,Negative,imprecise,small,Favours comparison
-kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,12,Average Treatment Effect (ATE),0.27,-0.04,0.59,156,Negative,imprecise,small,Favours comparison
-kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,18,Average Treatment Effect (ATE),0.24,-0.07,0.56,156,Negative,imprecise,small,Favours comparison
-kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,24,Average Treatment Effect (ATE),0.29,-0.02,0.61,156,Negative,imprecise,small,Favours comparison
 kozloff_2016,Health,Quality of Life,EuroQoL 5 Dimensions,6,Average Treatment Effect (ATE),-0.05,-0.37,0.26,156,Positive,imprecise,very small,Favours comparison
 kozloff_2016,Health,Quality of Life,EuroQoL 5 Dimensions,12,Average Treatment Effect (ATE),-0.22,-0.54,0.09,156,Positive,imprecise,small,Favours comparison
 kozloff_2016,Health,Quality of Life,EuroQoL 5 Dimensions,18,Average Treatment Effect (ATE),-0.05,-0.37,0.26,156,Positive,imprecise,very small,Favours comparison
@@ -57,53 +79,43 @@ kozloff_2016,Health,Mental Health Symptoms,Colorado Symptom Index,6,Average Trea
 kozloff_2016,Health,Mental Health Symptoms,Colorado Symptom Index,12,Average Treatment Effect (ATE),0.02,-0.3,0.33,156,Negative,imprecise,very small,Favours comparison
 kozloff_2016,Health,Mental Health Symptoms,Colorado Symptom Index,18,Average Treatment Effect (ATE),0.14,-0.17,0.46,156,Negative,imprecise,very small,Favours comparison
 kozloff_2016,Health,Mental Health Symptoms,Colorado Symptom Index,24,Average Treatment Effect (ATE),-0,-0.32,0.31,156,Negative,imprecise,very small,NA
-kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,6,Average Treatment Effect (ATE),0.92,0.6,1.24,156,Negative,precise,large,Favours comparison
-kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,12,Average Treatment Effect (ATE),0.71,0.4,1.03,156,Negative,precise,medium,Favours comparison
-kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,18,Average Treatment Effect (ATE),0.62,0.31,0.94,156,Negative,precise,medium,Favours comparison
-kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,24,Average Treatment Effect (ATE),0.61,0.29,0.93,156,Negative,precise,medium,Favours comparison
-kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),0.38,0.06,0.7,156,Negative,precise,small,Favours comparison
-kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),0.4,0.08,0.72,156,Negative,precise,small,Favours comparison
-kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),0.4,0.09,0.72,156,Negative,precise,small,Favours comparison
-kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),0.39,0.07,0.71,156,Negative,precise,small,Favours comparison
 gilmer_2016,Health,General medical and psychiatric inpatient cost,General medical and psychiatric inpatient cost,12,Average Treatment Effect on the Treated (ATT),0.06,0,0.11,5218,Negative,precise,very small,Favours comparison
 gilmer_2016,Health,Crisis and residential cost,Crisis and residential cost,12,Average Treatment Effect on the Treated (ATT),0.06,0.01,0.12,5218,Negative,precise,very small,Favours comparison
 gilmer_2016,Health,Mental health outpatient cost,Mental health outpatient cost,12,Average Treatment Effect on the Treated (ATT),0.84,0.78,0.89,5218,Negative,precise,large,Favours comparison
 gilmer_2016,Health,Total health care costs,Total health care costs,12,Average Treatment Effect on the Treated (ATT),0.43,0.37,0.48,5218,Negative,precise,small,Favours comparison
-thulien_2022,Stable Housing,Housing Quality,Perceived Housing Quality Scale,18,Average Treatment Effect (ATE),-0.12,-0.93,0.68,24,Positive,imprecise,very small,Favours comparison
-thulien_2022,Social and Emotional Wellbeing,Sense of Belonging,Community Integration Scale — Psychological,18,Average Treatment Effect (ATE),-0.55,-1.37,0.26,24,Positive,imprecise,medium,Favours comparison
-thulien_2022,Social and Emotional Wellbeing,Global Self-Worth,Rosenberg Self-Esteem Scale,18,Average Treatment Effect (ATE),-0.27,-1.07,0.54,24,Positive,imprecise,small,Favours comparison
-thulien_2022,Social and Emotional Wellbeing,Belongingness,Social Connectedness Scale,18,Average Treatment Effect (ATE),-0.12,-0.92,0.69,24,Positive,imprecise,very small,Favours comparison
-thulien_2022,Social and Emotional Wellbeing,Motivation and expectations about future,Beck Hopelessness Scale,18,Average Treatment Effect (ATE),-0.23,-1.03,0.58,24,Negative,imprecise,small,Favours intervention
-thulien_2022,Social and Emotional Wellbeing,Degree to which self-concept is defined by homelessness,Modified Engulfment Scale,18,Average Treatment Effect (ATE),-0.41,-1.22,0.4,24,Negative,imprecise,small,Favours intervention
-slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,3,Average Treatment Effect (ATE),0.03,-0.29,0.35,150,Positive,imprecise,very small,Favours intervention
-slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,6,Average Treatment Effect (ATE),0.2,-0.12,0.53,146,Positive,imprecise,small,Favours intervention
-slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,9,Average Treatment Effect (ATE),0.03,-0.3,0.37,134,Positive,imprecise,very small,Favours intervention
-slesnick_2023,Social and Emotional Wellbeing,Self-efficacy,Mastery Scale,12,Average Treatment Effect (ATE),0.07,-0.26,0.41,137,Positive,imprecise,very small,Favours intervention
-thulien_2022,Health,Presence and frequency of psychiatric symptoms,Colorado Symptom Index,18,Average Treatment Effect (ATE),-0.15,-0.95,0.66,24,Negative,imprecise,very small,Favours intervention
-slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,3,Average Treatment Effect (ATE),-0.09,-0.4,0.23,154,Negative,imprecise,very small,Favours intervention
-slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,6,Average Treatment Effect (ATE),-0.37,-0.69,-0.04,150,Negative,precise,small,Favours intervention
-slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,9,Average Treatment Effect (ATE),-0.17,-0.5,0.16,140,Negative,imprecise,very small,Favours intervention
-slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,12,Average Treatment Effect (ATE),-0.22,-0.54,0.11,146,Negative,imprecise,small,Favours intervention
-kidd_2020,Stable Housing,Stable housing,"Researcher assessed — gained (improved stability), sustained (same residence) or lost (homeless) housing status",6,Average Treatment Effect (ATE),0.37,-0.47,1.21,65,Positive,imprecise,small,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,3,Average Treatment Effect (ATE),0.61,0.2,1.02,156,Positive,precise,medium,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,6,Average Treatment Effect (ATE),1.22,0.81,1.62,156,Positive,precise,large,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,9,Average Treatment Effect (ATE),1.15,0.76,1.55,156,Positive,precise,large,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,12,Average Treatment Effect (ATE),0.84,0.46,1.21,156,Positive,precise,large,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,15,Average Treatment Effect (ATE),0.77,0.4,1.14,156,Positive,precise,medium,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,18,Average Treatment Effect (ATE),0.68,0.32,1.05,156,Positive,precise,medium,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,21,Average Treatment Effect (ATE),0.47,0.11,0.83,156,Positive,precise,small,Favours intervention
-kozloff_2016,Stable Housing,Days stably housed,Mean per cent of days stably housed,24,Average Treatment Effect (ATE),0.4,0.04,0.76,156,Positive,precise,small,Favours intervention
-slesnick_2023,Stable Housing,Access to Housing,Access to Housing,6,Average Treatment Effect (ATE),0.15,-0.31,0.61,160,Positive,imprecise,very small,Favours intervention
-slesnick_2023,Stable Housing,Access to Housing,Access to Housing,9,Average Treatment Effect (ATE),-0.06,-0.41,0.29,160,Positive,imprecise,very small,Favours comparison
-slesnick_2023,Stable Housing,Access to Housing,Access to Housing,12,Average Treatment Effect (ATE),0.22,-0.12,0.57,160,Positive,imprecise,small,Favours intervention
-raithel_2015,Stable Housing,Homeless services use,Single adult shelter use,24,Average Treatment Effect on the Treated (ATT),-0.39,-0.7,-0.08,297,Negative,precise,small,Favours intervention
-raithel_2015,Stable Housing,Homeless services use,Family shelter use,24,Average Treatment Effect on the Treated (ATT),-0.43,-0.91,0.04,297,Negative,imprecise,small,Favours intervention
-raithel_2015,Legal and Justice,Incarcerated,Jail stay,24,Average Treatment Effect on the Treated (ATT),-0.57,-1.01,-0.13,297,Negative,precise,medium,Favours intervention
-kidd_2020,Health,Mental Health,"Researcher assessed — gained (cessation of pattern of distress), sustained (unchanged) or lost (experienced crisis) mental health status",6,Average Treatment Effect (ATE),0.47,-0.21,1.15,65,Positive,imprecise,small,Favours intervention
-raithel_2015,Health,Health services use,Medicaid use,24,Average Treatment Effect on the Treated (ATT),-0.06,-0.36,0.23,297,Positive,imprecise,very small,Favours comparison
-kidd_2020,Employment and Earnings,Employment or Education,"Researcher assessed — gained (on either measure), sustained (on both measures) or lost (on either measure) employment or education status",6,Average Treatment Effect (ATE),0.39,-0.2,0.98,65,Positive,imprecise,small,Favours intervention
-kozloff_2016,Employment and Earnings,Employment,Vocational Time-Line Follow-Back Inventory,24,Average Treatment Effect (ATE),-0.23,-0.59,0.14,156,Positive,imprecise,small,Favours comparison
-thulien_2022,Employment and Earnings,Employment and Earnings,"Education, Employment, and Income Questionnaire",18,Average Treatment Effect (ATE),-0.15,-1.05,0.75,24,Positive,imprecise,very small,Favours comparison
-raithel_2015,Employment and Earnings,Public assistance use,Cash assistance use,24,Average Treatment Effect on the Treated (ATT),-0.25,-0.52,0.03,297,Positive,imprecise,small,Favours comparison
-raithel_2015,Employment and Earnings,Public assistance use,Supplemental Nutrition Assistance Program (SNAP) use,24,Average Treatment Effect on the Treated (ATT),0.2,-0.09,0.48,297,Positive,imprecise,small,Favours intervention
-thulien_2022,Education,Academic and vocational participation,"Education, Employment, and Income Questionnaire",18,Average Treatment Effect (ATE),-0.27,-1.23,0.68,24,Positive,imprecise,small,Favours comparison
+kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),-0.17,-0.52,0.18,156,Negative,imprecise,very small,Favours intervention
+kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),-0.04,-0.4,0.31,156,Negative,imprecise,very small,Favours intervention
+kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),0.35,-0.01,0.71,156,Negative,imprecise,small,Favours comparison
+kozloff_2016,Legal and Justice,Number of arrests,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),-0.26,-0.62,0.09,156,Negative,imprecise,small,Favours intervention
+kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,6,Average Treatment Effect (ATE),-0.1,-0.7,0.49,156,Negative,imprecise,very small,Favours intervention
+kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,12,Average Treatment Effect (ATE),-0.41,-0.94,0.12,156,Negative,imprecise,small,Favours intervention
+kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,18,Average Treatment Effect (ATE),-0.25,-0.81,0.31,156,Negative,imprecise,small,Favours intervention
+kozloff_2016,Health,Substance Related Problems,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,24,Average Treatment Effect (ATE),-0.5,-1.01,0.01,156,Negative,imprecise,medium,Favours intervention
+kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),-0.35,-0.72,0.02,156,Negative,imprecise,small,Favours intervention
+kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),0.17,-0.21,0.56,156,Negative,imprecise,very small,Favours comparison
+kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),0.1,-0.28,0.48,156,Negative,imprecise,very small,Favours comparison
+kozloff_2016,Health,Number of emergency department visits,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),-0.25,-0.62,0.12,156,Negative,imprecise,small,Favours intervention
+kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,6,Average Treatment Effect (ATE),-0.05,-0.37,0.26,156,Negative,imprecise,very small,Favours intervention
+kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,12,Average Treatment Effect (ATE),-0.11,-0.42,0.2,156,Negative,imprecise,very small,Favours intervention
+kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,18,Average Treatment Effect (ATE),0.28,-0.04,0.61,156,Negative,imprecise,small,Favours comparison
+kozloff_2016,Legal and Justice,"Victim of violent robbery, physical or sexual assault",Canadian General Social Survey,24,Average Treatment Effect (ATE),0.11,-0.21,0.43,156,Negative,imprecise,very small,Favours comparison
+kozloff_2016,Health,Has a regular medical doctor,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),0.36,0.05,0.67,156,Positive,precise,small,Favours intervention
+kozloff_2016,Health,Has a regular medical doctor,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),0.04,-0.28,0.35,156,Positive,imprecise,very small,Favours intervention
+kozloff_2016,Health,Has a regular medical doctor,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),-0.19,-0.51,0.12,156,Positive,imprecise,very small,Favours comparison
+kozloff_2016,Health,Has a regular medical doctor,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),0.28,-0.04,0.59,156,Positive,imprecise,small,Favours intervention
+kozloff_2016,Health,Perceived unmet health care need,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),0.02,-0.29,0.34,156,Negative,imprecise,very small,Favours comparison
+kozloff_2016,Health,Perceived unmet health care need,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),0.56,0.25,0.87,156,Negative,precise,medium,Favours comparison
+kozloff_2016,Health,Perceived unmet health care need,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),-0.13,-0.45,0.19,156,Negative,imprecise,very small,Favours intervention
+kozloff_2016,Health,Perceived unmet health care need,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),-0.1,-0.42,0.21,156,Negative,imprecise,very small,Favours intervention
+kozloff_2016,Health,Visited medical service provider,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),0.11,-0.21,0.43,156,Positive,imprecise,very small,Favours intervention
+kozloff_2016,Health,Visited medical service provider,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),-0.05,-0.36,0.27,156,Positive,imprecise,very small,Favours comparison
+kozloff_2016,Health,Visited medical service provider,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),0.17,-0.15,0.5,156,Positive,imprecise,very small,Favours intervention
+kozloff_2016,Health,Visited medical service provider,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),0.03,-0.29,0.35,156,Positive,imprecise,very small,Favours intervention
+kozloff_2016,Health,Visited other clinical service provider,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),-0.09,-0.41,0.22,156,Positive,imprecise,very small,Favours comparison
+kozloff_2016,Health,Visited other clinical service provider,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),-0.01,-0.32,0.31,156,Positive,imprecise,very small,Favours comparison
+kozloff_2016,Health,Visited other clinical service provider,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),0.12,-0.2,0.44,156,Positive,imprecise,very small,Favours intervention
+kozloff_2016,Health,Visited other clinical service provider,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),-0.09,-0.41,0.22,156,Positive,imprecise,very small,Favours comparison
+kozloff_2016,Health,Visited social service provider,"Health, Social and Justice Service Use Inventory",6,Average Treatment Effect (ATE),-0.27,-0.59,0.05,156,Positive,imprecise,small,Favours comparison
+kozloff_2016,Health,Visited social service provider,"Health, Social and Justice Service Use Inventory",12,Average Treatment Effect (ATE),-0.31,-0.64,0,156,Positive,precise,small,Favours comparison
+kozloff_2016,Health,Visited social service provider,"Health, Social and Justice Service Use Inventory",18,Average Treatment Effect (ATE),-0.46,-0.78,-0.14,156,Positive,precise,small,Favours comparison
+kozloff_2016,Health,Visited social service provider,"Health, Social and Justice Service Use Inventory",24,Average Treatment Effect (ATE),-0.12,-0.43,0.2,156,Positive,imprecise,very small,Favours comparison
