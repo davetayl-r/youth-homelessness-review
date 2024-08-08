@@ -1,30 +1,36 @@
 ---
 title: "Systematic review of housing and support interventions to improve housing, health, social, wellbeing and economic outcomes for homeless youth in high-income countries: supplementary material"
 author: 
-  - name: David J. A. Taylor
+  - name: David Taylor
     affiliation: Monash University
     orcid: 0000-0001-8801-7488
   - name: Stephanie Vecchio
     affiliation: Monash University
-    orcid:
+    orcid: 0009-0004-3710-9939
   - name: Susan Baidawi
     affiliation: Monash University
-    orcid:
+    orcid: 0000-0003-4394-1313
   - name: Aron Shlonsky
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
+date: 2024-08-07
 citation:
   doi: "TBD"
   url: https://davetayl-r.github.io/youth-homelessness-review
 bibliography: youth_homelessness_review_references.bib
-csl: vancouver.csl
+csl: apa-6th-edition.csl
 link-citations: true
 format: 
   html: 
     number-sections: true
     highlight-style: ayu
+    css: styles.css
+    include-in-header: 
+      text: |
+        <script src="lightbox.js"></script>
 tbl-cap-location: "top"
 fig-cap-location: "top"
+lightbox: true
 ---
 
 ```{r}
@@ -51,11 +57,21 @@ The following information is provided here:
 
 The code to produce this supplementary material, along with the analysis code for this review is available in a [GitHub repository](https://github.com/davetayl-r/youth-homelessness-review).
 
-# **PRISMA 2020 checklist**
+# Details of Housing First Components in Included Studies
+
+Note: to add from review document following team's review
+
+# Barriers and Facilitators by EPIS Domain
+
+Note: to add table from review document following team's review
+
+# Data collection instruments used in Included Studies
+
+Note: to add from review document following team's review
+
+# PRISMA 2020 checklist
 
 The PRISMA 2020 checklist [@page2021prisma2020statement] is included in @tbl-yh-prisma-checklist.
-
-NOTE: FILE prisma.xlsx REQUIRES UPDATING!!!!
 
 ```{r}
 #| echo: false
@@ -99,9 +115,9 @@ prisma_table %>%
     ) 
 ```
 
-# **Identification and selection of relevant studies**
+# Identification and selection of relevant studi
 
-## **Search strategy and results for databases**
+## Search strategy and results for database
 
 The databases and search terms are detailed in @tbl-yh-review-search-terms below.
 
@@ -255,7 +271,7 @@ The databases and search terms are detailed in @tbl-yh-review-search-terms below
 
 : Search terms {#tbl-yh-review-search-terms} {tbl-colwidths="\[20,40,15,15\]"}
 
-## **Search strategy and results for grey sources**
+## Search strategy and results for grey sources
 
 Sources and search terms used for grey sources are detailed in @tbl-yh-review-grey-search below.
 
@@ -279,7 +295,7 @@ Sources and search terms used for grey sources are detailed in @tbl-yh-review-gr
 
 : Search terms {#tbl-yh-review-grey-search} {tbl-colwidths="\[35,25,40\]"}
 
-# **Extraction and transformation of information from relevant studies**
+# Extraction of information from relevant studies
 
 ## Data extraction templates
 
@@ -289,6 +305,16 @@ The review team developed a data extraction template using Google's Sheets app t
 
 In the first tab (available below), we extracted information about the study.
 
+<button id="openLightbox1">
+
+View Full Screen
+
+</button>
+
+::: {#lightbox1 .lightbox}
+[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSQA1hAPvuPQVQJLCjojiB8Z6cv4RiP5bRDDzjPrDN4zYmOB2cLkzrkyegmjej8fqGOaWcuIlwWRvjT/pubhtml?gid=1229044638&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
+:::
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSQA1hAPvuPQVQJLCjojiB8Z6cv4RiP5bRDDzjPrDN4zYmOB2cLkzrkyegmjej8fqGOaWcuIlwWRvjT/pubhtml?gid=1229044638&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
 
 </iframe>
@@ -297,182 +323,659 @@ In the first tab (available below), we extracted information about the study.
 
 In the second tab (available below), we extracted information about reported outcomes that would allow us to transform each of the reported results into a common effect size.
 
+<button id="openLightbox2">
+
+View Full Screen
+
+</button>
+
+::: {#lightbox2 .lightbox}
+[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSQA1hAPvuPQVQJLCjojiB8Z6cv4RiP5bRDDzjPrDN4zYmOB2cLkzrkyegmjej8fqGOaWcuIlwWRvjT/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
+:::
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSQA1hAPvuPQVQJLCjojiB8Z6cv4RiP5bRDDzjPrDN4zYmOB2cLkzrkyegmjej8fqGOaWcuIlwWRvjT/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
 
 </iframe>
 
-## Effect size transformation
+# Transformation of reported results to a common effect size
 
-The code chunk below provides the R code that the review team used to transform the extracted data to a common effect size @rcoreteam2023languageenvironmentstatistical. It utilises packages by @wickham2019welcometidyverse and @ludecke2019esceffectsize as well as some custom functions developed by the review team.
+In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize], which is an R implementation of the Campbell Collaboration's Effect Size calculator [@wilsonpracticalmetaanalysiseffect]. 
+
+However, the results in the study by @kozloff2016housingfirsthomeless are presented as treatment effects (i.e., mean differences, ratios or rate ratios and ratios of odds ratios and their confidence intervals). The review team was unable to obtain the necessary information from the authors to transform these using the formulas in the *esc* package. Accordingly we approximated these results using information reported in the included studies. The approach used for each type of result, and the assumptions they rely on are detailed below.
+
+## Estimating Cohen's d or Hedges' g from a Ratio of Rate Ratios
+
+The `esc_ratio_rate_ratio` function estimates Cohen's d or Hedges' g effect sizes from a reported ratio of rate ratios, its standard error or confidence interval, sample sizes, and the population baseline rate. The method relies on several assumptions and approximations to convert the ratio of rate ratios to a standardised mean difference.
+
+### Assumptions
+
+1.  The ratio of rate ratios is a measure of the relative difference in event rates between the treatment and comparison groups, with the comparison group as the reference [@lash2021modernepidemiology].
+2.  The standard error of the ratio of rate ratios is either provided or can be calculated from the confidence interval assuming a normal distribution [@altman2011howobtainconfidence].
+3.  The population baseline rate represents the proportion of the population experiencing the event at baseline and is known or can be estimated [@lash2021modernepidemiology].
+4.  The event counts in the treatment and comparison groups follow a Poisson distribution [@fleiss2003statisticalmethodsrates].
+5.  The sample sizes of the treatment and comparison groups are known.
+
+### Step 1: Obtain the standard error of the ratio of rate ratios
+
+The function first obtains the standard error of the ratio of rate ratios either directly from the provided `ratio_rate_ratio_se` argument or by calculating it from the confidence interval using the following formula [@altman2011howobtainconfidence]:
+
+$$
+SE_{RRR} = \frac{RRR_{upper} - RRR_{lower}}{2 \times 1.96}
+$$
 
 ```{r}
 #| eval: false
-#| name: yh-supplementary-material-es-transformation-code
-#| code-fold: show
+se_ratio_rate_ratio <- (ratio_rate_ratio_ci_upper - ratio_rate_ratio_ci_lower) / (2 * 1.96)
+```
 
-## load required packages
-library(tidyverse)
-library(readxl)
-library(esc)
+where $SE_{RRR}$ is the standard error of the ratio of rate ratios, $RRR_{upper}$ and $RRR_{lower}$ are the upper and lower bounds of the ratio of rate ratios confidence interval, respectively.
 
-## read data from extration template
-data_extraction_sheet_location <- "./review/inputs/yh_review_data_extraction_sheet.xlsx"
-data_extraction_sheet <- read_excel(
-  path = data_extraction_sheet_location,
-  sheet = "outcome_data",
-  col_names = TRUE
-)
+### Step 2: Estimate the event counts
 
-## clean data
-clean_data_extraction_sheet <- data_extraction_sheet %>%
-  # remove instructions
-  filter(!row_number() == 1) %>%
-  # remove superfluous columns
-  select(
-    -primary_extractor,
-    -secondary_extractor,
-    -meta,
-    -required_information,
-    -comment,
-    -additional_extraction_items
-  ) %>%
-  # specify variable types
-  mutate(
-    across(
-      c(
-        outcome_timing,
-        grp1n,
-        grp2n,
-        prop1event,
-        prop2event,
-        grp1m,            
-        grp1sd,
-        grp1se,
-        grp2m,
-        grp2sd,
-        grp2se,
-        pre1mean,
-        pre1sd,
-        post1mean,
-        post1sd,
-        pre2mean,
-        pre2sd,
-        post2mean,	
-        post2sd,
-        gain1mean,
-        gain1se,          
-        gain2mean,
-        gain2se,
-        or,
-        f,
-        se,
-        totaln,
-        b,                
-        beta, 
-        sdy,
-        chisq,
-        t,
-        t_pvalue,
-        mean_diff,
-        mean_diff_lower,  
-        mean_diff_upper,
-        mean_diff_se
-        ),
-      as.numeric
-    )
-  ) %>%
-  # exclude baseline measurements
-  filter(
-    !outcome_timing == 0
-  )
+The event count for the comparison group is estimated using the population baseline rate and the comparison group sample size:
 
-# group data by es type
-mean_gain <- clean_data_extraction_sheet %>%
-  filter(
-    esc_type == "Mean Gain"
-  ) %>%
-  mutate(
-    id = row_number()
-  )
+$$
+E_C = n_C \times BR
+$$
 
-mean_difference <- clean_data_extraction_sheet %>%
-  filter(
-    esc_type == "Mean Difference"
-  ) %>%
-  mutate(
-    id = row_number()
-  )
+where $E_C$ is the event count for the comparison group, $n_C$ is the comparison group sample size, and $BR$ is the population baseline rate.
 
-mean_sd <- clean_data_extraction_sheet %>%
-  filter(
-    esc_type == "Mean SD"
-  ) %>%
-  mutate(
-    id = row_number()
-  )
+```{r}
+#| eval: false
+comparison_event_count <- comparison_n * population_baseline_rate
+```
 
-binary_proportions <- clean_data_extraction_sheet %>%
-  filter(
-    esc_type == "Binary proportions"
-  ) %>%
-  mutate(
-    id = row_number()
-  )
+The event count for the treatment group is then estimated using the ratio of rate ratios and the comparison event count:
 
-## transform results reported as mean gains to hedges' g using esc package
-mean_gain_hedges_g <- mean_gain %>%
-  # run es function
-  effect_sizes(
-    study = study_id,
-    fun = "esc_mean_gain",                                              
-    grp1n = grp1n,
-    grp2n = grp2n,
-    pre1mean = pre1mean,
-    pre1sd = pre1sd,
-    post1mean = post1mean,
-    post1sd = post1sd,
-    pre2mean = pre2mean,
-    pre2sd = pre2sd,
-    post2mean = post2mean,	
-    post2sd = post2sd,
-    es.type = "g") %>%
-  # rename var
-  rename(
-    study_id = study,
-    es_ci_low = ci.lo,
-    es_ci_high = ci.hi,
-    sample_size = sample.size,
-  ) %>%
-  # add row number as id
-  mutate(
-    id = row_number()
-  ) %>%
-  # merge back with raw data
-  left_join(
-    mean_gain,
-    by = c(
-      "id",
-      "study_id")
-  ) %>%
-  # select vars for reporting
-  select(
-    study_id,
-    outcome_domain,
-    outcome_construct,
-    outcome_measure,
-    outcome_timing,
-    estimand,
-    es,
-    es_ci_low,
-    es_ci_high,
-    sample_size,
-    favourable_direction
-  ) 
+$$
+E_T = E_C \times RRR
+$$
 
-## transform results reported as mean differences to hedges' g using custom function
+where $E_T$ is the event count for the treatment group, and $RRR$ is the ratio of rate ratios.
+
+```{r}
+#| eval: false
+treatment_event_count <- comparison_event_count * ratio_rate_ratio
+```
+
+### Step 3: Calculate the pooled event rate and standard deviation
+
+The pooled event count is calculated as the average of the treatment and comparison event counts:
+
+$$
+E_P = \frac{E_T + E_C}{2}
+$$
+
+where $E_P$ is the pooled event count.
+
+```{r}
+#| eval: false
+pooled_event_count <- (treatment_event_count + comparison_event_count) / 2
+```
+
+The pooled event rate is then estimated by dividing the pooled event count by the average of the treatment and comparison sample sizes:
+
+$$
+R_P = \frac{E_P}{\frac{n_T + n_C}{2}}
+$$
+
+where $R_P$ is the pooled event rate, and $n_T$ and $n_C$ are the treatment and comparison group sample sizes, respectively.
+
+```{r}
+#| eval: false
+pooled_event_rate <- pooled_event_count / ((treatment_n + comparison_n) / 2)
+```
+
+The pooled standard deviation is estimated using the pooled event rate, assuming a Poisson distribution [@fleiss2003statisticalmethodsrates]:
+
+$$
+SD_P = \sqrt{R_P \times (1 - R_P)}
+$$
+
+where $SD_P$ is the pooled standard deviation.
+
+```{r}
+#| eval: false
+pooled_sd <- sqrt(pooled_event_rate * (1 - pooled_event_rate))
+```
+
+### Step 4: Calculate Cohen's d
+
+Cohen's d is calculated using the estimated event rates for the treatment and comparison groups and the pooled standard deviation [@cohen1988statisticalpoweranalysis]:
+
+$$
+d = \frac{\frac{E_T}{n_T} - \frac{E_C}{n_C}}{SD_P}
+$$
+
+where $d$ is Cohen's *d*.
+
+```{r}
+#| eval: false
+cohens_d <- (treatment_event_count / treatment_n - comparison_event_count / comparison_n) / pooled_sd
+```
+
+### Step 5: Calculate the standard error and confidence interval for Cohen's *d*
+
+The standard error for Cohen's *d* is estimated using the event rates and sample sizes:
+
+$$
+SE_d = \sqrt{\frac{E_T}{n_T^2} + \frac{E_C}{n_C^2}} \times \frac{1}{SD_P}
+$$
+
+where $SE_d$ is the standard error for Cohen's d, $E_T$ and $E_C$ are the event counts in the treatment and comparison groups, respectively, $n_T$ and $n_C$ are the sample sizes of the treatment and comparison groups, respectively, and $SD_P$ is the pooled standard deviation.
+
+```{r}
+#| eval: false
+standard_error_d <- sqrt((treatment_event_count / treatment_n^2) + (comparison_event_count / comparison_n^2)) / pooled_sd
+```
+
+The confidence interval for Cohen's *d* is then calculated using the standard error [@nakagawa2007effectsizeconfidence]:
+
+$$
+CI_d = [d - 1.96 \times SE_d, d + 1.96 \times SE_d]
+$$
+
+where $CI_d$ is the confidence interval for Cohen's *d*.
+
+```{r}
+#| eval: false
+cohens_d_ci_lower <- cohens_d - (1.96 * standard_error_d)
+cohens_d_ci_upper <- cohens_d + (1.96 * standard_error_d)
+```
+
+### Step 6: Calculate Hedges' g (optional)
+
+If the esc_type argument is set to 'g', the function also calculates Hedges' *g*, which applies Hedges' correction to an estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
+
+$$
+g = d \times \left(1 - \frac{3}{4 \times (n_T + n_C) - 9}\right)
+$$
+
+where $g$ is Hedges' *g*.
+
+```{r}
+#| eval: false
+hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
+```
+
+The confidence interval for Hedges' *g* is calculated using the same standard error as Cohen's *d*.
+
+## Estimating Cohen's *d* or Hedges' *g* from a Mean Difference
+
+The `esc_mean_difference` function estimates Cohen's *d* or Hedges' *g* effect sizes from a reported mean difference, its standard error or confidence interval, and the sample sizes of the treatment and comparison groups. The function calculates the pooled standard deviation, effect size, standard error, confidence interval, and p-value.
+
+### Assumptions
+
+1.  The mean difference between the treatment and comparison groups is provided.
+2.  The standard error of the mean difference is either provided or can be calculated from the confidence interval assuming a normal distribution [@altman2011howobtainconfidence].
+3.  The sample sizes of the treatment and comparison groups are known.
+4.  The variance of the outcome is assumed to be equal in both groups.
+
+### Step 1: Obtain the standard error of the mean difference
+
+The function first obtains the standard error of the mean difference either directly from the provided `mean_diff_se` argument or by calculating it from the confidence interval using the following formula [@altman2011howobtainconfidence]:
+
+$$
+SE_{MD} = \frac{MD_{upper} - MD_{lower}}{2 \times 1.96}
+$$
+
+```{r}
+#| eval: false
+standard_error <- (mean_diff_ci_upper - mean_diff_ci_lower) / (2 * 1.96)
+```
+
+where $SE_{MD}$ is the standard error of the mean difference, $MD_{upper}$ and $MD_{lower}$ are the upper and lower bounds of the mean difference confidence interval, respectively.
+
+### Step 2: Estimate the pooled standard deviation
+
+The pooled standard deviation is estimated using the standard error and the sample sizes of the treatment and comparison groups:
+
+$$
+SD_{pooled} = \frac{SE_{MD}}{\sqrt{\frac{1}{n_T} + \frac{1}{n_C}}}
+$$
+
+where $SD_{pooled}$ is the pooled standard deviation, $SE_{MD}$ is the standard error of the mean difference, and $n_T$ and $n_C$ are the sample sizes of the treatment and comparison groups, respectively.
+
+```{r}
+#| eval: false
+standard_deviation_pooled <- standard_error / sqrt((1 / treatment_n) + (1 / comparison_n))
+```
+
+### Step 3: Calculate Cohen's d
+
+Cohen's d is calculated by dividing the mean difference by the pooled standard deviation [@cohen1988statisticalpoweranalysis]:
+
+$$
+d = \frac{MD}{SD_{pooled}}
+$$
+
+where $d$ is Cohen's d, $MD$ is the mean difference, and $SD_{pooled}$ is the pooled standard deviation.
+
+```{r}
+#| eval: false
+cohens_d <- mean_difference / standard_deviation_pooled
+```
+
+### Step 4: Calculate the standard error and confidence interval for Cohen's d
+
+The standard error for Cohen's *d* is calculated by dividing the standard error of the mean difference by the pooled standard deviation:
+
+$$
+SE_d = \frac{SE_{MD}}{SD_{pooled}}
+$$
+
+where $SE_d$ is the standard error for Cohen's *d*.
+
+```{r}
+#| eval: false
+standard_error_d <- standard_error / standard_deviation_pooled
+```
+
+The confidence interval for Cohen's *d* is then calculated using the standard error [@nakagawa2007effectsizeconfidence]:
+
+$$
+CI_d = [d - 1.96 \times SE_d, d + 1.96 \times SE_d]
+$$
+
+where $CI_d$ is the confidence interval for Cohen's d.
+
+```{r}
+#| eval: false
+mean_diff_ci_lower_d <- cohens_d - (1.96 * standard_error_d)
+mean_diff_ci_upper_d <- cohens_d + (1.96 * standard_error_d)
+```
+
+### Step 5: Calculate the p-value
+
+The t-statistic is calculated by dividing the mean difference by its standard error:
+
+$$
+t = \frac{MD}{SE_{MD}}
+$$
+
+where $t$ is the t-statistic.
+
+```{r}
+#| eval: false
+t_stat <- mean_difference / standard_error
+```
+
+The degrees of freedom are calculated as the sum of the sample sizes minus 2:
+
+$$
+df = n_T + n_C - 2
+$$
+
+where $df$ is the degrees of freedom.
+
+```{r}
+#| eval: false
+df <- treatment_n + comparison_n - 2
+```
+
+The p-value is then calculated using the t-distribution with the calculated degrees of freedom:
+
+```{r}
+#| eval: false
+p_value <- 2 * (1 - pt(abs(t_stat), df))
+```
+
+### Step 6: Calculate Hedges' g (optional)
+
+If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
+
+$$
+g = d \times \left(1 - \frac{3}{4 \times (n_T + n_C) - 9}\right)
+$$
+
+where $g$ is Hedges' g.
+
+```{r}
+#| eval: false
+hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
+```
+
+The confidence interval for Hedges' g is calculated using the same standard error as Cohen's d.
+
+## Estimating Cohen's d or Hedges' g from a Ratio of Odds Ratios
+
+The `esc_ratio_odds_ratio` function estimates Cohen's d or Hedges' g effect sizes from a reported ratio of odds ratios, its standard error or confidence interval, sample sizes, and the population baseline rate. The method relies on several assumptions and approximations to convert the ratio of odds ratios to a standardised mean difference.
+
+### Assumptions
+
+1.  The ratio of odds ratios is a measure of the relative difference in odds between the treatment and comparison groups, with the comparison group as the reference [@szumilas2010explainingoddsratios].
+2.  The standard error of the ratio of odds ratios is either provided or can be calculated from the confidence interval assuming a normal distribution of the log ratio of odds ratios [@altman2011howobtainconfidence].
+3.  The population baseline rate represents the proportion of the population experiencing the event at baseline and is known or can be estimated [@lash2021modernepidemiology].
+4.  The event counts in the treatment and comparison groups follow a binomial distribution [@fleiss2003statisticalmethodsrates].
+5.  The sample sizes of the treatment and comparison groups are known.
+
+### Step 1: Obtain the standard error of the log ratio of odds ratios
+
+The function first obtains the standard error of the log ratio of odds ratios either directly from the provided `ratio_odds_ratio_se` argument or by calculating it from the confidence interval using the following formula [@altman2011howobtainconfidence]:
+
+$$
+SE_{log(ROR)} = \frac{log(ROR_{upper}) - log(ROR_{lower})}{2 \times 1.96}
+$$
+
+```{r}
+#| eval: false
+se_log_ratio_odds_ratio <- (log_ratio_odds_ratio_ci_upper - log_ratio_odds_ratio_ci_lower) / (2 * 1.96)
+```
+
+where $SE_{log(ROR)}$ is the standard error of the log ratio of odds ratios, $ROR_{upper}$ and $ROR_{lower}$ are the upper and lower bounds of the ratio of odds ratios confidence interval, respectively.
+
+### Step 2: Convert the ratio of odds ratios to the log scale
+
+The ratio of odds ratios is converted to the log scale:
+
+$$
+log(ROR) = log(ROR)
+$$
+
+```{r}
+#| eval: false
+log_ratio_odds_ratio <- log(ratio_odds_ratio)
+```
+
+where $log(ROR)$ is the log ratio of odds ratios.
+
+### Step 3: Estimate the event probabilities and odds
+
+The event probability in the comparison group is estimated using the population baseline rate:
+
+$$
+P_C = BR
+$$
+
+where $P_C$ is the event probability in the comparison group, and $BR$ is the population baseline rate.
+
+```{r}
+#| eval: false
+comparison_event_prob <- population_baseline_rate
+```
+
+The odds in the comparison group are estimated using the event probability:
+
+$$
+O_C = \frac{P_C}{1 - P_C}
+$$
+
+where $O_C$ is the odds in the comparison group.
+
+```{r}
+#| eval: false
+comparison_odds <- comparison_event_prob / (1 - comparison_event_prob)
+```
+
+The odds in the treatment group are estimated using the ratio of odds ratios and the comparison odds:
+
+$$
+O_T = O_C \times ROR
+$$
+
+where $O_T$ is the odds in the treatment group, and $ROR$ is the ratio of odds ratios.
+
+```{r}
+#| eval: false
+treatment_odds <- comparison_odds * ratio_odds_ratio
+```
+
+The event probability in the treatment group is estimated using the treatment odds:
+
+$$
+P_T = \frac{O_T}{1 + O_T}
+$$
+
+where $P_T$ is the event probability in the treatment group.
+
+```{r}
+#| eval: false
+treatment_event_prob <- treatment_odds / (1 + treatment_odds)
+```
+
+### Step 4: Convert event probabilities to approximate event counts
+
+The event probabilities are converted to approximate event counts using the sample sizes:
+
+$$
+E_T = n_T \times P_T \\
+E_C = n_C \times P_C
+$$
+
+where $E_T$ and $E_C$ are the event counts in the treatment and comparison groups, respectively, and $n_T$ and $n_C$ are the sample sizes of the treatment and comparison groups, respectively.
+
+```{r}
+#| eval: false
+treatment_event_count <- treatment_n * treatment_event_prob
+comparison_event_count <- comparison_n * comparison_event_prob
+```
+
+### Step 5: Calculate the pooled event rate and standard deviation
+
+The pooled event count is calculated as the average of the treatment and comparison event counts:
+
+$$
+E_P = \frac{E_T + E_C}{2}
+$$
+
+where $E_P$ is the pooled event count.
+
+```{r}
+#| eval: false
+pooled_event_count <- (treatment_event_count + comparison_event_count) / 2
+```
+
+The pooled event rate is then estimated by dividing the pooled event count by the average of the treatment and comparison sample sizes:
+
+$$
+R_P = \frac{E_P}{\frac{n_T + n_C}{2}}
+$$
+
+where $R_P$ is the pooled event rate.
+
+```{r}
+#| eval: false
+pooled_event_rate <- pooled_event_count / ((treatment_n + comparison_n) / 2)
+```
+
+The pooled standard deviation is estimated using the pooled event rate, assuming a binomial distribution [@fleiss2003statisticalmethodsrates]:
+
+$$
+SD_P = \sqrt{R_P \times (1 - R_P)}
+$$
+
+where $SD_P$ is the pooled standard deviation.
+
+```{r}
+#| eval: false
+pooled_sd <- sqrt(pooled_event_rate * (1 - pooled_event_rate))
+```
+
+### Step 6: Calculate Cohen's d
+
+Cohen's d is calculated using the estimated event probabilities for the treatment and comparison groups and the pooled standard deviation [@cohen1988statisticalpoweranalysis]:
+
+$$
+d = \frac{P_T - P_C}{SD_P}
+$$
+
+where $d$ is Cohen's d.
+
+```{r}
+#| eval: false
+cohens_d <- (treatment_event_prob - comparison_event_prob) / pooled_sd
+```
+
+### Step 7: Calculate the standard error and confidence interval for Cohen's d
+
+The standard error for Cohen's d is estimated using the event probabilities and sample sizes [@hasselblad1995metaanalysisscreeningdiagnostic]:
+
+$$
+SE_d = \sqrt{\frac{P_T \times (1 - P_T)}{n_T} + \frac{P_C \times (1 - P_C)}{n_C}} \times \frac{1}{SD_P}
+$$
+
+where $SE_d$ is the standard error for Cohen's d, $P_T$ and $P_C$ are the event probabilities in the treatment and comparison groups, respectively, $n_T$ and $n_C$ are the sample sizes of the treatment and comparison groups, respectively, and $SD_P$ is the pooled standard deviation.
+
+```{r}
+#| eval: false
+standard_error_d <- sqrt((treatment_event_prob * (1 - treatment_event_prob)) / treatment_n + (comparison_event_prob * (1 - comparison_event_prob)) / comparison_n) / pooled_sd
+```
+
+The confidence interval for Cohen's d is then calculated using the standard error [@nakagawa2007effectsizeconfidence]:
+
+$$
+CI_d = [d - 1.96 \times SE_d, d + 1.96 \times SE_d]
+$$
+
+where $CI_d$ is the confidence interval for Cohen's d.
+
+```{r}
+#| eval: false
+cohens_d_ci_lower <- cohens_d - (1.96 * standard_error_d)
+cohens_d_ci_upper <- cohens_d + (1.96 * standard_error_d)
+```
+
+### Step 8: Calculate the p-value
+
+The Z-statistic is calculated using the log ratio of odds ratios and its standard error:
+
+$$
+Z = \frac{log(ROR)}{SE_{log(ROR)}}
+$$
+
+where $Z$ is the Z-statistic.
+
+```{r}
+#| eval: false
+z_stat <- log_ratio_odds_ratio / se_log_ratio_odds_ratio
+```
+
+The p-value is then calculated using the standard normal distribution:
+
+```{r}
+#| eval: false
+p_value <- 2 * (1 - pnorm(abs(z_stat)))
+```
+
+### Step 9: Calculate Hedges' g (optional)
+
+If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
+
+$$
+g = d \times \left(1 - \frac{3}{4 \times (n_T + n_C) - 9}\right)
+$$
+
+where $g$ is Hedges' g.
+
+```{r}
+#| eval: false
+hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
+```
+
+The confidence interval for Hedges' g is calculated using the same standard error as Cohen's d.
+
+## Implementation
+
+The code chunk below details the R function that implements the methods described above. 
+
+```{r}
+#| eval: false
+#| name: yh-supplementary-material-es-transformation-custom
+#| code-fold: true
+
+# Purpose: Most common transformations can be handled using those in the esc() R package. 
+# However, the results in the study by Kozloff (2016) are presented as treatment effects (i.e., mean differences, ratios or rate ratios and ratios of odds ratios and their confidence intervals).
+# These three functions transform these results into a common measure of the standardised mean difference: Cohen's d or Hedge's g
+
+## Transform ratio of odds ratios
+
+# Declare function to estimate either Cohen's d or Hedges' g, along with their 95% confidence interval and derived p-value from reported ratio of odds ratios and baseline rates
+esc_ratio_odds_ratio <- function(
+  ratio_odds_ratio,
+  ratio_odds_ratio_se = NULL,
+  ratio_odds_ratio_ci_lower = NULL,
+  ratio_odds_ratio_ci_upper = NULL,
+  treatment_n,
+  comparison_n,
+  population_baseline_rate,
+  esc_type = 'd') {
+  
+  # Use reported standard error if provided, otherwise calculate standard error from confidence intervals
+  if (!is.null(ratio_odds_ratio_se)) {
+    se_log_ratio_odds_ratio <- ratio_odds_ratio_se / ratio_odds_ratio
+  } else if (!is.null(ratio_odds_ratio_ci_lower) & !is.null(ratio_odds_ratio_ci_upper)) {
+    log_ratio_odds_ratio_ci_lower <- log(ratio_odds_ratio_ci_lower)
+    log_ratio_odds_ratio_ci_upper <- log(ratio_odds_ratio_ci_upper)
+    se_log_ratio_odds_ratio <- (log_ratio_odds_ratio_ci_upper - log_ratio_odds_ratio_ci_lower) / (2 * 1.96)
+  } else {
+    stop("Either ratio_odds_ratio_se or both ratio_odds_ratio_ci_lower and ratio_odds_ratio_ci_upper must be provided.")
+  }
+  
+  # Convert ratio of odds ratios to log scale
+  log_ratio_odds_ratio <- log(ratio_odds_ratio)
+  
+  # Estimate the event probability in the comparison group using the population baseline rate
+  comparison_event_prob <- population_baseline_rate
+  
+  # Estimate the odds in the comparison group
+  comparison_odds <- comparison_event_prob / (1 - comparison_event_prob)
+  
+  # Estimate the odds in the treatment group using the ratio of odds ratios and the comparison odds
+  treatment_odds <- comparison_odds * ratio_odds_ratio
+  
+  # Convert odds to event probabilities
+  treatment_event_prob <- treatment_odds / (1 + treatment_odds)
+  
+  # Convert event probabilities to approximate event counts
+  treatment_event_count <- treatment_n * treatment_event_prob
+  comparison_event_count <- comparison_n * comparison_event_prob
+  
+  # Calculate the pooled event count
+  pooled_event_count <- (treatment_event_count + comparison_event_count) / 2
+  
+  # Estimate the pooled event rate
+  pooled_event_rate <- pooled_event_count / ((treatment_n + comparison_n) / 2)
+  
+  # Estimate the pooled standard deviation using the pooled event rate
+  pooled_sd <- sqrt(pooled_event_rate * (1 - pooled_event_rate))
+  
+  # Calculate Cohen's d
+  cohens_d <- (treatment_event_prob - comparison_event_prob) / pooled_sd
+  
+  # Calculate the standard error for Cohen's d using the event probabilities and sample sizes
+  standard_error_d <- sqrt((treatment_event_prob * (1 - treatment_event_prob)) / treatment_n + (comparison_event_prob * (1 - comparison_event_prob)) / comparison_n) / pooled_sd
+  
+  # Calculate the confidence interval for Cohen's d
+  cohens_d_ci_lower <- cohens_d - (1.96 * standard_error_d)
+  cohens_d_ci_upper <- cohens_d + (1.96 * standard_error_d)
+  
+  # Calculate the Z-statistic
+  z_stat <- log_ratio_odds_ratio / se_log_ratio_odds_ratio
+  
+  # Calculate the p-value using the standard normal distribution
+  p_value <- 2 * (1 - pnorm(abs(z_stat)))
+  
+  # Check if Hedges' g is requested
+  if (esc_type == 'g') {
+    # Calculate Hedges' g
+    hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
+    return(list(effect_size = hedges_g, conf_interval = c(cohens_d_ci_lower, cohens_d_ci_upper), p_value = p_value))
+  } else {
+    return(list(effect_size = cohens_d, conf_interval = c(cohens_d_ci_lower, cohens_d_ci_upper), p_value = p_value))
+  }
+}
+
+## Transform mean differences
 
 # Declare function to estimate either Cohen's d or Hedges' g, along with their 95% confidence interval and derived p-value from reported mean differences
-esc_mean_difference <- function(mean_difference, mean_diff_se = NULL, mean_diff_ci_lower = NULL, mean_diff_ci_upper = NULL, treatment_n, comparison_n, esc_type) {
+esc_mean_difference <- function(
+  mean_difference, 
+  mean_diff_se = NULL, 
+  mean_diff_ci_lower = NULL, 
+  mean_diff_ci_upper = NULL, 
+  treatment_n, 
+  comparison_n, 
+  esc_type) {
   # Use reported standard error if provided, otherwise calculate standard error from confidence intervals
   if (!is.null(mean_diff_se)) {
     standard_error <- mean_diff_se
@@ -514,70 +1017,274 @@ esc_mean_difference <- function(mean_difference, mean_diff_se = NULL, mean_diff_
   }
 }
 
-## Transform mean difference results from Kozloff 2016 et al that reports CI's
-mean_difference_hedges_g_kozloff <- mean_difference %>%
-  # filter results from Kozloff 2016
-  filter(
-    study_id == "kozloff_2016"
-  ) %>%
-  # run custom function
-  rowwise() %>%
-  mutate(result = list(
-    esc_mean_difference(
-      mean_difference = mean_diff,
-      mean_diff_ci_lower = mean_diff_lower,
-      mean_diff_ci_upper = mean_diff_upper,
-      treatment_n = grp1n,
-      comparison_n = grp2n,
-      esc_type = "g"
-    )
-  )) 
+## Transform ratio of rate ratios
 
-## Transform mean difference results from Gilmer 2016 that reports SE's 
-mean_difference_hedges_g_gilmer <- mean_difference %>%
-  # filter results from Gilmer 2016
-  filter(
-    study_id == "gilmer_2016"
-  ) %>%
-  # run custom function
-  rowwise() %>%
-  mutate(result = list(
-    esc_mean_difference(
-      mean_difference = mean_diff,
-      mean_diff_se = mean_diff_se,
-      treatment_n = grp1n,
-      comparison_n = grp2n,
-      esc_type = "g"
-    )
-  )) 
+# Declare function to estimate either Cohen's d or Hedges' g, along with their 95% confidence interval and derived p-value from reported differences in rate ratios and baseline rates
+esc_ratio_rate_ratio <- function(
+  ratio_rate_ratio,
+  ratio_rate_ratio_se = NULL,
+  ratio_rate_ratio_ci_lower = NULL,
+  ratio_rate_ratio_ci_upper = NULL,
+  treatment_n,
+  comparison_n,
+  population_baseline_rate,
+  esc_type = 'd') {
+  
+  # Use reported standard error if provided, otherwise calculate standard error from confidence intervals
+  if (!is.null(ratio_rate_ratio_se)) {
+    se_ratio_rate_ratio <- ratio_rate_ratio_se
+  } else if (!is.null(ratio_rate_ratio_ci_lower) & !is.null(ratio_rate_ratio_ci_upper)) {
+    se_ratio_rate_ratio <- (ratio_rate_ratio_ci_upper - ratio_rate_ratio_ci_lower) / (2 * 1.96)
+  } else {
+    stop("Either ratio_rate_ratio_se or both ratio_rate_ratio_ci_lower and ratio_rate_ratio_ci_upper must be provided.")
+  }
+  
+  # Estimate the event count for the comparison group using the population baseline rate
+  comparison_event_count <- comparison_n * population_baseline_rate
+  
+  # Estimate the event count for the treatment group using the rate ratio and the comparison event count
+  treatment_event_count <- comparison_event_count * ratio_rate_ratio
+  
+  # Calculate the pooled event count
+  pooled_event_count <- (treatment_event_count + comparison_event_count) / 2
+  
+  # Estimate the pooled event rate
+  pooled_event_rate <- pooled_event_count / ((treatment_n + comparison_n) / 2)
+  
+  # Estimate the pooled standard deviation using the pooled event rate
+  pooled_sd <- sqrt(pooled_event_rate * (1 - pooled_event_rate))
+  
+  # Calculate Cohen's d
+  cohens_d <- (treatment_event_count / treatment_n - comparison_event_count / comparison_n) / pooled_sd
+  
+  # Calculate the standard error for Cohen's d using the event rates and sample sizes
+  standard_error_d <- sqrt((treatment_event_count / treatment_n^2) + (comparison_event_count / comparison_n^2)) / pooled_sd
+  
+  # Calculate the confidence interval for Cohen's d
+  cohens_d_ci_lower <- cohens_d - (1.96 * standard_error_d)
+  cohens_d_ci_upper <- cohens_d + (1.96 * standard_error_d)
+  
+  # Calculate the Z-statistic
+  z_stat <- (ratio_rate_ratio - 1) / se_ratio_rate_ratio
+  
+  # Calculate the p-value using the standard normal distribution
+  p_value <- 2 * (1 - pnorm(abs(z_stat)))
+  
+  # Check if Hedges' g is requested
+  if (esc_type == 'g') {
+    # Calculate Hedges' g
+    hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
+    return(list(effect_size = hedges_g, conf_interval = c(hedges_g - (1.96 * standard_error_d), hedges_g + (1.96 * standard_error_d)), p_value = p_value))
+  } else {
+    return(list(effect_size = cohens_d, conf_interval = c(cohens_d_ci_lower, cohens_d_ci_upper), p_value = p_value))
+  }
+}
+ 
+# testing sandpit 
+diff <- 0.67
+diff_lower <- 0.22
+diff_upper <- 2.07
+treatment_n <- 87
+comparison_n <- 69
+population_baseline_rate <- 0.2
 
-## Merge results back together and clean up
-mean_difference_hedges_g <- bind_rows(
-  mean_difference_hedges_g_kozloff,
-  mean_difference_hedges_g_gilmer
+esc_mean_difference(
+  mean_difference = diff, 
+  mean_diff_ci_lower = diff_lower, 
+  mean_diff_ci_upper = diff_upper, 
+  treatment_n = treatment_n, 
+  comparison_n = comparison_n, 
+  esc_type = "g")
+
+esc_ratio_rate_ratio(
+  ratio_rate_ratio = diff,
+  ratio_rate_ratio_ci_lower = diff_lower,
+  ratio_rate_ratio_ci_upper = diff_upper,
+  population_baseline_rate = population_baseline_rate,
+  treatment_n = treatment_n,
+  comparison_n = comparison_n,
+  esc_type = "g")
+
+esc_ratio_odds_ratio(
+  ratio_odds_ratio = diff,
+  ratio_odds_ratio_ci_lower = diff_lower,
+  ratio_odds_ratio_ci_upper = diff_upper,
+  population_baseline_rate = population_baseline_rate,
+  treatment_n = treatment_n,
+  comparison_n = comparison_n,
+  esc_type = "g")
+```
+
+The code below details the complete process for effect-size transformation. 
+
+```{r}
+#| eval: false
+#| name: yh-supplementary-material-es-transformation-code
+#| code-fold: true
+
+# load packages
+library(tidyverse)
+library(readxl)
+library(esc)
+
+# load custom es transformation functions
+source("./review/code/es_transformation/custom_es_transformation_functions.R")
+
+# read raw data
+data_extraction_sheet_location <- "./review/inputs/yh_review_data_extraction_sheet.xlsx"
+data_extraction_sheet <- read_excel(
+  path = data_extraction_sheet_location,
+  sheet = "outcome_data",
+  col_names = TRUE
+)
+
+# clean data
+clean_data_extraction_sheet <- data_extraction_sheet %>%
+  # remove instructions
+  filter(!row_number() == 1) %>%
+  # remove superfluous columns
+  select(
+    -primary_extractor,
+    -secondary_extractor,
+    -meta,
+    -required_information,
+    -comment,
+    -additional_extraction_items
   ) %>%
-  ungroup() %>%
-  unnest_wider(
-    result
-  ) %>%
-  # Convert the character column to a list of numeric vectors
+  # specify variable types
   mutate(
-    conf_interval = as.character(conf_interval),
-    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") %>% 
-      map(~ as.numeric(.))
+    across(
+      c(
+        outcome_timing,
+        grp1n,
+        grp2n,
+        prop1event,
+        prop2event,
+        grp1m,
+        grp1sd,
+        grp1se,
+        grp2m,
+        grp2sd,
+        grp2se,
+        pre1mean,
+        pre1sd,
+        post1mean,
+        post1sd,
+        pre2mean,
+        pre2sd,
+        post2mean,
+        post2sd,
+        gain1mean,
+        gain1se,
+        gain2mean,
+        gain2se,
+        or,
+        f,
+        se,
+        totaln,
+        b,
+        beta,
+        sdy,
+        chisq,
+        t,
+        t_pvalue,
+        diff,
+        diff_lower,
+        diff_upper,
+        diff_se,
+        population_baseline_rate
+        ),
+      as.numeric
+    )
   ) %>%
-  # Split the list-column into two new columns
-  unnest_wider(
-    conf_interval, 
-    names_sep = "_") %>%
+  # exclude baseline measurements
+  filter(
+    !outcome_timing == 0
+  )
+
+# group data by effect size type
+mean_gain <- clean_data_extraction_sheet %>%
+  filter(
+    esc_type == "Mean Gain"
+  ) %>%
+  mutate(
+    id = row_number()
+  )
+
+mean_sd <- clean_data_extraction_sheet %>%
+  filter(
+    esc_type == "Mean SD"
+  ) %>%
+  mutate(
+    id = row_number()
+  )
+
+binary_proportions <- clean_data_extraction_sheet %>%
+  filter(
+    esc_type == "Binary proportions"
+  ) %>%
+  mutate(
+    id = row_number()
+  )
+
+mean_difference <- clean_data_extraction_sheet %>%
+  filter(
+    esc_type == "Mean Difference"
+  ) %>%
+  mutate(
+    id = row_number()
+  )
+
+ratio_rate_ratio <- clean_data_extraction_sheet %>%
+  filter(
+    esc_type == "Ratio of Rate Ratios"
+  ) %>%
+  mutate(
+    id = row_number()
+  )
+
+ratio_odds_ratio <- clean_data_extraction_sheet %>%
+  filter(
+    esc_type == "Ratio of Odds Ratios"
+  ) %>%
+  mutate(
+    id = row_number()
+  )
+
+# transform results reported as mean gains to hedges' g using esc package
+mean_gain_hedges_g <- mean_gain %>%
+  # run es function
+  effect_sizes(
+    study = study_id,
+    fun = "esc_mean_gain",
+    grp1n = grp1n,
+    grp2n = grp2n,
+    pre1mean = pre1mean,
+    pre1sd = pre1sd,
+    post1mean = post1mean,
+    post1sd = post1sd,
+    pre2mean = pre2mean,
+    pre2sd = pre2sd,
+    post2mean = post2mean,
+    post2sd = post2sd,
+    es.type = "g") %>%
+  # rename var
   rename(
-    es = effect_size,
-    es_ci_low = conf_interval_1,
-    es_ci_high = conf_interval_2
+    study_id = study,
+    es_ci_low = ci.lo,
+    es_ci_high = ci.hi,
+    sample_size = sample.size,
   ) %>%
-  # add sample size var
+  # add row number as id
   mutate(
-    sample_size = grp1n + grp2n
+    id = row_number()
+  ) %>%
+  # merge back with raw data
+  left_join(
+    mean_gain,
+    by = c(
+      "id",
+      "study_id")
   ) %>%
   # select vars for reporting
   select(
@@ -594,12 +1301,12 @@ mean_difference_hedges_g <- bind_rows(
     favourable_direction
   ) 
 
-## transform results reported as mean & sd to hedges' g using esc package
+# transform results reported as mean and standard deviation gains to hedges' g using esc package
 mean_sd_hedges_g <- mean_sd %>%
   # run es function
   effect_sizes(
     study = study_id,
-    fun = "esc_mean_sd",                                              
+    fun = "esc_mean_sd",
     grp1m = grp1m,
     grp1sd = grp1sd,
     grp1n = grp1n,
@@ -640,12 +1347,12 @@ mean_sd_hedges_g <- mean_sd %>%
     favourable_direction
   ) 
 
-## transform results reported as binary proporations to hedges' g using esc package
+# transform results reported as binary proportions to hedges' g using esc package
 binary_proportions_hedges_g <- binary_proportions %>%
   # run es function
   effect_sizes(
     study = study_id,
-    fun = "esc_bin_prop",                                              
+    fun = "esc_bin_prop",
     prop1event = prop1event,
     grp1n = grp1n,
     prop2event = prop2event,
@@ -684,12 +1391,208 @@ binary_proportions_hedges_g <- binary_proportions %>%
     favourable_direction
   ) 
 
-## clean up data for export
+# transform results reported as mean differences from Kozloff 2016 et al that reports CI's using custom function
+mean_difference_hedges_g_kozloff_2016 <- mean_difference %>%
+  # filter results from Gilmer 2016
+  filter(
+    study_id == "kozloff_2016"
+  ) %>%
+  # run custom function
+  rowwise() %>%
+  mutate(result = list(
+    esc_mean_difference(
+      mean_difference = diff,
+      mean_diff_ci_lower = diff_lower,
+      mean_diff_ci_upper = diff_upper,
+      treatment_n = grp1n,
+      comparison_n = grp2n,
+      esc_type = "g"
+    )
+  )) 
+
+# transform results reported as mean differences from Gilmer 2016 that reports SE's using custom function
+mean_difference_hedges_g_gilmer_2016 <- mean_difference %>%
+  # filter results from Gilmer 2016
+  filter(
+    study_id == "gilmer_2016"
+  ) %>%
+  # run custom function
+  rowwise() %>%
+  mutate(result = list(
+    esc_mean_difference(
+      mean_difference = diff,
+      mean_diff_se = diff_se,
+      treatment_n = grp1n,
+      comparison_n = grp2n,
+      esc_type = "g"
+    )
+  )) 
+
+# merge results back together and clean up
+mean_difference_hedges_g <- bind_rows(
+  mean_difference_hedges_g_kozloff_2016,
+  mean_difference_hedges_g_gilmer_2016
+  ) %>%
+  ungroup() %>%
+  unnest_wider(
+    result
+  ) %>%
+  # Convert the character column to a list of numeric vectors
+  mutate(
+    conf_interval = as.character(conf_interval),
+    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") %>% 
+      map(~ as.numeric(.))
+  ) %>%
+  # split the list-column into two new columns
+  unnest_wider(
+    conf_interval, 
+    names_sep = "_") %>%
+  rename(
+    es = effect_size,
+    es_ci_low = conf_interval_1,
+    es_ci_high = conf_interval_2
+  ) %>%
+  # add sample size var
+  mutate(
+    sample_size = grp1n + grp2n,
+    p_value = round(p_value, 4)
+  ) %>%
+  # select vars for reporting
+  select(
+    study_id,
+    outcome_domain,
+    outcome_construct,
+    outcome_measure,
+    outcome_timing,
+    estimand,
+    es,
+    es_ci_low,
+    es_ci_high,
+    p_value,
+    sample_size,
+    favourable_direction
+  ) 
+
+# transform results reported as ratios of rate ratios using custom function
+ratio_rate_ratio_hedges_g <- ratio_rate_ratio %>%
+  # run custom function
+  rowwise() %>%
+  mutate(result = list(
+    esc_ratio_rate_ratio(
+      ratio_rate_ratio = diff, 
+      ratio_rate_ratio_ci_lower = diff_lower, 
+      ratio_rate_ratio_ci_upper = diff_upper, 
+      population_baseline_rate = population_baseline_rate,
+      treatment_n = grp1n, 
+      comparison_n = grp2n, 
+      esc_type = "g"
+    )
+  )) %>%
+  # clean up results
+  ungroup() %>%
+  unnest_wider(
+    result
+  ) %>%
+  # Convert the character column to a list of numeric vectors
+  mutate(
+    conf_interval = as.character(conf_interval),
+    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") %>% 
+      map(~ as.numeric(.))
+  ) %>%
+  # split the list-column into two new columns
+  unnest_wider(
+    conf_interval, 
+    names_sep = "_") %>%
+  rename(
+    es = effect_size,
+    es_ci_low = conf_interval_1,
+    es_ci_high = conf_interval_2
+  ) %>%
+  # add sample size var
+  mutate(
+    sample_size = grp1n + grp2n,
+    p_value = round(p_value, 4)
+  ) %>%
+  # select vars for reporting
+  select(
+    study_id,
+    outcome_domain,
+    outcome_construct,
+    outcome_measure,
+    outcome_timing,
+    estimand,
+    es,
+    es_ci_low,
+    es_ci_high,
+    p_value,
+    sample_size,
+    favourable_direction
+  ) 
+
+# transform results reported as ratios of odds ratios using custom function
+ratio_odds_ratio_hedges_g <- ratio_odds_ratio %>%
+  # run custom function
+  rowwise() %>%
+  mutate(result = list(
+    esc_ratio_odds_ratio(
+      ratio_odds_ratio = diff, 
+      ratio_odds_ratio_ci_lower = diff_lower, 
+      ratio_odds_ratio_ci_upper = diff_upper, 
+      population_baseline_rate = population_baseline_rate,
+      treatment_n = grp1n, 
+      comparison_n = grp2n, 
+      esc_type = "g"
+    )
+  )) %>%
+  # clean up results
+  ungroup() %>%
+  unnest_wider(
+    result
+  ) %>%
+  # Convert the character column to a list of numeric vectors
+  mutate(
+    conf_interval = as.character(conf_interval),
+    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") %>% 
+      map(~ as.numeric(.))
+  ) %>%
+  # split the list-column into two new columns
+  unnest_wider(
+    conf_interval, 
+    names_sep = "_") %>%
+  rename(
+    es = effect_size,
+    es_ci_low = conf_interval_1,
+    es_ci_high = conf_interval_2
+  ) %>%
+  # add sample size var
+  mutate(
+    sample_size = grp1n + grp2n,
+    p_value = round(p_value, 4)
+  ) %>%
+  # select vars for reporting
+  select(
+    study_id,
+    outcome_domain,
+    outcome_construct,
+    outcome_measure,
+    outcome_timing,
+    estimand,
+    es,
+    es_ci_low,
+    es_ci_high,
+    p_value,
+    sample_size,
+    favourable_direction
+  ) 
+
+# clean up data for export 
 effect_sizes <- dplyr::bind_rows(
   mean_gain_hedges_g,
-  mean_difference_hedges_g,
   mean_sd_hedges_g,
-  binary_proportions_hedges_g
+  binary_proportions_hedges_g,
+  mean_difference_hedges_g,
+  ratio_rate_ratio_hedges_g,
+  ratio_odds_ratio_hedges_g
   ) %>%
   # round quant outcomes for reporting and combine in single column
   mutate(
@@ -698,7 +1601,7 @@ effect_sizes <- dplyr::bind_rows(
     es_ci_high = round(es_ci_high, 2)
   )
 
-## add flags for interpretation 
+# add flags for discussion
 effect_sizes_info <- effect_sizes %>%
   mutate(
     # create variable that determines the precision of the estimate based on whether or not it crosses zero
@@ -720,9 +1623,13 @@ effect_sizes_info <- effect_sizes %>%
       es < 0 & favourable_direction == "Positive" ~ "Favours comparison",
       es > 0 & favourable_direction == "Positive" ~ "Favours intervention"
     )
+  ) %>%
+  # drop redundant vars
+  select(
+    -p_value
   )
     
-## export data
+# export effect size data
 saveRDS(
   effect_sizes_info,
   "./review/output/tables/effect_size_results.RDS"
@@ -734,19 +1641,41 @@ write_csv(
   )
 ```
 
-
-
-## Risk of bias assessments
+# Risk of bias assessments
 
 In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.
 
-For randomised control trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template that we used and the results of our assessment are embedded below.
+## Assessing Risk of Bias in randomised controlled trials
+
+For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template that we used and the results of our assessment are embedded below.
+
+<button id="openLightbox3">
+
+View Full Screen
+
+</button>
+
+::: {#lightbox3 .lightbox}
+[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=1938863292&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
+:::
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=1938863292&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
 
 </iframe>
 
+## Assessing Risk of Bias in non-randomised studies of interventions
+
 For non-randomised studies of interventions, we used the ROBINS-I tool @sterne2016robinsitoolassessing. The template and results are embedded below.
+
+<button id="openLightbox4">
+
+View Full Screen
+
+</button>
+
+::: {#lightbox4 .lightbox}
+[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=20575753&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
+:::
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=20575753&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
 
