@@ -115,7 +115,7 @@ prisma_table %>%
     ) 
 ```
 
-# Identification and selection of relevant studi
+# Identification and selection of relevant studies
 
 ## Search strategy and results for database
 
@@ -275,23 +275,15 @@ The databases and search terms are detailed in @tbl-yh-review-search-terms below
 
 Sources and search terms used for grey sources are detailed in @tbl-yh-review-grey-search below.
 
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | Sources                                                                                                           | Date searched                            | Search process                                                                    |
-+===================================================================================================================+==========================================+===================================================================================+
+|-------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------|
 | [Australian Housing and Urban Research Institute (AHURI)](https://search.informit.org/search/advanced)            | 17 October 2023                          | Review all publications under "Homelessness"                                      |
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Analysis and Policy observatory (APO) database (Informit)](https://search.informit.org/search/advanced)          | 16 October 2023                          | Search for "Youth Homeless\*" and review all results                              |
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Australian Criminology Database (CINCH) (Informit)](https://search.informit.org/search/advanced)                 | 16 October 2023                          | Search for "Youth Homeless\*" and review all results                              |
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Australian Family and Society Abstracts database (Informit) (AIFS)](https://search.informit.org/search/advanced) | 17 October 2023                          | Search for "Youth Homeless\*" and review all results                              |
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Chapin Hall at the University of Chicago](https://www.chapinhall.org/our-work/)                                  | 17 October 2023                          | Review all publications under: "Youth Homelessness" and type of work "Research"   |
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Social Care Online (SCIE)](https://www.scie-socialcareonline.org.uk)                                             | Database no longer maintained/accessible | Not applicable                                                                    |
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Washington State Institute for Public Policy (WSIPP)](https://www.wsipp.wa.gov/Publications)                     | 16 October 2023                          | Reviewed all "Publications" returned after "homeless" was searched in "any field" |
-+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 
 : Search terms {#tbl-yh-review-grey-search} {tbl-colwidths="\[35,25,40\]"}
 
@@ -339,7 +331,7 @@ View Full Screen
 
 # Transformation of reported results to a common effect size
 
-In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize], which is an R implementation of the Campbell Collaboration's Effect Size calculator [@wilsonpracticalmetaanalysiseffect]. 
+In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize], which is an R implementation of the Campbell Collaboration's Effect Size calculator [@wilsonpracticalmetaanalysiseffect].
 
 However, the results in the study by @kozloff2016housingfirsthomeless are presented as treatment effects (i.e., mean differences, ratios or rate ratios and ratios of odds ratios and their confidence intervals). The review team was unable to obtain the necessary information from the authors to transform these using the formulas in the *esc* package. Accordingly we approximated these results using information reported in the included studies. The approach used for each type of result, and the assumptions they rely on are detailed below.
 
@@ -876,7 +868,7 @@ The confidence interval for Hedges' g is calculated using the same standard erro
 
 ## Implementation
 
-The code chunk below details the R function that implements the methods described above. 
+The code chunk below details the R function that implements the methods described above.
 
 ```{r}
 #| eval: false
@@ -1115,7 +1107,7 @@ esc_ratio_odds_ratio(
   esc_type = "g")
 ```
 
-The code below details the complete process for effect-size transformation. 
+The code below details the complete process for effect-size transformation.
 
 ```{r}
 #| eval: false

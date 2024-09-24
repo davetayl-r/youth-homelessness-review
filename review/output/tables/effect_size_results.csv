@@ -1,22 +1,4 @@
 study_id,outcome_domain,outcome_construct,outcome_measure,outcome_timing,estimand,es,es_ci_low,es_ci_high,sample_size,favourable_direction,estimate_precision,es_magnitude,direction_of_effect
-kidd_2020,Stable Housing,Housing security,Housing Security Scale,6,Average Treatment Effect (ATE),-0.33,-1.31,0.65,65,Positive,imprecise,small,Favours comparison
-kidd_2020,Stable Housing,Subjective housing security,Subjective Housing Security Scale,6,Average Treatment Effect (ATE),-0.79,-1.77,0.2,65,Positive,imprecise,medium,Favours comparison
-kidd_2020,Social and Emotional Wellbeing,Mindfulness,Cognitive and Affective Mindfullness Scale-Revised (CAMS),6,Average Treatment Effect (ATE),0.24,-0.73,1.22,65,Positive,imprecise,small,Favours intervention
-kidd_2020,Social and Emotional Wellbeing,Resilience,Conner Davidson Resilience Scale (CD-RISC),6,Average Treatment Effect (ATE),0.23,-0.75,1.21,65,Positive,imprecise,small,Favours intervention
-kidd_2020,Social and Emotional Wellbeing,Hope,Adult Hope Scale (AHS),6,Average Treatment Effect (ATE),0.11,-0.86,1.09,65,Positive,imprecise,very small,Favours intervention
-kidd_2020,Significant Relationships,Social Support,Medical Outcomes Study (MOS) Social Support Survey — Emotional Supports,6,Average Treatment Effect (ATE),-0.23,-1.2,0.75,65,Positive,imprecise,small,Favours comparison
-kidd_2020,Significant Relationships,Social Support,Medical Outcomes Study (MOS) Social Support Survey — Tangible Supports,6,Average Treatment Effect (ATE),0.09,-0.89,1.06,65,Positive,imprecise,very small,Favours intervention
-kidd_2020,Significant Relationships,Social Support,Medical Outcomes Study (MOS) Social Support Survey — Affectionate Supports,6,Average Treatment Effect (ATE),-0.2,-1.17,0.78,65,Positive,imprecise,small,Favours comparison
-kidd_2020,Living Skills and Independence,Community integration,Community Integration Scale,6,Average Treatment Effect (ATE),-0.27,-1.25,0.7,65,Positive,imprecise,small,Favours comparison
-kidd_2020,Living Skills and Independence,Community integration,Community Integration Measure,6,Average Treatment Effect (ATE),0.08,-0.9,1.05,65,Positive,imprecise,very small,Favours intervention
-kidd_2020,Health,Mental Health,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Internalizing Scale,6,Average Treatment Effect (ATE),0.11,-0.86,1.09,65,Negative,imprecise,very small,Favours comparison
-kidd_2020,Health,Mental Health,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Externalizing Scale,6,Average Treatment Effect (ATE),0.09,-0.88,1.07,65,Negative,imprecise,very small,Favours comparison
-kidd_2020,Health,Mental Health,Global Assessment of Individual Needs Short Screener (GAIN-SS) — Substance Problem Scale,6,Average Treatment Effect (ATE),0.02,-0.96,0.99,65,Negative,imprecise,very small,Favours comparison
-kidd_2020,Health,Mental Health,Mental Health Continuum-Short Form (MHC-SF),6,Average Treatment Effect (ATE),0.11,-0.87,1.08,65,Positive,imprecise,very small,Favours intervention
-kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale-Brief (WHOQOL-BREF) — Physical Health,6,Average Treatment Effect (ATE),-0.1,-1.08,0.88,65,Positive,imprecise,very small,Favours comparison
-kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale-Brief (WHOQOL-BREF) — Psychological Health,6,Average Treatment Effect (ATE),0.01,-0.97,0.99,65,Positive,imprecise,very small,Favours intervention
-kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale-Brief (WHOQOL-BREF) — Social Health,6,Average Treatment Effect (ATE),0.08,-0.9,1.05,65,Positive,imprecise,very small,Favours intervention
-kidd_2020,Health,Quality of Life,World Health Organization Quality of Life Scale-Brief (WHOQOL-BREF) — Environmental Health,6,Average Treatment Effect (ATE),-0.19,-1.17,0.79,65,Positive,imprecise,very small,Favours comparison
 thulien_2022,Stable Housing,Housing Quality,Perceived Housing Quality Scale,18,Average Treatment Effect (ATE),-0.12,-0.93,0.68,24,Positive,imprecise,very small,Favours comparison
 thulien_2022,Social and Emotional Wellbeing,Sense of Belonging,Community Integration Scale — Psychological,18,Average Treatment Effect (ATE),-0.55,-1.37,0.26,24,Positive,imprecise,medium,Favours comparison
 thulien_2022,Social and Emotional Wellbeing,Global Self-Worth,Rosenberg Self-Esteem Scale,18,Average Treatment Effect (ATE),-0.27,-1.07,0.54,24,Positive,imprecise,small,Favours comparison
@@ -32,16 +14,13 @@ slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-
 slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,6,Average Treatment Effect (ATE),-0.37,-0.69,-0.04,150,Negative,precise,small,Favours intervention
 slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,9,Average Treatment Effect (ATE),-0.17,-0.5,0.16,140,Negative,imprecise,very small,Favours intervention
 slesnick_2023,Health,Substance Use (total days of drug use in previous 90),Form-90,12,Average Treatment Effect (ATE),-0.22,-0.54,0.11,146,Negative,imprecise,small,Favours intervention
-kidd_2020,Stable Housing,Stable housing,"Researcher assessed — gained (improved stability), sustained (same residence) or lost (homeless) housing status",6,Average Treatment Effect (ATE),0.37,-0.47,1.21,65,Positive,imprecise,small,Favours intervention
 slesnick_2023,Stable Housing,Access to Housing,Access to Housing,6,Average Treatment Effect (ATE),0.15,-0.31,0.61,160,Positive,imprecise,very small,Favours intervention
 slesnick_2023,Stable Housing,Access to Housing,Access to Housing,9,Average Treatment Effect (ATE),-0.06,-0.41,0.29,160,Positive,imprecise,very small,Favours comparison
 slesnick_2023,Stable Housing,Access to Housing,Access to Housing,12,Average Treatment Effect (ATE),0.22,-0.12,0.57,160,Positive,imprecise,small,Favours intervention
 raithel_2015,Stable Housing,Homeless services use,Single adult shelter use,24,Average Treatment Effect on the Treated (ATT),-0.39,-0.7,-0.08,297,Negative,precise,small,Favours intervention
 raithel_2015,Stable Housing,Homeless services use,Family shelter use,24,Average Treatment Effect on the Treated (ATT),-0.43,-0.91,0.04,297,Negative,imprecise,small,Favours intervention
 raithel_2015,Legal and Justice,Incarcerated,Jail stay,24,Average Treatment Effect on the Treated (ATT),-0.57,-1.01,-0.13,297,Negative,precise,medium,Favours intervention
-kidd_2020,Health,Mental Health,"Researcher assessed — gained (cessation of pattern of distress), sustained (unchanged) or lost (experienced crisis) mental health status",6,Average Treatment Effect (ATE),0.47,-0.21,1.15,65,Positive,imprecise,small,Favours intervention
 raithel_2015,Health,Health services use,Medicaid use,24,Average Treatment Effect on the Treated (ATT),-0.06,-0.36,0.23,297,Positive,imprecise,very small,Favours comparison
-kidd_2020,Employment and Earnings,Employment or Education,"Researcher assessed — gained (on either measure), sustained (on both measures) or lost (on either measure) employment or education status",6,Average Treatment Effect (ATE),0.39,-0.2,0.98,65,Positive,imprecise,small,Favours intervention
 kozloff_2016,Employment and Earnings,Employment,Vocational Time-Line Follow-Back Inventory,24,Average Treatment Effect (ATE),-0.23,-0.59,0.14,156,Positive,imprecise,small,Favours comparison
 thulien_2022,Employment and Earnings,Employment and Earnings,"Education, Employment, and Income Questionnaire",18,Average Treatment Effect (ATE),-0.15,-1.05,0.75,24,Positive,imprecise,very small,Favours comparison
 raithel_2015,Employment and Earnings,Public assistance use,Cash assistance use,24,Average Treatment Effect on the Treated (ATT),-0.25,-0.52,0.03,297,Positive,imprecise,small,Favours comparison

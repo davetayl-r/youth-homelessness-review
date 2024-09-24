@@ -1,7 +1,7 @@
-## RISK OF BIAS PLOTS: ROB2 
+## Housing and support interventions for homeless youth systematic review
+## Visualise risk of bias
 
-## LOAD REQUIRED PACKAGES
-
+# load required packages
 library(tidyverse)
 library(readxl)
 library(ggplot2)
@@ -9,9 +9,8 @@ library(scales)
 library(robvis)
 library(cowplot)
 
-## READ DATA
-
-raw_rob_location <- "./inputs/yh_review_risk_of_bias_data.xlsx"
+# read data
+raw_rob_location <- "./review/inputs/yh_review_risk_of_bias_data.xlsx"
 
 raw_robins_i_data <- read_excel(
   raw_rob_location,
@@ -23,8 +22,7 @@ raw_rob2_data <- read_excel(
   skip = 1,
   sheet = "rob2")
 
-## CLEAN DATA
-
+# clean data
 robins_i_data <- raw_robins_i_data %>%
   # remove instructions
   slice(
@@ -86,7 +84,6 @@ rob2_data <- raw_rob2_data %>%
   # wrap label if too long
   mutate(
     Label = case_when(
-      Label == "kidd_2020" ~ "Kidd et al 2020",
       Label == "kozloff_2016" ~ "Kozloff et al 2016",
       Label == "thulien_2022" ~ "Thulien et al 2022",
       Label == "slesnick_2023" ~ "Slesnick et al 2023"   
@@ -96,8 +93,7 @@ rob2_data <- raw_rob2_data %>%
   # drop duplicates
   distinct()
 
-## CREATE SUMMARY PLOTS
-
+# create summary plots
 robins_i_summary_plot <- rob_summary(
   data = robins_i_data, 
   tool = "ROBINS-I",
@@ -131,8 +127,7 @@ rob2_summary_plot <- rob_summary(
     legend.margin = margin(1,0,1,0)
   ) 
     
-## CREATE TRAFFIC LIGHT PLOT
-
+# create traffic light plot
 rob2_traffic_light_plot <- rob_traffic_light(
   data = rob2_data, 
   tool = "ROB2",
@@ -160,13 +155,12 @@ robins_i_traffic_light_plot <- rob_traffic_light(
     strip.text.y.left = element_text(angle = 0)
   )
 
-## COMBINE PLOTS FOR PUBLICATION
-
+# combine plots for export
 summary_rob_plots <- plot_grid(
   rob2_summary_plot, 
   robins_i_summary_plot, 
   labels = c(
-    'RoB2 — Randomised studies (n=4)', 
+    'RoB2 — Randomised studies (n=3)', 
     'ROBINS-I — Non-randomised studies (n=2)'),
   label_size = 12,
   ncol = 2,
@@ -186,17 +180,16 @@ traffic_light_plots <- plot_grid(
   align = "h",
   axis = "bt")
 
-## EXPORT PLOTS
-
+# export
 ggsave(
-  file = "./output/visualisation/yh_review_summary_rob_plot.png",
+  file = "./review/output/visualisation/yh_review_summary_rob_plot.png",
   plot = summary_rob_plots,
   height = 6,
   width = 14,
   type = "cairo-png")
 
 ggsave(
-  file = "./output/visualisation/yh_review_traffic_light_plot.png",
+  file = "./review/output/visualisation/yh_review_traffic_light_plot.png",
   plot = traffic_light_plots,
   height = 6,
   width = 14,

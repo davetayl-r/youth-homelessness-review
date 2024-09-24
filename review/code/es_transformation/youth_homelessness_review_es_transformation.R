@@ -1,4 +1,5 @@
-## EFFECT SIZE TRANSFORMATIONS FOR YOUTH HOMELESSNESS SYSTEMATIC REVIEW
+## Housing and support interventions for homeless youth systematic review
+## Effect Size transformations
 
 # load packages
 library(tidyverse)
@@ -128,56 +129,6 @@ ratio_odds_ratio <- clean_data_extraction_sheet %>%
   mutate(
     id = row_number()
   )
-
-# transform results reported as mean gains to hedges' g using esc package
-mean_gain_hedges_g <- mean_gain %>%
-  # run es function
-  effect_sizes(
-    study = study_id,
-    fun = "esc_mean_gain",
-    grp1n = grp1n,
-    grp2n = grp2n,
-    pre1mean = pre1mean,
-    pre1sd = pre1sd,
-    post1mean = post1mean,
-    post1sd = post1sd,
-    pre2mean = pre2mean,
-    pre2sd = pre2sd,
-    post2mean = post2mean,
-    post2sd = post2sd,
-    es.type = "g") %>%
-  # rename var
-  rename(
-    study_id = study,
-    es_ci_low = ci.lo,
-    es_ci_high = ci.hi,
-    sample_size = sample.size,
-  ) %>%
-  # add row number as id
-  mutate(
-    id = row_number()
-  ) %>%
-  # merge back with raw data
-  left_join(
-    mean_gain,
-    by = c(
-      "id",
-      "study_id")
-  ) %>%
-  # select vars for reporting
-  select(
-    study_id,
-    outcome_domain,
-    outcome_construct,
-    outcome_measure,
-    outcome_timing,
-    estimand,
-    es,
-    es_ci_low,
-    es_ci_high,
-    sample_size,
-    favourable_direction
-  ) 
 
 # transform results reported as mean and standard deviation gains to hedges' g using esc package
 mean_sd_hedges_g <- mean_sd %>%
@@ -465,7 +416,6 @@ ratio_odds_ratio_hedges_g <- ratio_odds_ratio %>%
 
 # clean up data for export 
 effect_sizes <- dplyr::bind_rows(
-  mean_gain_hedges_g,
   mean_sd_hedges_g,
   binary_proportions_hedges_g,
   mean_difference_hedges_g,
@@ -517,3 +467,6 @@ write_csv(
   effect_sizes_info,
   "./review/output/tables/effect_size_results.csv"
   )
+
+housing <- effect_sizes_info %>% filter(outcome_domain == "Stable Housing")
+health <- effect_sizes_info %>% filter(outcome_domain == "Health")
