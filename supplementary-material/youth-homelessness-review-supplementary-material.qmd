@@ -1,5 +1,5 @@
 ---
-title: "Systematic review of housing and support interventions to improve housing, health, social, wellbeing and economic outcomes for homeless youth in high-income countries: supplementary material"
+title: "Supplementary material for housing and support interventions to improve housing, health, social, wellbeing and economic outcomes for homeless youth in high-income countries: a systematic review"
 author: 
   - name: David Taylor
     affiliation: Monash University
@@ -49,25 +49,226 @@ This page contains supplementary material for a network meta-analysis titled *"S
 
 The following information is provided here:
 
+-   **Inclusion and exclusion criteria by PICOSS domain** —- includes details of the criteria used to select studies eligible for inclusion in this review
+
+-   **Housing First components of included interventions** --- includes details of how the components of each included intervention map on to Housing First components
+
+-   **Instruments used in included studies** --- includes details of the instuments used to assess outcomes for participants in included studies
+
 -   **PRISMA 2020 Checklist** --- includes details of how this review meets the PRISMA 2020 reporting guidelines
 
 -   **Identification and selection of relevant studies** --- includes search strategies and results for each published database and grey sources
 
--   **Extraction and transformation of information from relevant studies** --- includes the template and information extracted from each included study used to transform into a common effect size
+-   **Extraction of information from relevant studies** --- includes the template and information extracted from each included study used to transform into a common effect size
+
+-   **Effect size transformation** — includes detailed description of the methods used to transform reported results into a common effect size
+
+-   **Risk of bias in included studies** --- includes the template and assessments used to assess the risk of bias in included studies
 
 The code to produce this supplementary material, along with the analysis code for this review is available in a [GitHub repository](https://github.com/davetayl-r/youth-homelessness-review).
 
-# Details of Housing First Components in Included Studies
+# Inclusion and exclusion criteria by PICOSS domain
 
-Note: to add from review document following internal team review
+Inclusion and exclusion criteria used in this review are detailed in @tbl-yh-review-picoss.
 
-# Barriers and Facilitators by EPIS Domain
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Domain         | Inclusion criteria                                                                                                                    | Exclusion criteria                                                                                                       |
++================+=======================================================================================================================================+==========================================================================================================================+
+| *Population*   | Youth aged 16-25 who:                                                                                                                 | Studies where more than 80% of the population do not meet inclusion criteria e.g., individuals aged under 16 or over 25. |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Are currently, or have previously, experienced homelessness; and                                                                  |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Have substantial socio-emotional issues that require services beyond housing, such as:                                            |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Have current or prior mental health issues (either self-reported or diagnosed)                                                |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Prior involvement with child protection or out-of-home care system                                                            |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Have prior involvement with the juvenile or adult justice system                                                              |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Have a history of family violence, as victims or perpretrators                                                                |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Have current or prior problem use of alcohol and other drugs (either self-reported or diagnosed)                              |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Have a physical or intellectual disability                                                                                    |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Received public assistance payments; and/or                                                                                   |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Are a member of a demographic group known to be facing additional barriers, including:                                            |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Adolescent parents                                                                                                            |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Identify as First Nations                                                                                                     |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                |     -   Identify as LGBTIQ+                                                                                                           |                                                                                                                          |
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| *Intervention* | Interventions that combine the provision of accommodation — either directly or indirectly — with additional support services such as: | Studies examining other interventions                                                                                    |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Case management                                                                                                                   |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Counselling, mental health or psychological assistance                                                                            |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Independent living or life skills development                                                                                     |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Transportation assistance                                                                                                         |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Employment skills training and/or coaching                                                                                        |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Support to engage or re-engage in education                                                                                       |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Residential advisors                                                                                                              |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Personalised advice or mentoring                                                                                                  |                                                                                                                          |
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| *Comparison*   | Treatment as usual, another intervention, no intervention, or waitlist control                                                        | Studies using other comparators                                                                                          |
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| *Outcome*      | Studies that report outcomes within the following domains:                                                                            | Studies that report other outcomes                                                                                       |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Stable housing                                                                                                                    |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Health                                                                                                                            |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Social and Emotional Wellbeing                                                                                                    |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Education                                                                                                                         |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Employment and Earnings                                                                                                           |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Legal and Justice                                                                                                                 |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Independent living skills                                                                                                         |                                                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Social connections                                                                                                                |                                                                                                                          |
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| *Setting*      | High income countries as defined by the World Bank in FY2022-23                                                                       | Countries defined as low and middle income by the World Bank in FY2022-23                                                |
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| *Study design* | Randomised controlled trials (RCT) including:                                                                                         | Non-primary studies, including:                                                                                          |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Individual RCTs                                                                                                                   | -   Literature reviews                                                                                                   |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Cluster RCTs                                                                                                                      | -   Systematic reviews                                                                                                   |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | Step-Wedge designs with random time allocation                                                                                        | -   Meta-analysis                                                                                                        |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | Non-randomised designs that use parallel cohorts that adjust for baseline equivalence:                                                | Studies without a valid counterfactual, including:                                                                       |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Covariate matching                                                                                                                | -   Single group pre-post designs                                                                                        |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Propensity score based methods                                                                                                    | -   Control group designs without matching in time and establishing baseline equivalence                                 |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Doubly robust methods                                                                                                             | -   Cross-sectional designs                                                                                              |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Instrumental variable estimation                                                                                                  | -   Non-controlled observational (cohort) designs                                                                        |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Difference-in-Difference estimation                                                                                               | -   Case-control designs                                                                                                 |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Interrupted time-series                                                                                                           | -   Case studies/series                                                                                                  |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Regression discontinuity designs                                                                                                  | -   Surveys                                                                                                              |
+|                |                                                                                                                                       |                                                                                                                          |
+|                | -   Synthetic control studies                                                                                                         |                                                                                                                          |
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
 
-Note: to add table from review document following internal team review
+: Inclusion and exclusion criteria by PICOSS domain {#tbl-yh-review-picoss} {tbl-colwidths="\[15,45,45\]"}
 
-# Data collection instruments used in Included Studies
+# Housing First components of included interventions
 
-Note: to add from review document following internal team review
+Details of Housing First components in included studies are detailed in @tbl-yh-hf-components.
+
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: Details of Housing First components in included studies
+#| name: yh-supplementary-material-hf-components
+#| label: tbl-yh-hf-components
+ 
+# read data
+components_file_location <- "./inputs/housing_first_components.xlsx"
+components_table <- readxl::read_excel(
+  components_file_location,
+  sheet = "components")
+
+# produce table
+components_table |>
+  # add "@" in front of bibtex keys
+  rename(
+    "@kozloff2016housingfirsthomeless" = "kozloff2016housingfirsthomeless", 
+    "@thulien2019evaluatingeffectsrent" = "thulien2019evaluatingeffectsrent", 
+    "@slesnick2023housingsupportiveservices" = "slesnick2023housingsupportiveservices", 
+    "@raithel2015partneringleveragemultiple" = "raithel2015partneringleveragemultiple",
+    "@gilmer2016permanentsupportivehousing" = "gilmer2016permanentsupportivehousing"
+    ) |>
+  kbl(
+    format = "html"
+    ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed")
+    ) |>
+  pack_rows(
+    index = c(
+      "Housing-related components" = 7, 
+      "Support services components" = 6, 
+      "Components applicable to both housing and support services" = 3),
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  add_header_above(
+    c(" ", "Study" = 5)) |>
+  column_spec(
+    1, bold = T) |>
+  unclass() |> 
+  cat()
+```
+
+# Instruments used in included studies
+
+Instruments used to measure outcomes in included studies are detailed in @tbl-yh-instruments.
+
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: Instruments used in included studies
+#| name: yh-supplementary-material-instruments
+#| label: tbl-yh-instruments
+ 
+# read data
+instruments_file_location <- "./inputs/instruments.xlsx"
+instruments_table <- readxl::read_excel(
+  instruments_file_location,
+  sheet = "instruments")
+
+# produce table
+instruments_table |>
+  mutate(
+    Reference = str_c("@", Reference),
+    `Included studies using instrument` = sapply(
+      strsplit(`Included studies using instrument`, ";\\s*"), 
+        function(x) {
+          paste0("@", trimws(x), collapse = "; ")
+        })
+    ) |>
+  kbl(
+    format = "html"
+    ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed")
+    ) |>
+  pack_rows(
+    index = c(
+      "Stable Housing" = 2, 
+      "Health" = 9, 
+      "Social and emotional wellbeing" = 5,
+      "Employment and earnings" = 1,
+      "Legal and justice" = 1,
+      "Living skills and independence" = 2),
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  unclass() |> 
+  cat()
+```
 
 # PRISMA 2020 checklist
 
@@ -75,6 +276,7 @@ The PRISMA 2020 checklist [@page2021prisma2020statement] is included in @tbl-yh-
 
 ```{r}
 #| echo: false
+#| results: asis
 #| tbl-cap: PRISMA 2020 Checklist Updated
 #| name: yh-supplementary-material-prisma-2020
 #| label: tbl-yh-prisma-checklist
@@ -86,7 +288,7 @@ prisma_table <- readxl::read_excel(
   sheet = "prisma")
 
 # produce table
-prisma_table %>%
+prisma_table |>
   filter(
     !`Section and Topic` == "TITLE", 
     !`Section and Topic` == "ABSTRACT",
@@ -94,15 +296,15 @@ prisma_table %>%
     !`Section and Topic` == "METHODS",
     !`Section and Topic` == "RESULTS",
     !`Section and Topic` == "DISCUSSION",
-    !`Section and Topic` == "OTHER INFORMATION") %>%
+    !`Section and Topic` == "OTHER INFORMATION") |>
   kbl(
-    ) %>%
+    ) |>
   kable_styling(
     bootstrap_options = c(
       "hover", 
       "condensed"),
     font_size = 12
-    ) %>%
+    ) |>
   pack_rows(
     index = c(
       "Title" = 1, 
@@ -111,7 +313,8 @@ prisma_table %>%
       "Methods" = 17,
       "Results" = 11,
       "Discussion" = 3,
-      "Other Information" = 6)
+      "Other Information" = 6),
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
     ) 
 ```
 
@@ -275,15 +478,23 @@ The databases and search terms are detailed in @tbl-yh-review-search-terms below
 
 Sources and search terms used for grey sources are detailed in @tbl-yh-review-grey-search below.
 
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | Sources                                                                                                           | Date searched                            | Search process                                                                    |
-|-------------------------------------------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------|
++===================================================================================================================+==========================================+===================================================================================+
 | [Australian Housing and Urban Research Institute (AHURI)](https://search.informit.org/search/advanced)            | 17 October 2023                          | Review all publications under "Homelessness"                                      |
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Analysis and Policy observatory (APO) database (Informit)](https://search.informit.org/search/advanced)          | 16 October 2023                          | Search for "Youth Homeless\*" and review all results                              |
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Australian Criminology Database (CINCH) (Informit)](https://search.informit.org/search/advanced)                 | 16 October 2023                          | Search for "Youth Homeless\*" and review all results                              |
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Australian Family and Society Abstracts database (Informit) (AIFS)](https://search.informit.org/search/advanced) | 17 October 2023                          | Search for "Youth Homeless\*" and review all results                              |
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Chapin Hall at the University of Chicago](https://www.chapinhall.org/our-work/)                                  | 17 October 2023                          | Review all publications under: "Youth Homelessness" and type of work "Research"   |
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Social Care Online (SCIE)](https://www.scie-socialcareonline.org.uk)                                             | Database no longer maintained/accessible | Not applicable                                                                    |
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | [Washington State Institute for Public Policy (WSIPP)](https://www.wsipp.wa.gov/Publications)                     | 16 October 2023                          | Reviewed all "Publications" returned after "homeless" was searched in "any field" |
++-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 
 : Search terms {#tbl-yh-review-grey-search} {tbl-colwidths="\[35,25,40\]"}
 
@@ -329,7 +540,7 @@ View Full Screen
 
 </iframe>
 
-# Transformation of reported results to a common effect size
+# Effect size transformation
 
 In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize], which is an R implementation of the Campbell Collaboration's Effect Size calculator [@wilsonpracticalmetaanalysiseffect].
 
@@ -1131,9 +1342,9 @@ data_extraction_sheet <- read_excel(
 )
 
 # clean data
-clean_data_extraction_sheet <- data_extraction_sheet %>%
+clean_data_extraction_sheet <- data_extraction_sheet |>
   # remove instructions
-  filter(!row_number() == 1) %>%
+  filter(!row_number() == 1) |>
   # remove superfluous columns
   select(
     -primary_extractor,
@@ -1142,7 +1353,7 @@ clean_data_extraction_sheet <- data_extraction_sheet %>%
     -required_information,
     -comment,
     -additional_extraction_items
-  ) %>%
+  ) |>
   # specify variable types
   mutate(
     across(
@@ -1188,63 +1399,63 @@ clean_data_extraction_sheet <- data_extraction_sheet %>%
         ),
       as.numeric
     )
-  ) %>%
+  ) |>
   # exclude baseline measurements
   filter(
     !outcome_timing == 0
   )
 
 # group data by effect size type
-mean_gain <- clean_data_extraction_sheet %>%
+mean_gain <- clean_data_extraction_sheet |>
   filter(
     esc_type == "Mean Gain"
-  ) %>%
+  ) |>
   mutate(
     id = row_number()
   )
 
-mean_sd <- clean_data_extraction_sheet %>%
+mean_sd <- clean_data_extraction_sheet |>
   filter(
     esc_type == "Mean SD"
-  ) %>%
+  ) |>
   mutate(
     id = row_number()
   )
 
-binary_proportions <- clean_data_extraction_sheet %>%
+binary_proportions <- clean_data_extraction_sheet |>
   filter(
     esc_type == "Binary proportions"
-  ) %>%
+  ) |>
   mutate(
     id = row_number()
   )
 
-mean_difference <- clean_data_extraction_sheet %>%
+mean_difference <- clean_data_extraction_sheet |>
   filter(
     esc_type == "Mean Difference"
-  ) %>%
+  ) |>
   mutate(
     id = row_number()
   )
 
-ratio_rate_ratio <- clean_data_extraction_sheet %>%
+ratio_rate_ratio <- clean_data_extraction_sheet |>
   filter(
     esc_type == "Ratio of Rate Ratios"
-  ) %>%
+  ) |>
   mutate(
     id = row_number()
   )
 
-ratio_odds_ratio <- clean_data_extraction_sheet %>%
+ratio_odds_ratio <- clean_data_extraction_sheet |>
   filter(
     esc_type == "Ratio of Odds Ratios"
-  ) %>%
+  ) |>
   mutate(
     id = row_number()
   )
 
 # transform results reported as mean gains to hedges' g using esc package
-mean_gain_hedges_g <- mean_gain %>%
+mean_gain_hedges_g <- mean_gain |>
   # run es function
   effect_sizes(
     study = study_id,
@@ -1259,25 +1470,25 @@ mean_gain_hedges_g <- mean_gain %>%
     pre2sd = pre2sd,
     post2mean = post2mean,
     post2sd = post2sd,
-    es.type = "g") %>%
+    es.type = "g") |>
   # rename var
   rename(
     study_id = study,
     es_ci_low = ci.lo,
     es_ci_high = ci.hi,
     sample_size = sample.size,
-  ) %>%
+  ) |>
   # add row number as id
   mutate(
     id = row_number()
-  ) %>%
+  ) |>
   # merge back with raw data
   left_join(
     mean_gain,
     by = c(
       "id",
       "study_id")
-  ) %>%
+  ) |>
   # select vars for reporting
   select(
     study_id,
@@ -1294,7 +1505,7 @@ mean_gain_hedges_g <- mean_gain %>%
   ) 
 
 # transform results reported as mean and standard deviation gains to hedges' g using esc package
-mean_sd_hedges_g <- mean_sd %>%
+mean_sd_hedges_g <- mean_sd |>
   # run es function
   effect_sizes(
     study = study_id,
@@ -1305,25 +1516,25 @@ mean_sd_hedges_g <- mean_sd %>%
     grp2m = grp2m,
     grp2sd = grp2sd,
     grp2n = grp2n,
-    es.type = "g") %>%
+    es.type = "g") |>
   # rename var
   rename(
     study_id = study,
     es_ci_low = ci.lo,
     es_ci_high = ci.hi,
     sample_size = sample.size,
-  ) %>%
+  ) |>
   # add row number as id
   mutate(
     id = row_number()
-  ) %>%
+  ) |>
   # merge back with raw data
   left_join(
     mean_sd,
     by = c(
       "id",
       "study_id")
-  ) %>%
+  ) |>
   # select vars for reporting
   select(
     study_id,
@@ -1340,7 +1551,7 @@ mean_sd_hedges_g <- mean_sd %>%
   ) 
 
 # transform results reported as binary proportions to hedges' g using esc package
-binary_proportions_hedges_g <- binary_proportions %>%
+binary_proportions_hedges_g <- binary_proportions |>
   # run es function
   effect_sizes(
     study = study_id,
@@ -1349,25 +1560,25 @@ binary_proportions_hedges_g <- binary_proportions %>%
     grp1n = grp1n,
     prop2event = prop2event,
     grp2n = grp2n,
-    es.type = "g") %>%
+    es.type = "g") |>
   # rename var
   rename(
     study_id = study,
     es_ci_low = ci.lo,
     es_ci_high = ci.hi,
     sample_size = sample.size,
-  ) %>%
+  ) |>
   # add row number as id
   mutate(
     id = row_number()
-  ) %>%
+  ) |>
   # merge back with raw data
   left_join(
     binary_proportions,
     by = c(
       "id",
       "study_id")
-  ) %>%
+  ) |>
   # select vars for reporting
   select(
     study_id,
@@ -1384,13 +1595,13 @@ binary_proportions_hedges_g <- binary_proportions %>%
   ) 
 
 # transform results reported as mean differences from Kozloff 2016 et al that reports CI's using custom function
-mean_difference_hedges_g_kozloff_2016 <- mean_difference %>%
+mean_difference_hedges_g_kozloff_2016 <- mean_difference |>
   # filter results from Gilmer 2016
   filter(
     study_id == "kozloff_2016"
-  ) %>%
+  ) |>
   # run custom function
-  rowwise() %>%
+  rowwise() |>
   mutate(result = list(
     esc_mean_difference(
       mean_difference = diff,
@@ -1403,13 +1614,13 @@ mean_difference_hedges_g_kozloff_2016 <- mean_difference %>%
   )) 
 
 # transform results reported as mean differences from Gilmer 2016 that reports SE's using custom function
-mean_difference_hedges_g_gilmer_2016 <- mean_difference %>%
+mean_difference_hedges_g_gilmer_2016 <- mean_difference |>
   # filter results from Gilmer 2016
   filter(
     study_id == "gilmer_2016"
-  ) %>%
+  ) |>
   # run custom function
-  rowwise() %>%
+  rowwise() |>
   mutate(result = list(
     esc_mean_difference(
       mean_difference = diff,
@@ -1424,31 +1635,31 @@ mean_difference_hedges_g_gilmer_2016 <- mean_difference %>%
 mean_difference_hedges_g <- bind_rows(
   mean_difference_hedges_g_kozloff_2016,
   mean_difference_hedges_g_gilmer_2016
-  ) %>%
-  ungroup() %>%
+  ) |>
+  ungroup() |>
   unnest_wider(
     result
-  ) %>%
+  ) |>
   # Convert the character column to a list of numeric vectors
   mutate(
     conf_interval = as.character(conf_interval),
-    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") %>% 
+    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") |> 
       map(~ as.numeric(.))
-  ) %>%
+  ) |>
   # split the list-column into two new columns
   unnest_wider(
     conf_interval, 
-    names_sep = "_") %>%
+    names_sep = "_") |>
   rename(
     es = effect_size,
     es_ci_low = conf_interval_1,
     es_ci_high = conf_interval_2
-  ) %>%
+  ) |>
   # add sample size var
   mutate(
     sample_size = grp1n + grp2n,
     p_value = round(p_value, 4)
-  ) %>%
+  ) |>
   # select vars for reporting
   select(
     study_id,
@@ -1466,9 +1677,9 @@ mean_difference_hedges_g <- bind_rows(
   ) 
 
 # transform results reported as ratios of rate ratios using custom function
-ratio_rate_ratio_hedges_g <- ratio_rate_ratio %>%
+ratio_rate_ratio_hedges_g <- ratio_rate_ratio |>
   # run custom function
-  rowwise() %>%
+  rowwise() |>
   mutate(result = list(
     esc_ratio_rate_ratio(
       ratio_rate_ratio = diff, 
@@ -1479,32 +1690,32 @@ ratio_rate_ratio_hedges_g <- ratio_rate_ratio %>%
       comparison_n = grp2n, 
       esc_type = "g"
     )
-  )) %>%
+  )) |>
   # clean up results
-  ungroup() %>%
+  ungroup() |>
   unnest_wider(
     result
-  ) %>%
+  ) |>
   # Convert the character column to a list of numeric vectors
   mutate(
     conf_interval = as.character(conf_interval),
-    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") %>% 
+    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") |> 
       map(~ as.numeric(.))
-  ) %>%
+  ) |>
   # split the list-column into two new columns
   unnest_wider(
     conf_interval, 
-    names_sep = "_") %>%
+    names_sep = "_") |>
   rename(
     es = effect_size,
     es_ci_low = conf_interval_1,
     es_ci_high = conf_interval_2
-  ) %>%
+  ) |>
   # add sample size var
   mutate(
     sample_size = grp1n + grp2n,
     p_value = round(p_value, 4)
-  ) %>%
+  ) |>
   # select vars for reporting
   select(
     study_id,
@@ -1522,9 +1733,9 @@ ratio_rate_ratio_hedges_g <- ratio_rate_ratio %>%
   ) 
 
 # transform results reported as ratios of odds ratios using custom function
-ratio_odds_ratio_hedges_g <- ratio_odds_ratio %>%
+ratio_odds_ratio_hedges_g <- ratio_odds_ratio |>
   # run custom function
-  rowwise() %>%
+  rowwise() |>
   mutate(result = list(
     esc_ratio_odds_ratio(
       ratio_odds_ratio = diff, 
@@ -1535,32 +1746,32 @@ ratio_odds_ratio_hedges_g <- ratio_odds_ratio %>%
       comparison_n = grp2n, 
       esc_type = "g"
     )
-  )) %>%
+  )) |>
   # clean up results
-  ungroup() %>%
+  ungroup() |>
   unnest_wider(
     result
-  ) %>%
+  ) |>
   # Convert the character column to a list of numeric vectors
   mutate(
     conf_interval = as.character(conf_interval),
-    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") %>% 
+    conf_interval = str_extract_all(conf_interval, "-?[0-9.]+") |> 
       map(~ as.numeric(.))
-  ) %>%
+  ) |>
   # split the list-column into two new columns
   unnest_wider(
     conf_interval, 
-    names_sep = "_") %>%
+    names_sep = "_") |>
   rename(
     es = effect_size,
     es_ci_low = conf_interval_1,
     es_ci_high = conf_interval_2
-  ) %>%
+  ) |>
   # add sample size var
   mutate(
     sample_size = grp1n + grp2n,
     p_value = round(p_value, 4)
-  ) %>%
+  ) |>
   # select vars for reporting
   select(
     study_id,
@@ -1585,7 +1796,7 @@ effect_sizes <- dplyr::bind_rows(
   mean_difference_hedges_g,
   ratio_rate_ratio_hedges_g,
   ratio_odds_ratio_hedges_g
-  ) %>%
+  ) |>
   # round quant outcomes for reporting and combine in single column
   mutate(
     es = round(es, 2),
@@ -1594,7 +1805,7 @@ effect_sizes <- dplyr::bind_rows(
   )
 
 # add flags for discussion
-effect_sizes_info <- effect_sizes %>%
+effect_sizes_info <- effect_sizes |>
   mutate(
     # create variable that determines the precision of the estimate based on whether or not it crosses zero
     estimate_precision = case_when(
@@ -1615,7 +1826,7 @@ effect_sizes_info <- effect_sizes %>%
       es < 0 & favourable_direction == "Positive" ~ "Favours comparison",
       es > 0 & favourable_direction == "Positive" ~ "Favours intervention"
     )
-  ) %>%
+  ) |>
   # drop redundant vars
   select(
     -p_value
@@ -1633,7 +1844,7 @@ write_csv(
   )
 ```
 
-# Risk of bias assessments
+# Risk of bias in included studies
 
 In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.
 
