@@ -38,9 +38,15 @@ lightbox: true
 #| message: false
 #| name: yh-supplementary-material-global-options
 
-# load required packages
-library(tidyverse)
-library(kableExtra)
+# load required packages in groundhog framework
+library("groundhog")
+
+required_packages <- c(
+  "tidyverse",
+  "kableExtra",
+  "readxl",
+  "esc")
+groundhog.library(required_packages, "2024-10-09")
 ```
 
 # About
@@ -90,7 +96,7 @@ Inclusion and exclusion criteria used in this review are detailed in @tbl-yh-rev
 |                |                                                                                                                                       |                                                                                                                          |
 |                |     -   Have current or prior problem use of alcohol and other drugs (either self-reported or diagnosed)                              |                                                                                                                          |
 |                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Have a physical or intellectual disability                                                                                    |                                                                                                                          |
+|                |     -   Have a physical or intellectual disability                                                                                    |                                                                                                                          |
 |                |                                                                                                                                       |                                                                                                                          |
 |                |     -   Received public assistance payments; and/or                                                                                   |                                                                                                                          |
 |                |                                                                                                                                       |                                                                                                                          |
@@ -1324,11 +1330,6 @@ The code below details the complete process for effect-size transformation.
 #| eval: false
 #| name: yh-supplementary-material-es-transformation-code
 #| code-fold: true
-
-# load packages
-library(tidyverse)
-library(readxl)
-library(esc)
 
 # load custom es transformation functions
 source("./review/code/es_transformation/custom_es_transformation_functions.R")

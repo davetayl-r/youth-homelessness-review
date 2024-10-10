@@ -1,16 +1,19 @@
-## PRISMA CHART
+## Create PRISMA 2020 figure for manuscript
 
-library(tidyverse)
-library(readxl)
-library(PRISMA2020)
+# load packages within groundhog framework
+library("groundhog")
 
-## READ DATA
+required_packages <- c(
+  "tidyverse",
+  "readxl",
+  "PRISMA2020")
+groundhog.library(required_packages, "2024-10-09")
 
+# read data
 raw_prisma_data_location <- "./review/inputs/yh_review_prisma_data.csv"
 raw_prisma_data <- read.csv(raw_prisma_data_location)
 
-## CREATE PRISMA CHART
-
+# create prisma flowchart
 prisma_data <- PRISMA_data(raw_prisma_data)
 
 prisma_figure <- PRISMA_flowdiagram(
@@ -30,6 +33,7 @@ prisma_figure <- PRISMA_flowdiagram(
   side_boxes = TRUE
 )
 
+# export flowchart
 PRISMA_save(
   plotobj = prisma_figure, 
   filename = "./review/output/visualisation/yh_review_prisma_flowchart.png",

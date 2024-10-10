@@ -1,13 +1,17 @@
 ## Housing and support interventions for homeless youth systematic review
 ## Visualise risk of bias
 
-# load required packages
-library(tidyverse)
-library(readxl)
-library(ggplot2)
-library(scales)
-library(robvis)
-library(cowplot)
+# load required packages in groundhog framework
+library("groundhog")
+
+required_packages <- c(
+  "tidyverse",
+  "readxl",
+  "ggplot2",
+  "scales",
+  "robvis",
+  "cowplot")
+groundhog.library(required_packages, "2024-10-09")
 
 # read data
 raw_rob_location <- "./review/inputs/yh_review_risk_of_bias_data.xlsx"

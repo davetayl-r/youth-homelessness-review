@@ -1,10 +1,15 @@
 ## Housing and support interventions for homeless youth systematic review
 ## Effect Size transformations
 
-# load packages
-library(tidyverse)
-library(readxl)
-library(esc)
+# load packages within groundhog framework
+
+library("groundhog")
+
+required_packages <- c(
+  "tidyverse",
+  "readxl",
+  "esc")
+groundhog.library(required_packages, "2024-10-09")
 
 # load custom es transformation functions
 source("./review/code/es_transformation/custom_es_transformation_functions.R")
