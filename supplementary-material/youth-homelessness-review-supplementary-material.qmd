@@ -55,25 +55,88 @@ This page contains supplementary material for a network meta-analysis titled *"S
 
 The following information is provided here:
 
--   **Inclusion and exclusion criteria by PICOSS domain** —- includes details of the criteria used to select studies eligible for inclusion in this review
+**Reporting Standards:**  
 
--   **Housing First components of included interventions** --- includes details of how the components of each included intervention map on to Housing First components
+-   *[PRISMA 2020 Checklist](#sec-prisma-checklist)* --- includes details of how this review meets the PRISMA 2020 reporting guidelines
 
--   **Instruments used in included studies** --- includes details of the instuments used to assess outcomes for participants in included studies
+**Study identification and data extraction:**  
 
--   **PRISMA 2020 Checklist** --- includes details of how this review meets the PRISMA 2020 reporting guidelines
+-   *[Inclusion and exclusion criteria by PICOSS domain](#sec-inclusion-exclusion)* —- includes details of the criteria used to select studies eligible for inclusion in this review
 
--   **Identification and selection of relevant studies** --- includes search strategies and results for each published database and grey sources
+-   *[Identification and selection of relevant studies](#sec-study-identification)* --- includes search strategies and results for each published database and grey sources
 
--   **Extraction of information from relevant studies** --- includes the template and information extracted from each included study used to transform into a common effect size
+-   *[Extraction of information from relevant studies](#sec-data-extraction)* --- includes the template and information extracted from each included study used to transform into a common effect size
 
--   **Effect size transformation** — includes detailed description of the methods used to transform reported results into a common effect size
+**Reported results and their transformation:**  
 
--   **Risk of bias in included studies** --- includes the template and assessments used to assess the risk of bias in included studies
+-   *[Effect size transformation](#sec-es-transformation)* — includes detailed description of the methods used to transform reported results into a common effect size
+
+-   *[Instruments used in included studies](#sec-instruments)* --- includes details of the instruments used to assess outcomes for participants in included studies
+
+**Supplementary results:**  
+
+-   *[Risk of bias in included studies](#sec-risk-of-bias)* --- includes the template and assessments used to assess the risk of bias in included studies
+
+-   *[Housing First components of included interventions](#sec-hf-components)* --- includes details of how the components of each included intervention map on to Housing First components
+
+-   *[Barriers and Facilitators](#sec-barriers-facilitators)* --- includes additional details on the barriers and facilitators affecting implementation identified in included studies
+
 
 The code to produce this supplementary material, along with the analysis code for this review is available in a [GitHub repository](https://github.com/davetayl-r/youth-homelessness-review).
 
-# Inclusion and exclusion criteria by PICOSS domain
+# Reporting Standards
+
+## PRISMA 2020 checklist {#sec-prisma-checklist}
+
+The PRISMA 2020 checklist [@page2021prisma2020statement] is included in @tbl-yh-prisma-checklist.
+
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: PRISMA 2020 Checklist Updated
+#| name: yh-supplementary-material-prisma-2020
+#| label: tbl-yh-prisma-checklist
+ 
+# read data
+prisma_file_location <- "./inputs/prisma.xlsx"
+prisma_table <- readxl::read_excel(
+  prisma_file_location,
+  sheet = "prisma")
+
+# produce table
+prisma_table |>
+  filter(
+    !`Section and Topic` == "TITLE", 
+    !`Section and Topic` == "ABSTRACT",
+    !`Section and Topic` == "INTRODUCTION",
+    !`Section and Topic` == "METHODS",
+    !`Section and Topic` == "RESULTS",
+    !`Section and Topic` == "DISCUSSION",
+    !`Section and Topic` == "OTHER INFORMATION") |>
+  kbl(
+    ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed"),
+    font_size = 12
+    ) |>
+  pack_rows(
+    index = c(
+      "Title" = 1, 
+      "Abstract" = 1, 
+      "Introduction" = 2,
+      "Methods" = 17,
+      "Results" = 11,
+      "Discussion" = 3,
+      "Other Information" = 6),
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) 
+```
+
+# Study identification and data extraction {#sec-inclusion-exclusion}
+
+## Inclusion and exclusion criteria by PICOSS domain
 
 Inclusion and exclusion criteria used in this review are detailed in @tbl-yh-review-picoss.
 
@@ -177,156 +240,9 @@ Inclusion and exclusion criteria used in this review are detailed in @tbl-yh-rev
 
 : Inclusion and exclusion criteria by PICOSS domain {#tbl-yh-review-picoss} {tbl-colwidths="\[15,45,45\]"}
 
-# Housing First components of included interventions
+## Identification and selection of relevant studies {#sec-study-identification}
 
-Details of Housing First components in included studies are detailed in @tbl-yh-hf-components.
-
-```{r}
-#| echo: false
-#| results: asis
-#| tbl-cap: Details of Housing First components in included studies
-#| name: yh-supplementary-material-hf-components
-#| label: tbl-yh-hf-components
- 
-# read data
-components_file_location <- "./inputs/housing_first_components.xlsx"
-components_table <- readxl::read_excel(
-  components_file_location,
-  sheet = "components")
-
-# produce table
-components_table |>
-  # add "@" in front of bibtex keys
-  rename(
-    "@kozloff2016housingfirsthomeless" = "kozloff2016housingfirsthomeless", 
-    "@thulien2019evaluatingeffectsrent" = "thulien2019evaluatingeffectsrent", 
-    "@slesnick2023housingsupportiveservices" = "slesnick2023housingsupportiveservices", 
-    "@raithel2015partneringleveragemultiple" = "raithel2015partneringleveragemultiple",
-    "@gilmer2016permanentsupportivehousing" = "gilmer2016permanentsupportivehousing"
-    ) |>
-  kbl(
-    format = "html"
-    ) |>
-  kable_styling(
-    bootstrap_options = c(
-      "hover", 
-      "condensed")
-    ) |>
-  pack_rows(
-    index = c(
-      "Housing-related components" = 7, 
-      "Support services components" = 6, 
-      "Components applicable to both housing and support services" = 3),
-    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
-    ) |>
-  add_header_above(
-    c(" ", "Study" = 5)) |>
-  column_spec(
-    1, bold = T) |>
-  unclass() |> 
-  cat()
-```
-
-# Instruments used in included studies
-
-Instruments used to measure outcomes in included studies are detailed in @tbl-yh-instruments.
-
-```{r}
-#| echo: false
-#| results: asis
-#| tbl-cap: Instruments used in included studies
-#| name: yh-supplementary-material-instruments
-#| label: tbl-yh-instruments
- 
-# read data
-instruments_file_location <- "./inputs/instruments.xlsx"
-instruments_table <- readxl::read_excel(
-  instruments_file_location,
-  sheet = "instruments")
-
-# produce table
-instruments_table |>
-  mutate(
-    Reference = str_c("@", Reference),
-    `Included studies using instrument` = sapply(
-      strsplit(`Included studies using instrument`, ";\\s*"), 
-        function(x) {
-          paste0("@", trimws(x), collapse = "; ")
-        })
-    ) |>
-  kbl(
-    format = "html"
-    ) |>
-  kable_styling(
-    bootstrap_options = c(
-      "hover", 
-      "condensed")
-    ) |>
-  pack_rows(
-    index = c(
-      "Stable Housing" = 2, 
-      "Health" = 9, 
-      "Social and emotional wellbeing" = 5,
-      "Employment and earnings" = 1,
-      "Legal and justice" = 1,
-      "Living skills and independence" = 2),
-    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
-    ) |>
-  unclass() |> 
-  cat()
-```
-
-# PRISMA 2020 checklist
-
-The PRISMA 2020 checklist [@page2021prisma2020statement] is included in @tbl-yh-prisma-checklist.
-
-```{r}
-#| echo: false
-#| results: asis
-#| tbl-cap: PRISMA 2020 Checklist Updated
-#| name: yh-supplementary-material-prisma-2020
-#| label: tbl-yh-prisma-checklist
- 
-# read data
-prisma_file_location <- "./inputs/prisma.xlsx"
-prisma_table <- readxl::read_excel(
-  prisma_file_location,
-  sheet = "prisma")
-
-# produce table
-prisma_table |>
-  filter(
-    !`Section and Topic` == "TITLE", 
-    !`Section and Topic` == "ABSTRACT",
-    !`Section and Topic` == "INTRODUCTION",
-    !`Section and Topic` == "METHODS",
-    !`Section and Topic` == "RESULTS",
-    !`Section and Topic` == "DISCUSSION",
-    !`Section and Topic` == "OTHER INFORMATION") |>
-  kbl(
-    ) |>
-  kable_styling(
-    bootstrap_options = c(
-      "hover", 
-      "condensed"),
-    font_size = 12
-    ) |>
-  pack_rows(
-    index = c(
-      "Title" = 1, 
-      "Abstract" = 1, 
-      "Introduction" = 2,
-      "Methods" = 17,
-      "Results" = 11,
-      "Discussion" = 3,
-      "Other Information" = 6),
-    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
-    ) 
-```
-
-# Identification and selection of relevant studies
-
-## Search strategy and results for database
+### Search strategy and results for database
 
 The databases and search terms are detailed in @tbl-yh-review-search-terms below.
 
@@ -480,7 +396,7 @@ The databases and search terms are detailed in @tbl-yh-review-search-terms below
 
 : Search terms {#tbl-yh-review-search-terms} {tbl-colwidths="\[20,40,15,15\]"}
 
-## Search strategy and results for grey sources
+### Search strategy and results for grey sources
 
 Sources and search terms used for grey sources are detailed in @tbl-yh-review-grey-search below.
 
@@ -504,13 +420,13 @@ Sources and search terms used for grey sources are detailed in @tbl-yh-review-gr
 
 : Search terms {#tbl-yh-review-grey-search} {tbl-colwidths="\[35,25,40\]"}
 
-# Extraction of information from relevant studies
+## Extraction of information from relevant studies {#sec-data-extraction}
 
-## Data extraction templates
+### Data extraction templates
 
 The review team developed a data extraction template using Google's Sheets app to facilitate collaboration between team members. Each tab of the sheet contained specific information.
 
-### Study-level data extraction template
+#### Study-level data extraction template
 
 In the first tab (available below), we extracted information about the study.
 
@@ -528,7 +444,7 @@ View Full Screen
 
 </iframe>
 
-### Outcome-level data extraction template
+#### Outcome-level data extraction template
 
 In the second tab (available below), we extracted information about reported outcomes that would allow us to transform each of the reported results into a common effect size.
 
@@ -546,17 +462,19 @@ View Full Screen
 
 </iframe>
 
-# Effect size transformation
+# Reported results and their transformation
+
+## Effect size transformation {#sec-es-transformation}
 
 In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize], which is an R implementation of the Campbell Collaboration's Effect Size calculator [@wilsonpracticalmetaanalysiseffect].
 
 However, the results in the study by @kozloff2016housingfirsthomeless are presented as treatment effects (i.e., mean differences, ratios or rate ratios and ratios of odds ratios and their confidence intervals). The review team was unable to obtain the necessary information from the authors to transform these using the formulas in the *esc* package. Accordingly we approximated these results using information reported in the included studies. The approach used for each type of result, and the assumptions they rely on are detailed below.
 
-## Estimating Cohen's d or Hedges' g from a Ratio of Rate Ratios
+### Estimating Cohen's d or Hedges' g from a Ratio of Rate Ratios
 
 The `esc_ratio_rate_ratio` function estimates Cohen's d or Hedges' g effect sizes from a reported ratio of rate ratios, its standard error or confidence interval, sample sizes, and the population baseline rate. The method relies on several assumptions and approximations to convert the ratio of rate ratios to a standardised mean difference.
 
-### Assumptions
+#### Assumptions
 
 1.  The ratio of rate ratios is a measure of the relative difference in event rates between the treatment and comparison groups, with the comparison group as the reference [@lash2021modernepidemiology].
 2.  The standard error of the ratio of rate ratios is either provided or can be calculated from the confidence interval assuming a normal distribution [@altman2011howobtainconfidence].
@@ -564,7 +482,7 @@ The `esc_ratio_rate_ratio` function estimates Cohen's d or Hedges' g effect size
 4.  The event counts in the treatment and comparison groups follow a Poisson distribution [@fleiss2003statisticalmethodsrates].
 5.  The sample sizes of the treatment and comparison groups are known.
 
-### Step 1: Obtain the standard error of the ratio of rate ratios
+#### Step 1: Obtain the standard error of the ratio of rate ratios
 
 The function first obtains the standard error of the ratio of rate ratios either directly from the provided `ratio_rate_ratio_se` argument or by calculating it from the confidence interval using the following formula [@altman2011howobtainconfidence]:
 
@@ -579,7 +497,7 @@ se_ratio_rate_ratio <- (ratio_rate_ratio_ci_upper - ratio_rate_ratio_ci_lower) /
 
 where $SE_{RRR}$ is the standard error of the ratio of rate ratios, $RRR_{upper}$ and $RRR_{lower}$ are the upper and lower bounds of the ratio of rate ratios confidence interval, respectively.
 
-### Step 2: Estimate the event counts
+#### Step 2: Estimate the event counts
 
 The event count for the comparison group is estimated using the population baseline rate and the comparison group sample size:
 
@@ -607,7 +525,7 @@ where $E_T$ is the event count for the treatment group, and $RRR$ is the ratio o
 treatment_event_count <- comparison_event_count * ratio_rate_ratio
 ```
 
-### Step 3: Calculate the pooled event rate and standard deviation
+#### Step 3: Calculate the pooled event rate and standard deviation
 
 The pooled event count is calculated as the average of the treatment and comparison event counts:
 
@@ -648,7 +566,7 @@ where $SD_P$ is the pooled standard deviation.
 pooled_sd <- sqrt(pooled_event_rate * (1 - pooled_event_rate))
 ```
 
-### Step 4: Calculate Cohen's d
+#### Step 4: Calculate Cohen's d
 
 Cohen's d is calculated using the estimated event rates for the treatment and comparison groups and the pooled standard deviation [@cohen1988statisticalpoweranalysis]:
 
@@ -663,7 +581,7 @@ where $d$ is Cohen's *d*.
 cohens_d <- (treatment_event_count / treatment_n - comparison_event_count / comparison_n) / pooled_sd
 ```
 
-### Step 5: Calculate the standard error and confidence interval for Cohen's *d*
+#### Step 5: Calculate the standard error and confidence interval for Cohen's *d*
 
 The standard error for Cohen's *d* is estimated using the event rates and sample sizes:
 
@@ -692,7 +610,7 @@ cohens_d_ci_lower <- cohens_d - (1.96 * standard_error_d)
 cohens_d_ci_upper <- cohens_d + (1.96 * standard_error_d)
 ```
 
-### Step 6: Calculate Hedges' g (optional)
+#### Step 6: Calculate Hedges' g (optional)
 
 If the esc_type argument is set to 'g', the function also calculates Hedges' *g*, which applies Hedges' correction to an estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
 
@@ -709,18 +627,18 @@ hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
 
 The confidence interval for Hedges' *g* is calculated using the same standard error as Cohen's *d*.
 
-## Estimating Cohen's *d* or Hedges' *g* from a Mean Difference
+### Estimating Cohen's *d* or Hedges' *g* from a Mean Difference
 
 The `esc_mean_difference` function estimates Cohen's *d* or Hedges' *g* effect sizes from a reported mean difference, its standard error or confidence interval, and the sample sizes of the treatment and comparison groups. The function calculates the pooled standard deviation, effect size, standard error, confidence interval, and p-value.
 
-### Assumptions
+#### Assumptions
 
 1.  The mean difference between the treatment and comparison groups is provided.
 2.  The standard error of the mean difference is either provided or can be calculated from the confidence interval assuming a normal distribution [@altman2011howobtainconfidence].
 3.  The sample sizes of the treatment and comparison groups are known.
 4.  The variance of the outcome is assumed to be equal in both groups.
 
-### Step 1: Obtain the standard error of the mean difference
+#### Step 1: Obtain the standard error of the mean difference
 
 The function first obtains the standard error of the mean difference either directly from the provided `mean_diff_se` argument or by calculating it from the confidence interval using the following formula [@altman2011howobtainconfidence]:
 
@@ -735,7 +653,7 @@ standard_error <- (mean_diff_ci_upper - mean_diff_ci_lower) / (2 * 1.96)
 
 where $SE_{MD}$ is the standard error of the mean difference, $MD_{upper}$ and $MD_{lower}$ are the upper and lower bounds of the mean difference confidence interval, respectively.
 
-### Step 2: Estimate the pooled standard deviation
+#### Step 2: Estimate the pooled standard deviation
 
 The pooled standard deviation is estimated using the standard error and the sample sizes of the treatment and comparison groups:
 
@@ -750,7 +668,7 @@ where $SD_{pooled}$ is the pooled standard deviation, $SE_{MD}$ is the standard 
 standard_deviation_pooled <- standard_error / sqrt((1 / treatment_n) + (1 / comparison_n))
 ```
 
-### Step 3: Calculate Cohen's d
+#### Step 3: Calculate Cohen's d
 
 Cohen's d is calculated by dividing the mean difference by the pooled standard deviation [@cohen1988statisticalpoweranalysis]:
 
@@ -765,7 +683,7 @@ where $d$ is Cohen's d, $MD$ is the mean difference, and $SD_{pooled}$ is the po
 cohens_d <- mean_difference / standard_deviation_pooled
 ```
 
-### Step 4: Calculate the standard error and confidence interval for Cohen's d
+#### Step 4: Calculate the standard error and confidence interval for Cohen's d
 
 The standard error for Cohen's *d* is calculated by dividing the standard error of the mean difference by the pooled standard deviation:
 
@@ -794,7 +712,7 @@ mean_diff_ci_lower_d <- cohens_d - (1.96 * standard_error_d)
 mean_diff_ci_upper_d <- cohens_d + (1.96 * standard_error_d)
 ```
 
-### Step 5: Calculate the p-value
+#### Step 5: Calculate the p-value
 
 The t-statistic is calculated by dividing the mean difference by its standard error:
 
@@ -829,7 +747,7 @@ The p-value is then calculated using the t-distribution with the calculated degr
 p_value <- 2 * (1 - pt(abs(t_stat), df))
 ```
 
-### Step 6: Calculate Hedges' g (optional)
+#### Step 6: Calculate Hedges' g (optional)
 
 If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
 
@@ -846,11 +764,11 @@ hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
 
 The confidence interval for Hedges' g is calculated using the same standard error as Cohen's d.
 
-## Estimating Cohen's d or Hedges' g from a Ratio of Odds Ratios
+### Estimating Cohen's d or Hedges' g from a Ratio of Odds Ratios
 
 The `esc_ratio_odds_ratio` function estimates Cohen's d or Hedges' g effect sizes from a reported ratio of odds ratios, its standard error or confidence interval, sample sizes, and the population baseline rate. The method relies on several assumptions and approximations to convert the ratio of odds ratios to a standardised mean difference.
 
-### Assumptions
+#### Assumptions
 
 1.  The ratio of odds ratios is a measure of the relative difference in odds between the treatment and comparison groups, with the comparison group as the reference [@szumilas2010explainingoddsratios].
 2.  The standard error of the ratio of odds ratios is either provided or can be calculated from the confidence interval assuming a normal distribution of the log ratio of odds ratios [@altman2011howobtainconfidence].
@@ -858,7 +776,7 @@ The `esc_ratio_odds_ratio` function estimates Cohen's d or Hedges' g effect size
 4.  The event counts in the treatment and comparison groups follow a binomial distribution [@fleiss2003statisticalmethodsrates].
 5.  The sample sizes of the treatment and comparison groups are known.
 
-### Step 1: Obtain the standard error of the log ratio of odds ratios
+#### Step 1: Obtain the standard error of the log ratio of odds ratios
 
 The function first obtains the standard error of the log ratio of odds ratios either directly from the provided `ratio_odds_ratio_se` argument or by calculating it from the confidence interval using the following formula [@altman2011howobtainconfidence]:
 
@@ -873,7 +791,7 @@ se_log_ratio_odds_ratio <- (log_ratio_odds_ratio_ci_upper - log_ratio_odds_ratio
 
 where $SE_{log(ROR)}$ is the standard error of the log ratio of odds ratios, $ROR_{upper}$ and $ROR_{lower}$ are the upper and lower bounds of the ratio of odds ratios confidence interval, respectively.
 
-### Step 2: Convert the ratio of odds ratios to the log scale
+#### Step 2: Convert the ratio of odds ratios to the log scale
 
 The ratio of odds ratios is converted to the log scale:
 
@@ -888,7 +806,7 @@ log_ratio_odds_ratio <- log(ratio_odds_ratio)
 
 where $log(ROR)$ is the log ratio of odds ratios.
 
-### Step 3: Estimate the event probabilities and odds
+#### Step 3: Estimate the event probabilities and odds
 
 The event probability in the comparison group is estimated using the population baseline rate:
 
@@ -942,7 +860,7 @@ where $P_T$ is the event probability in the treatment group.
 treatment_event_prob <- treatment_odds / (1 + treatment_odds)
 ```
 
-### Step 4: Convert event probabilities to approximate event counts
+#### Step 4: Convert event probabilities to approximate event counts
 
 The event probabilities are converted to approximate event counts using the sample sizes:
 
@@ -959,7 +877,7 @@ treatment_event_count <- treatment_n * treatment_event_prob
 comparison_event_count <- comparison_n * comparison_event_prob
 ```
 
-### Step 5: Calculate the pooled event rate and standard deviation
+#### Step 5: Calculate the pooled event rate and standard deviation
 
 The pooled event count is calculated as the average of the treatment and comparison event counts:
 
@@ -1000,7 +918,7 @@ where $SD_P$ is the pooled standard deviation.
 pooled_sd <- sqrt(pooled_event_rate * (1 - pooled_event_rate))
 ```
 
-### Step 6: Calculate Cohen's d
+#### Step 6: Calculate Cohen's d
 
 Cohen's d is calculated using the estimated event probabilities for the treatment and comparison groups and the pooled standard deviation [@cohen1988statisticalpoweranalysis]:
 
@@ -1015,7 +933,7 @@ where $d$ is Cohen's d.
 cohens_d <- (treatment_event_prob - comparison_event_prob) / pooled_sd
 ```
 
-### Step 7: Calculate the standard error and confidence interval for Cohen's d
+#### Step 7: Calculate the standard error and confidence interval for Cohen's d
 
 The standard error for Cohen's d is estimated using the event probabilities and sample sizes [@hasselblad1995metaanalysisscreeningdiagnostic]:
 
@@ -1044,7 +962,7 @@ cohens_d_ci_lower <- cohens_d - (1.96 * standard_error_d)
 cohens_d_ci_upper <- cohens_d + (1.96 * standard_error_d)
 ```
 
-### Step 8: Calculate the p-value
+#### Step 8: Calculate the p-value
 
 The Z-statistic is calculated using the log ratio of odds ratios and its standard error:
 
@@ -1066,7 +984,7 @@ The p-value is then calculated using the standard normal distribution:
 p_value <- 2 * (1 - pnorm(abs(z_stat)))
 ```
 
-### Step 9: Calculate Hedges' g (optional)
+#### Step 9: Calculate Hedges' g (optional)
 
 If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
 
@@ -1083,7 +1001,7 @@ hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
 
 The confidence interval for Hedges' g is calculated using the same standard error as Cohen's d.
 
-## Implementation
+### Implementation
 
 The code chunk below details the R function that implements the methods described above.
 
@@ -1845,11 +1763,62 @@ write_csv(
   )
 ```
 
-# Risk of bias in included studies
+## Instruments used in included studies {#sec-instruments}
+
+Instruments used to measure outcomes in included studies are detailed in @tbl-yh-instruments.
+
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: Instruments used in included studies
+#| name: yh-supplementary-material-instruments
+#| label: tbl-yh-instruments
+ 
+# read data
+instruments_file_location <- "./inputs/instruments.xlsx"
+instruments_table <- readxl::read_excel(
+  instruments_file_location,
+  sheet = "instruments")
+
+# produce table
+instruments_table |>
+  mutate(
+    Reference = str_c("@", Reference),
+    `Included studies using instrument` = sapply(
+      strsplit(`Included studies using instrument`, ";\\s*"), 
+        function(x) {
+          paste0("@", trimws(x), collapse = "; ")
+        })
+    ) |>
+  kbl(
+    format = "html"
+    ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed")
+    ) |>
+  pack_rows(
+    index = c(
+      "Stable Housing" = 2, 
+      "Health" = 9, 
+      "Social and emotional wellbeing" = 5,
+      "Employment and earnings" = 1,
+      "Legal and justice" = 1,
+      "Living skills and independence" = 2),
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  unclass() |> 
+  cat()
+```
+
+# Supplementary Results
+
+## Risk of bias in included studies {#sec-risk-of-bias}
 
 In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.
 
-## Assessing Risk of Bias in randomised controlled trials
+### Assessing Risk of Bias in randomised controlled trials
 
 For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template that we used and the results of our assessment are embedded below.
 
@@ -1867,7 +1836,7 @@ View Full Screen
 
 </iframe>
 
-## Assessing Risk of Bias in non-randomised studies of interventions
+### Assessing Risk of Bias in non-randomised studies of interventions
 
 For non-randomised studies of interventions, we used the ROBINS-I tool @sterne2016robinsitoolassessing. The template and results are embedded below.
 
@@ -1884,6 +1853,144 @@ View Full Screen
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=20575753&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
 
 </iframe>
+
+## Housing First components of included interventions {#sec-hf-components}
+
+Details of Housing First components in included studies are detailed in @tbl-yh-hf-components.
+
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: Details of Housing First components in included studies
+#| name: yh-supplementary-material-hf-components
+#| label: tbl-yh-hf-components
+ 
+# read data
+components_file_location <- "./inputs/housing_first_components.xlsx"
+components_table <- readxl::read_excel(
+  components_file_location,
+  sheet = "components")
+
+# produce table
+components_table |>
+  # add "@" in front of bibtex keys
+  rename(
+    "@kozloff2016housingfirsthomeless" = "kozloff2016housingfirsthomeless", 
+    "@thulien2019evaluatingeffectsrent" = "thulien2019evaluatingeffectsrent", 
+    "@slesnick2023housingsupportiveservices" = "slesnick2023housingsupportiveservices", 
+    "@raithel2015partneringleveragemultiple" = "raithel2015partneringleveragemultiple",
+    "@gilmer2016permanentsupportivehousing" = "gilmer2016permanentsupportivehousing"
+    ) |>
+  kbl(
+    format = "html"
+    ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed")
+    ) |>
+  pack_rows(
+    index = c(
+      "Housing-related components" = 7, 
+      "Support services components" = 6, 
+      "Components applicable to both housing and support services" = 3),
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  add_header_above(
+    c(" ", "Study" = 5)) |>
+  column_spec(
+    1, bold = T) |>
+  unclass() |> 
+  cat()
+```
+
+## Barriers and Facilitators {#sec-barriers-facilitators}
+
+Barriers and facilitators grouped by EPIS domain are detailed in @tbl-yh-barriers-facilitators.
+
+```{r}
+#| echo: false
+#| warning: false
+#| results: asis
+#| tbl-cap: Barriers and facilitators by EPIS domain
+#| name: yh-supplementary-material-barriers-facilitators
+#| label: tbl-yh-barriers-facilitators
+ 
+# read data
+barriers_facilitators_file_location <- "./inputs/barriers_facilitators.xlsx"
+barriers_facilitators_table <- readxl::read_excel(
+  barriers_facilitators_file_location,
+  sheet = "barriers_facilitators",
+  skip = 1) 
+
+# rename columns to make them unique but meaningful
+colnames(barriers_facilitators_table) <- c(
+  "EPIS_domain",
+  "Housing_inner",
+  "Housing_outer",
+  "Support_inner",
+  "Support_outer",
+  "Housing_Support_inner",
+  "Housing_Support_outer"
+)
+
+# produce table
+barriers_facilitators_table |>
+  kbl(
+    format = "html",
+    col.names = c(
+      "EPIS domain",
+      "Inner context",
+      "Outer context",
+      "Inner context",
+      "Outer context",
+      "Inner context",
+      "Outer context"
+    )
+  ) |>
+  add_header_above(
+    header = c(
+      " " = 1,
+      "Housing components" = 2,
+      "Support services components" = 2,
+      "Housing and support service components" = 2
+    )
+  ) |>
+  kable_styling(
+    bootstrap_options = c("hover", "condensed"),
+    full_width = FALSE
+  ) |>
+  column_spec(
+    1, bold = TRUE
+    ) |>
+  collapse_rows(
+    columns = 1,
+    valign = "top"
+  ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed")
+    ) |>
+  pack_rows(
+      "Exploration", 1, 2,
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  pack_rows(
+      "Preparation", 3, 4,
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  pack_rows(
+      "Implementation", 5, 6,
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  pack_rows(
+      "Sustainment", 7, 8,
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  unclass() |> 
+  cat()
+```
 
 <h1>References</h1>
 
