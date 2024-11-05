@@ -176,7 +176,7 @@ traffic_light_plots <- plot_grid(
   rob2_traffic_light_plot, 
   robins_i_traffic_light_plot, 
   labels = c(
-    'RoB2 — Randomised studies (n=4)', 
+    'RoB2 — Randomised studies (n=3)', 
     'ROBINS-I — Non-randomised studies (n=2)'),
   label_size = 12,
   ncol = 2,
@@ -195,6 +195,6 @@ ggsave(
 ggsave(
   file = "./review/output/visualisation/yh_review_traffic_light_plot.png",
   plot = traffic_light_plots,
-  height = 6,
+  height = 3.75,
   width = 14,
   type = "cairo-png")

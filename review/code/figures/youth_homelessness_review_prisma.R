@@ -1,4 +1,4 @@
-## Create PRISMA 2020 figure for manuscript
+# Create PRISMA 2020 figure for manuscript
 
 # load packages within groundhog framework
 library("groundhog")

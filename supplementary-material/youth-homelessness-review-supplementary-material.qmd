@@ -55,36 +55,43 @@ This page contains supplementary material for a network meta-analysis titled *"S
 
 The following information is provided here:
 
-**Reporting Standards:**  
+[**Reporting Standards:**](#sec-reporting-standards)
 
--   *[PRISMA 2020 Checklist](#sec-prisma-checklist)* --- includes details of how this review meets the PRISMA 2020 reporting guidelines
+-   [*PRISMA 2020 Checklist*](#sec-prisma-checklist) --- includes details of how this review meets the PRISMA 2020 reporting guidelines
 
-**Study identification and data extraction:**  
+[**Supplementary methodology:**](#sec-methodology})
 
--   *[Inclusion and exclusion criteria by PICOSS domain](#sec-inclusion-exclusion)* —- includes details of the criteria used to select studies eligible for inclusion in this review
+-   [*Selection criteria*](#sec-inclusion-exclusion) —- includes details of the criteria used to select studies eligible for inclusion in this review
 
--   *[Identification and selection of relevant studies](#sec-study-identification)* --- includes search strategies and results for each published database and grey sources
+-   [*Search methods*](#sec-search-methods) --- includes search strategies and results for each published database and grey sources
 
--   *[Extraction of information from relevant studies](#sec-data-extraction)* --- includes the template and information extracted from each included study used to transform into a common effect size
+-   [*Data collection*](#sec-data-collection) --- includes the process used to screen titles and abstracts and full-texts
 
-**Reported results and their transformation:**  
+-   [*Data extraction*](#sec-data-extraction) --- includes the template and information extracted from each included study used to transform into a common effect size
 
--   *[Effect size transformation](#sec-es-transformation)* — includes detailed description of the methods used to transform reported results into a common effect size
+-   [*Effect size transformation*](#sec-es-transformation) --- includes detailed description of the methods used to transform reported results into a common effect size
 
--   *[Instruments used in included studies](#sec-instruments)* --- includes details of the instruments used to assess outcomes for participants in included studies
+-   [*Defining Housing First components*](#sec-hf-components-definitions) --- includes definitions of Housing First components used in this review
 
-**Supplementary results:**  
+-   [*Deviations from the protocol*](#sec-deviations) --- details how our review deviated from the registered protocol
 
--   *[Risk of bias in included studies](#sec-risk-of-bias)* --- includes the template and assessments used to assess the risk of bias in included studies
+[**Supplementary results:**](#sec-results)
 
--   *[Housing First components of included interventions](#sec-hf-components)* --- includes details of how the components of each included intervention map on to Housing First components
+-   [*Secondary reports of included studies*](#sec-secondary-reports) --- details additional reports of included studies 
 
--   *[Barriers and Facilitators](#sec-barriers-facilitators)* --- includes additional details on the barriers and facilitators affecting implementation identified in included studies
+-   [*Studies excluded at full text review*](#sec-excluded-studies) --- details of studies excluded at full text review with reasons for exclusion
 
+-   [*Housing First components of included interventions*](#sec-hf-components) --- includes details of how the components of each included intervention map on to Housing First components
+
+-   [*Instruments used in included studies*](#sec-instruments) --- includes details of the instruments used to assess outcomes for participants in included studies
+
+-   [*Risk of bias in included studies*](#sec-risk-of-bias) --- includes the template and assessments used to assess the risk of bias in included studies
+
+-   [*Barriers and Facilitators*](#sec-barriers-facilitators) --- includes additional details on the barriers and facilitators affecting implementation identified in included studies
 
 The code to produce this supplementary material, along with the analysis code for this review is available in a [GitHub repository](https://github.com/davetayl-r/youth-homelessness-review).
 
-# Reporting Standards
+# Reporting Standards {#sec-reporting-standards}
 
 ## PRISMA 2020 checklist {#sec-prisma-checklist}
 
@@ -93,12 +100,12 @@ The PRISMA 2020 checklist [@page2021prisma2020statement] is included in @tbl-yh-
 ```{r}
 #| echo: false
 #| results: asis
-#| tbl-cap: PRISMA 2020 Checklist Updated
+#| tbl-cap: PRISMA 2020 Checklist
 #| name: yh-supplementary-material-prisma-2020
 #| label: tbl-yh-prisma-checklist
  
 # read data
-prisma_file_location <- "./inputs/prisma.xlsx"
+prisma_file_location <- "./inputs/prisma_checklist.xlsx"
 prisma_table <- readxl::read_excel(
   prisma_file_location,
   sheet = "prisma")
@@ -114,12 +121,13 @@ prisma_table |>
     !`Section and Topic` == "DISCUSSION",
     !`Section and Topic` == "OTHER INFORMATION") |>
   kbl(
+    format = "html",
+    escape = FALSE
     ) |>
   kable_styling(
     bootstrap_options = c(
       "hover", 
-      "condensed"),
-    font_size = 12
+      "condensed")
     ) |>
   pack_rows(
     index = c(
@@ -131,14 +139,26 @@ prisma_table |>
       "Discussion" = 3,
       "Other Information" = 6),
     label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
-    ) 
+    ) |>
+  unclass() |> 
+  cat()
 ```
 
-# Study identification and data extraction {#sec-inclusion-exclusion}
+# Supplementary methodology {#sec-methodology}
 
-## Inclusion and exclusion criteria by PICOSS domain
+This section contains additional information on the methodology used in this review.
 
-Inclusion and exclusion criteria used in this review are detailed in @tbl-yh-review-picoss.
+## Selection criteria {#sec-inclusion-exclusion}
+
+The population of interest was youth aged between 16 and 25 who are currently, or have previously, experienced homelessness; have substantial socio-emotional issues that require services beyond housing; and/or are members of a demographic group known to be facing additional barriers, such as adolescent parents, those who identify as First Nations, or have a mental health condition. 
+
+Interventions of interest included those that combine the provision of accommodation, either directly or indirectly (i.e., through vouchers), with additional support services such as case management, counselling, independent living or life skills development, transportation assistance, employment skills training and/or coaching, support to engage or re-engage in education, residential advisors, and personalised advice or mentoring. 
+
+Comparators included treatment as usual, another intervention, no intervention, or waitlist control. Primary outcome domains were stable housing, health, social and emotional wellbeing, education, employment and earnings. Secondary outcomes domains were legal and justice, independent living skills, and social connections. 
+
+Both randomised and non-randomised study designs that used causal methods to assess the impact of the intervention were eligible for inclusion. Specifically, a non-randomised study needed to use a counterfactual approach that estimated the impact of the intervention by comparing observed participant outcomes with hypothetical non-participant outcomes. 
+
+Inclusion and exclusion criteria by used in this review by PICOSS domain are detailed in @tbl-yh-review-picoss.
 
 +----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
 | Domain         | Inclusion criteria                                                                                                                    | Exclusion criteria                                                                                                       |
@@ -240,7 +260,13 @@ Inclusion and exclusion criteria used in this review are detailed in @tbl-yh-rev
 
 : Inclusion and exclusion criteria by PICOSS domain {#tbl-yh-review-picoss} {tbl-colwidths="\[15,45,45\]"}
 
-## Identification and selection of relevant studies {#sec-study-identification}
+## Search methods {#sec-search-methods}
+
+Our search strategy encompassed 10 electronic databases (Cochrane Central Register of Trials via Ovid, CINAHL via EBSCO, EMBASE via Ovid, ERIC via ProQuest, PsycINFO via Ovid, MEDLINE via Ovid, Sociological Abstracts via ProQuest, Social Services Abstracts via ProQuest, Criminal Justice Abstracts via EBSCO, Violence and Abuse Abstracts via EBSCO) with no year of publication or language restrictions. Our strategy for identifying grey literature comprised searching six clearinghouses, government agencies and organisations known to be undertaking or consolidating research in this area (Australian Housing and Urban Research Institute (AHURI), Analysis and Policy Observatory database (APO), Australian Criminology Database (CINCH), Australian Family and Society Abstracts database (AIFS), Chapin Hall at the University of Chicago and the Washington State for Public Policy). Reference lists of included studies were reviewed as were studies included in reviews by @altena2010effectiveinterventionshomeless, @wang2019impactinterventionsyouth and @morton2020interventionsyouthhomelessness.
+
+Barriers and facilitators to implementation are not typically reported at length in the results of published RCTs or NRSs. We expanded our search to review additional reports of included studies in order to identify them. These included: study protocols, conference presentations, technical reports and process/implementation evaluations. 
+
+Additional reports of the same study were identified by a) reviewing reference lists of included studies, b) reviewing the RCT registry records of included studies, c) reviewing additional publications by the authors of included studies. 
 
 ### Search strategy and results for database
 
@@ -420,13 +446,21 @@ Sources and search terms used for grey sources are detailed in @tbl-yh-review-gr
 
 : Search terms {#tbl-yh-review-grey-search} {tbl-colwidths="\[35,25,40\]"}
 
-## Extraction of information from relevant studies {#sec-data-extraction}
+## Data collection {#sec-data-collection}
 
-### Data extraction templates
+Covidence [@veritashealthinnovationcovidencesystematicreview], and Zotero [@corporationfordigitalscholarship2022zotero] were used for deduplication, literature screening, and library storage/referencing, respectively.
 
-The review team developed a data extraction template using Google's Sheets app to facilitate collaboration between team members. Each tab of the sheet contained specific information.
+Two reviewers (DT and SV) independently screened each title/abstract identified by the search strategy, with a third reviewer resolving any disagreements (AS and SB). Studies deemed potentially relevant during title/abstract screening underwent full-text assessment by two independent reviewers (DT and SV) using the inclusion and exclusion criteria outlined in the protocol [@taylor2023protocolsystematicreview]. Discrepancies were resolved through discussion with an additional reviewer (SB and AS). 
 
-#### Study-level data extraction template
+## Data extraction {#sec-data-extraction}
+
+Pairs of reviewers performed data extraction (DT and SV), with one reviewer checking the other's results. 
+
+We developed a data extraction template using Google's Sheets app to facilitate collaboration between team members. Each tab of the sheet contained specific information.  
+
+All reported measures corresponding to outcomes of interest at all available time points were extracted into a shared spreadsheet which is available in @tbl-yh-instruments.
+
+### Data extraction template: study-level data
 
 In the first tab (available below), we extracted information about the study.
 
@@ -444,7 +478,7 @@ View Full Screen
 
 </iframe>
 
-#### Outcome-level data extraction template
+### Data extraction template: Outcome-level data
 
 In the second tab (available below), we extracted information about reported outcomes that would allow us to transform each of the reported results into a common effect size.
 
@@ -462,13 +496,13 @@ View Full Screen
 
 </iframe>
 
-# Reported results and their transformation
-
 ## Effect size transformation {#sec-es-transformation}
 
-In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize], which is an R implementation of the Campbell Collaboration's Effect Size calculator [@wilsonpracticalmetaanalysiseffect].
+In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize].
 
-However, the results in the study by @kozloff2016housingfirsthomeless are presented as treatment effects (i.e., mean differences, ratios or rate ratios and ratios of odds ratios and their confidence intervals). The review team was unable to obtain the necessary information from the authors to transform these using the formulas in the *esc* package. Accordingly we approximated these results using information reported in the included studies. The approach used for each type of result, and the assumptions they rely on are detailed below.
+In cases where studies lacked sufficient data for effect size computation or conversion, the study’s authors were approached to obtain the missing information. If this information was unavailable or insufficient to calculate an effect size, reasonable assumptions were made.
+
+The results in the study by @kozloff2016housingfirsthomeless are one such case where assumptions were made. Results in this study were presented as treatment effects (i.e., mean differences, ratios or rate ratios and ratios of odds ratios and their confidence intervals). The review team was unable to obtain the necessary information from the authors to transform these using the formulas in the *esc* package. Accordingly we approximated these results using information reported in the included studies. The approach used for each type of result, and the assumptions they rely on are detailed below.
 
 ### Estimating Cohen's d or Hedges' g from a Ratio of Rate Ratios
 
@@ -1001,7 +1035,7 @@ hedges_g <- cohens_d * (1 - (3 / (4 * (treatment_n + comparison_n) - 9)))
 
 The confidence interval for Hedges' g is calculated using the same standard error as Cohen's d.
 
-### Implementation
+### Analytic Code Implementation {#sec-code-implementation}
 
 The code chunk below details the R function that implements the methods described above.
 
@@ -1763,33 +1797,25 @@ write_csv(
   )
 ```
 
-## Instruments used in included studies {#sec-instruments}
+## Defining Housing First components {#sec-hf-components-definitions}
 
-Instruments used to measure outcomes in included studies are detailed in @tbl-yh-instruments.
+Components of interventions were classified based up on the definitions in @tbl-yh-hf-components-def.
 
 ```{r}
 #| echo: false
 #| results: asis
-#| tbl-cap: Instruments used in included studies
-#| name: yh-supplementary-material-instruments
-#| label: tbl-yh-instruments
+#| tbl-cap: Definitions of Housing First components for youth
+#| name: yh-supplementary-material-hf-components-definitions
+#| label: tbl-yh-hf-components-def
  
 # read data
-instruments_file_location <- "./inputs/instruments.xlsx"
-instruments_table <- readxl::read_excel(
-  instruments_file_location,
-  sheet = "instruments")
+components_definitions_file_location <- "./inputs/housing_first_definitions.xlsx"
+components_definitions_table <- readxl::read_excel(
+  components_definitions_file_location,
+  sheet = "definitions")
 
 # produce table
-instruments_table |>
-  mutate(
-    Reference = str_c("@", Reference),
-    `Included studies using instrument` = sapply(
-      strsplit(`Included studies using instrument`, ";\\s*"), 
-        function(x) {
-          paste0("@", trimws(x), collapse = "; ")
-        })
-    ) |>
+components_definitions_table |>
   kbl(
     format = "html"
     ) |>
@@ -1800,59 +1826,99 @@ instruments_table |>
     ) |>
   pack_rows(
     index = c(
-      "Stable Housing" = 2, 
-      "Health" = 9, 
-      "Social and emotional wellbeing" = 5,
-      "Employment and earnings" = 1,
-      "Legal and justice" = 1,
-      "Living skills and independence" = 2),
+      "Housing-related components" = 7, 
+      "Support services components" = 6, 
+      "Components applicable to both housing and support services" = 3),
     label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  column_spec(
+    1, bold = T) |>
+  unclass() |> 
+  cat()
+```
+
+## Deviations from the protocol {#sec-deviations}
+
+We did not pre-specify that we would explore barriers and facilitators encountered during the implementation of included interventions. The decision to undertake this was made during the course of the review when it became evident that we had identified insufficient studies to undertake a quantitative synthesis.
+
+# Supplementary Results {#sec-results}
+
+## Secondary reports of included studies {#sec-secondary-reports}
+
+Additional reports of included studies, including protocols, implementation evaluations, and conference presentations, are detailed in @tbl-yh-reports-included-studies.
+
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: Distinguishing between reports of included studies
+#| name: yh-supplementary-material-reports-included-studies
+#| label: tbl-yh-reports-included-studies
+ 
+# read data
+reports_included_studies_file_location <- "./inputs/included_studies.xlsx"
+reports_included_studies_table <- readxl::read_excel(
+  reports_included_studies_file_location,
+  sheet = "reports")
+
+# produce table
+reports_included_studies_table |>
+  mutate(
+    `Primary Reference` = str_c("@", `Primary Reference`),
+    `Secondary Reference` = str_c("@", `Secondary Reference`),
+    ) |>
+  kbl(
+    format = "html"
+    ) |>
+  collapse_rows(
+    column = 1,
+    valign = "top"
+  ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed"),
     ) |>
   unclass() |> 
   cat()
 ```
 
-# Supplementary Results
+## Studies excluded at full text review {#sec-excluded-studies}
 
-## Risk of bias in included studies {#sec-risk-of-bias}
+Studies excluded at full-text review stage are detailed in @tbl-yh-reports-excluded-studies, with a reason and rationale for their exclusion.
 
-In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: Studies excluded at full-text review
+#| name: yh-supplementary-material-reports-excluded-studies
+#| label: tbl-yh-reports-excluded-studies
+ 
+# read data
+excluded_studies_file_location <- "./inputs/excluded_studies.xlsx"
+excluded_studies_table <- readxl::read_excel(
+  excluded_studies_file_location,
+  sheet = "excluded")
 
-### Assessing Risk of Bias in randomised controlled trials
-
-For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template that we used and the results of our assessment are embedded below.
-
-<button id="openLightbox3">
-
-View Full Screen
-
-</button>
-
-::: {#lightbox3 .lightbox}
-[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=1938863292&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
-:::
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=1938863292&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
-
-</iframe>
-
-### Assessing Risk of Bias in non-randomised studies of interventions
-
-For non-randomised studies of interventions, we used the ROBINS-I tool @sterne2016robinsitoolassessing. The template and results are embedded below.
-
-<button id="openLightbox4">
-
-View Full Screen
-
-</button>
-
-::: {#lightbox4 .lightbox}
-[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=20575753&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
-:::
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=20575753&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
-
-</iframe>
+# produce table
+excluded_studies_table |>
+  mutate(
+    Reference = str_c("@", Reference)
+    ) |>
+  kbl(
+    format = "html"
+    ) |>
+  collapse_rows(
+    column = 1,
+    valign = "top"
+  ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed"),
+    ) |>
+  unclass() |> 
+  cat()
+```
 
 ## Housing First components of included interventions {#sec-hf-components}
 
@@ -1903,6 +1969,95 @@ components_table |>
   unclass() |> 
   cat()
 ```
+
+## Instruments used in included studies {#sec-instruments}
+
+Instruments used to measure outcomes in included studies are detailed in @tbl-yh-instruments.
+
+```{r}
+#| echo: false
+#| results: asis
+#| tbl-cap: Instruments used in included studies
+#| name: yh-supplementary-material-instruments
+#| label: tbl-yh-instruments
+ 
+# read data
+instruments_file_location <- "./inputs/instruments.xlsx"
+instruments_table <- readxl::read_excel(
+  instruments_file_location,
+  sheet = "instruments")
+
+# produce table
+instruments_table |>
+  mutate(
+    Reference = str_c("@", Reference),
+    `Included studies using instrument` = sapply(
+      strsplit(`Included studies using instrument`, ";\\s*"), 
+        function(x) {
+          paste0("@", trimws(x), collapse = "; ")
+        })
+    ) |>
+  kbl(
+    format = "html"
+    ) |>
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed")
+    ) |>
+  pack_rows(
+    index = c(
+      "Stable Housing" = 2, 
+      "Health" = 9, 
+      "Social and emotional wellbeing" = 5,
+      "Employment and earnings" = 1,
+      "Legal and justice" = 1,
+      "Living skills and independence" = 2),
+    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
+    ) |>
+  unclass() |> 
+  cat()
+```
+
+## Risk of bias in included studies {#sec-risk-of-bias}
+
+In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.
+
+### Assessing Risk of Bias in randomised controlled trials
+
+For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template that we used and the results of our assessment are embedded below.
+
+<button id="openLightbox3">
+
+View Full Screen
+
+</button>
+
+::: {#lightbox3 .lightbox}
+[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=1938863292&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
+:::
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=1938863292&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
+
+</iframe>
+
+### Assessing Risk of Bias in non-randomised studies of interventions
+
+For non-randomised studies of interventions, we used the ROBINS-I tool @sterne2016robinsitoolassessing. The template and results are embedded below.
+
+<button id="openLightbox4">
+
+View Full Screen
+
+</button>
+
+::: {#lightbox4 .lightbox}
+[×]{.close} <iframe class="lightbox-content" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=20575753&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false"> </iframe>
+:::
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1V3lnKNktElrI5WPO4aHWAJYGsnrAQS6UN4oFDra1cfHJ4Raj3ctzbggJsTcmm_lioUOucpm5WgZ7/pubhtml?gid=20575753&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
+
+</iframe>
 
 ## Barriers and Facilitators {#sec-barriers-facilitators}
 
