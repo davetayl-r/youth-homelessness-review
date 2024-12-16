@@ -13,9 +13,9 @@ author:
   - name: Aron Shlonsky
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
-date: 2024-08-07
+date: 2024-12-17
 citation:
-  doi: "TBD"
+  doi: "10.5281/zenodo.14503767"
   url: https://davetayl-r.github.io/youth-homelessness-review
 bibliography: youth_homelessness_review_references.bib
 csl: apa-6th-edition.csl
@@ -46,7 +46,7 @@ required_packages <- c(
   "kableExtra",
   "readxl",
   "esc")
-groundhog.library(required_packages, "2024-10-09")
+groundhog.library(required_packages, "2024-12-01")
 ```
 
 # About
