@@ -24,11 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+     # - name: Set up Quarto
+     #   uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render site
-        run: quarto render
+     # - name: Render site
+     #   run: quarto render
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
