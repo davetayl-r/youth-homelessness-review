@@ -24,19 +24,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-     # - name: Set up Quarto
-     #   uses: quarto-dev/quarto-actions/setup@v2
-
-     # - name: Render site
-     #   run: quarto render
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './supplementary-material/_site/*'  
+          path: './supplementary-material/_site/'
 
       - name: Deploy to GitHub Pages
         id: deployment
