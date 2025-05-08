@@ -1,5 +1,5 @@
 ---
-title: "Supplementary material for housing and support interventions to improve housing, health, social, wellbeing and economic outcomes for homeless youth in high-income countries: a systematic review"
+title: "Supplementary material for housing & support interventions for homeless youth in high-income countries: systematic review"
 author: 
   - name: David Taylor
     affiliation: Monash University
@@ -13,7 +13,7 @@ author:
   - name: Aron Shlonsky
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
-date: 2024-12-17
+date: 2025-5-8
 citation:
   doi: "10.5281/zenodo.14503767"
   url: https://davetayl-r.github.io/youth-homelessness-review
@@ -38,20 +38,16 @@ lightbox: true
 #| message: false
 #| name: yh-supplementary-material-global-options
 
-# load required packages in groundhog framework
-library("groundhog")
-
-required_packages <- c(
-  "tidyverse",
-  "kableExtra",
-  "readxl",
-  "esc")
-groundhog.library(required_packages, "2024-12-01")
+# load required packages
+library(tidyverse)
+library(kableExtra)
+library(readxl)
+library(esc)
 ```
 
 # About
 
-This page contains supplementary material for a network meta-analysis titled *"Systematic review of housing and support interventions to improve housing, health, social, wellbeing and economic outcomes for homeless youth in high-income countries"*.
+This page contains supplementary material for a network meta-analysis titled *Housing & support interventions for homeless youth in high-income countries: systematic review*.
 
 The following information is provided here:
 
