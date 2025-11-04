@@ -73,8 +73,6 @@ The following information is provided here:
 
 [**Supplementary methodology:**](#sec-methodology%7D)
 
--   [*Selection criteria*](#sec-inclusion-exclusion) —- includes details of the criteria used to select studies eligible for inclusion in this review
-
 -   [*Search methods*](#sec-search-methods) --- includes search strategies and results for each published database and grey sources
 
 -   [*Data collection*](#sec-data-collection) --- includes the process used to screen titles and abstracts and full-texts
@@ -82,10 +80,6 @@ The following information is provided here:
 -   [*Data extraction*](#sec-data-extraction) --- includes the template and information extracted from each included study used to transform into a common effect size
 
 -   [*Effect size transformation*](#sec-es-transformation) --- includes detailed description of the methods used to transform reported results into a common effect size
-
--   [*Defining Housing First components*](#sec-hf-components-definitions) --- includes definitions of Housing First components used in this review
-
--   [*Deviations from the protocol*](#sec-deviations) --- details how our review deviated from the registered protocol
 
 [**Supplementary results:**](#sec-results)
 
@@ -1700,50 +1694,6 @@ write_csv(
   "./review/output/tables/effect_size_results.csv"
   )
 ```
-
-## Defining Housing First components {#sec-hf-components-definitions}
-
-Components of interventions were classified based up on the definitions in @supptbl-yh-hf-components-def.
-
-```{r}
-#| echo: false
-#| results: asis
-#| tbl-cap: Definitions of Housing First components for youth
-#| name: yh-supplementary-material-hf-components-definitions
-#| label: tbl-yh-hf-components-def
- 
-# read data
-components_definitions_file_location <- "./inputs/housing_first_definitions.xlsx"
-components_definitions_table <- readxl::read_excel(
-  components_definitions_file_location,
-  sheet = "definitions")
-
-# produce table
-components_definitions_table |>
-  kbl(
-    format = "html"
-    ) |>
-  kable_styling(
-    bootstrap_options = c(
-      "hover", 
-      "condensed")
-    ) |>
-  pack_rows(
-    index = c(
-      "Housing-related components" = 7, 
-      "Support services components" = 6, 
-      "Components applicable to both housing and support services" = 3),
-    label_row_css = "text-align: left; color: #FFFFFF; background-color: #E06632;"
-    ) |>
-  column_spec(
-    1, bold = T) |>
-  unclass() |> 
-  cat()
-```
-
-## Deviations from the protocol {#sec-deviations}
-
-We did not pre-specify that we would explore barriers and facilitators encountered during the implementation of included interventions. The decision to undertake this was made during the course of the review when it became evident that we had identified insufficient studies to undertake a quantitative synthesis.
 
 # Supplementary Results {#sec-results}
 
