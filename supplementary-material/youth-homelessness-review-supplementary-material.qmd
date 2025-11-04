@@ -42,8 +42,14 @@ format:
     include-in-header: 
       text: |
         <script src="lightbox.js"></script>
-website:
-  google-analytics: "G-ZJMRY7KB31"
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJMRY7KB31"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-ZJMRY7KB31');
+        </script>
 tbl-cap-location: "top"
 fig-cap-location: "top"
 lightbox: true
