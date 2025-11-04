@@ -13,13 +13,27 @@ author:
   - name: Aron Shlonsky
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
-date: 2025-5-8
+date: 2025-11-1
 citation:
   doi: "10.5281/zenodo.14503767"
   url: https://davetayl-r.github.io/youth-homelessness-review
 bibliography: youth_homelessness_review_references.bib
 csl: apa-6th-edition.csl
 link-citations: true
+crossref:
+  custom:
+    - key: suppfig
+      kind: float
+      reference-prefix: Figure S
+      caption-prefix: Figure S
+      space-before-numbering: false
+      caption-location: "top"
+    - key: supptbl
+      kind: float
+      reference-prefix: Table S
+      caption-prefix: Table S
+      space-before-numbering: false
+      caption-location: "top" 
 format: 
   html: 
     number-sections: true
@@ -28,6 +42,8 @@ format:
     include-in-header: 
       text: |
         <script src="lightbox.js"></script>
+website:
+  google-analytics: "G-ZJMRY7KB31"
 tbl-cap-location: "top"
 fig-cap-location: "top"
 lightbox: true
@@ -55,7 +71,7 @@ The following information is provided here:
 
 -   [*PRISMA 2020 Checklist*](#sec-prisma-checklist) --- includes details of how this review meets the PRISMA 2020 reporting guidelines
 
-[**Supplementary methodology:**](#sec-methodology})
+[**Supplementary methodology:**](#sec-methodology%7D)
 
 -   [*Selection criteria*](#sec-inclusion-exclusion) —- includes details of the criteria used to select studies eligible for inclusion in this review
 
@@ -73,7 +89,7 @@ The following information is provided here:
 
 [**Supplementary results:**](#sec-results)
 
--   [*Secondary reports of included studies*](#sec-secondary-reports) --- details additional reports of included studies 
+-   [*Secondary reports of included studies*](#sec-secondary-reports) --- details additional reports of included studies
 
 -   [*Studies excluded at full text review*](#sec-excluded-studies) --- details of studies excluded at full text review with reasons for exclusion
 
@@ -91,14 +107,12 @@ The code to produce this supplementary material, along with the analysis code fo
 
 ## PRISMA 2020 checklist {#sec-prisma-checklist}
 
-The PRISMA 2020 checklist [@page2021prisma2020statement] is included in @tbl-yh-prisma-checklist.
+The PRISMA 2020 checklist [@page2021prisma2020statement] is included in @supptbl-yh-prisma-checklist.
 
+::: {#supptbl-yh-prisma-checklist float="supptbl"}
 ```{r}
 #| echo: false
 #| results: asis
-#| tbl-cap: PRISMA 2020 Checklist
-#| name: yh-supplementary-material-prisma-2020
-#| label: tbl-yh-prisma-checklist
  
 # read data
 prisma_file_location <- "./inputs/prisma_checklist.xlsx"
@@ -140,133 +154,24 @@ prisma_table |>
   cat()
 ```
 
+PRISMA 2020 Checklist
+:::
+
 # Supplementary methodology {#sec-methodology}
 
 This section contains additional information on the methodology used in this review.
-
-## Selection criteria {#sec-inclusion-exclusion}
-
-The population of interest was youth aged between 16 and 25 who are currently, or have previously, experienced homelessness; have substantial socio-emotional issues that require services beyond housing; and/or are members of a demographic group known to be facing additional barriers, such as adolescent parents, those who identify as First Nations, or have a mental health condition. 
-
-Interventions of interest included those that combine the provision of accommodation, either directly or indirectly (i.e., through vouchers), with additional support services such as case management, counselling, independent living or life skills development, transportation assistance, employment skills training and/or coaching, support to engage or re-engage in education, residential advisors, and personalised advice or mentoring. 
-
-Comparators included treatment as usual, another intervention, no intervention, or waitlist control. Primary outcome domains were stable housing, health, social and emotional wellbeing, education, employment and earnings. Secondary outcomes domains were legal and justice, independent living skills, and social connections. 
-
-Both randomised and non-randomised study designs that used causal methods to assess the impact of the intervention were eligible for inclusion. Specifically, a non-randomised study needed to use a counterfactual approach that estimated the impact of the intervention by comparing observed participant outcomes with hypothetical non-participant outcomes. 
-
-Inclusion and exclusion criteria by used in this review by PICOSS domain are detailed in @tbl-yh-review-picoss.
-
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| Domain         | Inclusion criteria                                                                                                                    | Exclusion criteria                                                                                                       |
-+================+=======================================================================================================================================+==========================================================================================================================+
-| *Population*   | Youth aged 16-25 who:                                                                                                                 | Studies where more than 80% of the population do not meet inclusion criteria e.g., individuals aged under 16 or over 25. |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Are currently, or have previously, experienced homelessness; and                                                                  |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Have substantial socio-emotional issues that require services beyond housing, such as:                                            |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Have current or prior mental health issues (either self-reported or diagnosed)                                                |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Prior involvement with child protection or out-of-home care system                                                            |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Have prior involvement with the juvenile or adult justice system                                                              |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Have a history of family violence, as victims or perpretrators                                                                |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Have current or prior problem use of alcohol and other drugs (either self-reported or diagnosed)                              |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Have a physical or intellectual disability                                                                                    |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Received public assistance payments; and/or                                                                                   |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Are a member of a demographic group known to be facing additional barriers, including:                                            |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Adolescent parents                                                                                                            |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Identify as First Nations                                                                                                     |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                |     -   Identify as LGBTIQ+                                                                                                           |                                                                                                                          |
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| *Intervention* | Interventions that combine the provision of accommodation — either directly or indirectly — with additional support services such as: | Studies examining other interventions                                                                                    |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Case management                                                                                                                   |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Counselling, mental health or psychological assistance                                                                            |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Independent living or life skills development                                                                                     |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Transportation assistance                                                                                                         |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Employment skills training and/or coaching                                                                                        |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Support to engage or re-engage in education                                                                                       |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Residential advisors                                                                                                              |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Personalised advice or mentoring                                                                                                  |                                                                                                                          |
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| *Comparison*   | Treatment as usual, another intervention, no intervention, or waitlist control                                                        | Studies using other comparators                                                                                          |
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| *Outcome*      | Studies that report outcomes within the following domains:                                                                            | Studies that report other outcomes                                                                                       |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Stable housing                                                                                                                    |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Health                                                                                                                            |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Social and Emotional Wellbeing                                                                                                    |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Education                                                                                                                         |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Employment and Earnings                                                                                                           |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Legal and Justice                                                                                                                 |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Independent living skills                                                                                                         |                                                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Social connections                                                                                                                |                                                                                                                          |
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| *Setting*      | High income countries as defined by the World Bank in FY2022-23                                                                       | Countries defined as low and middle income by the World Bank in FY2022-23                                                |
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| *Study design* | Randomised controlled trials (RCT) including:                                                                                         | Non-primary studies, including:                                                                                          |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Individual RCTs                                                                                                                   | -   Literature reviews                                                                                                   |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Cluster RCTs                                                                                                                      | -   Systematic reviews                                                                                                   |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | Step-Wedge designs with random time allocation                                                                                        | -   Meta-analysis                                                                                                        |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | Non-randomised designs that use parallel cohorts that adjust for baseline equivalence:                                                | Studies without a valid counterfactual, including:                                                                       |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Covariate matching                                                                                                                | -   Single group pre-post designs                                                                                        |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Propensity score based methods                                                                                                    | -   Control group designs without matching in time and establishing baseline equivalence                                 |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Doubly robust methods                                                                                                             | -   Cross-sectional designs                                                                                              |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Instrumental variable estimation                                                                                                  | -   Non-controlled observational (cohort) designs                                                                        |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Difference-in-Difference estimation                                                                                               | -   Case-control designs                                                                                                 |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Interrupted time-series                                                                                                           | -   Case studies/series                                                                                                  |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Regression discontinuity designs                                                                                                  | -   Surveys                                                                                                              |
-|                |                                                                                                                                       |                                                                                                                          |
-|                | -   Synthetic control studies                                                                                                         |                                                                                                                          |
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-
-: Inclusion and exclusion criteria by PICOSS domain {#tbl-yh-review-picoss} {tbl-colwidths="\[15,45,45\]"}
 
 ## Search methods {#sec-search-methods}
 
 Our search strategy encompassed 10 electronic databases (Cochrane Central Register of Trials via Ovid, CINAHL via EBSCO, EMBASE via Ovid, ERIC via ProQuest, PsycINFO via Ovid, MEDLINE via Ovid, Sociological Abstracts via ProQuest, Social Services Abstracts via ProQuest, Criminal Justice Abstracts via EBSCO, Violence and Abuse Abstracts via EBSCO) with no year of publication or language restrictions. Our strategy for identifying grey literature comprised searching six clearinghouses, government agencies and organisations known to be undertaking or consolidating research in this area (Australian Housing and Urban Research Institute (AHURI), Analysis and Policy Observatory database (APO), Australian Criminology Database (CINCH), Australian Family and Society Abstracts database (AIFS), Chapin Hall at the University of Chicago and the Washington State for Public Policy). Reference lists of included studies were reviewed as were studies included in reviews by @altena2010effectiveinterventionshomeless, @wang2019impactinterventionsyouth and @morton2020interventionsyouthhomelessness.
 
-Barriers and facilitators to implementation are not typically reported at length in the results of published RCTs or NRSs. We expanded our search to review additional reports of included studies in order to identify them. These included: study protocols, conference presentations, technical reports and process/implementation evaluations. 
+Barriers and facilitators to implementation are not typically reported at length in the results of published RCTs or NRSs. We expanded our search to review additional reports of included studies in order to identify them. These included: study protocols, conference presentations, technical reports and process/implementation evaluations.
 
-Additional reports of the same study were identified by a) reviewing reference lists of included studies, b) reviewing the RCT registry records of included studies, c) reviewing additional publications by the authors of included studies. 
+Additional reports of the same study were identified by a) reviewing reference lists of included studies, b) reviewing the RCT registry records of included studies, c) reviewing additional publications by the authors of included studies.
 
 ### Search strategy and results for database
 
-The databases and search terms are detailed in @tbl-yh-review-search-terms below.
+The databases and search terms are detailed in @supptbl-yh-review-search-terms below.
 
 +-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-----------+
 | Database                                                    | Search terms                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Date searched | Record \# |
@@ -416,11 +321,13 @@ The databases and search terms are detailed in @tbl-yh-review-search-terms below
 |                                                             | 7\. 3 AND 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |               |           |
 +-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-----------+
 
-: Search terms {#tbl-yh-review-search-terms} {tbl-colwidths="\[20,40,15,15\]"}
+: Search terms {#supptbl-yh-review-search-terms} {tbl-colwidths="\[20,40,15,15\]"}
 
 ### Search strategy and results for grey sources
 
-Sources and search terms used for grey sources are detailed in @tbl-yh-review-grey-search below.
+Sources and search terms used for grey sources are detailed in @supptbl-yh-review-grey-search below.
+
+:::{#supptbl-yh-review-grey-search float="supptbl" tbl-colwidths="\[35,25,40\]"}
 
 +-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 | Sources                                                                                                           | Date searched                            | Search process                                                                    |
@@ -440,21 +347,22 @@ Sources and search terms used for grey sources are detailed in @tbl-yh-review-gr
 | [Washington State Institute for Public Policy (WSIPP)](https://www.wsipp.wa.gov/Publications)                     | 16 October 2023                          | Reviewed all "Publications" returned after "homeless" was searched in "any field" |
 +-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 
-: Search terms {#tbl-yh-review-grey-search} {tbl-colwidths="\[35,25,40\]"}
+Search terms
+:::
 
 ## Data collection {#sec-data-collection}
 
 Covidence [@veritashealthinnovationcovidencesystematicreview], and Zotero [@corporationfordigitalscholarship2022zotero] were used for deduplication, literature screening, and library storage/referencing, respectively.
 
-Two reviewers (DT and SV) independently screened each title/abstract identified by the search strategy, with a third reviewer resolving any disagreements (AS and SB). Studies deemed potentially relevant during title/abstract screening underwent full-text assessment by two independent reviewers (DT and SV) using the inclusion and exclusion criteria outlined in the protocol [@taylor2023protocolsystematicreview]. Discrepancies were resolved through discussion with an additional reviewer (SB and AS). 
+Two reviewers (DT and SV) independently screened each title/abstract identified by the search strategy, with a third reviewer resolving any disagreements (AS and SB). Studies deemed potentially relevant during title/abstract screening underwent full-text assessment by two independent reviewers (DT and SV) using the inclusion and exclusion criteria outlined in the protocol [@taylor2023protocolsystematicreview]. Discrepancies were resolved through discussion with an additional reviewer (SB and AS).
 
 ## Data extraction {#sec-data-extraction}
 
-Pairs of reviewers performed data extraction (DT and SV), with one reviewer checking the other's results. 
+Pairs of reviewers performed data extraction (DT and SV), with one reviewer checking the other's results.
 
-We developed a data extraction template using Google's Sheets app to facilitate collaboration between team members. Each tab of the sheet contained specific information.  
+We developed a data extraction template using Google's Sheets app to facilitate collaboration between team members. Each tab of the sheet contained specific information.
 
-All reported measures corresponding to outcomes of interest at all available time points were extracted into a shared spreadsheet which is available in @tbl-yh-instruments.
+All reported measures corresponding to outcomes of interest at all available time points were extracted into a shared spreadsheet which is available in @supptbl-yh-instruments.
 
 ### Data extraction template: study-level data
 
@@ -1795,7 +1703,7 @@ write_csv(
 
 ## Defining Housing First components {#sec-hf-components-definitions}
 
-Components of interventions were classified based up on the definitions in @tbl-yh-hf-components-def.
+Components of interventions were classified based up on the definitions in @supptbl-yh-hf-components-def.
 
 ```{r}
 #| echo: false
@@ -1841,7 +1749,7 @@ We did not pre-specify that we would explore barriers and facilitators encounter
 
 ## Secondary reports of included studies {#sec-secondary-reports}
 
-Additional reports of included studies, including protocols, implementation evaluations, and conference presentations, are detailed in @tbl-yh-reports-included-studies.
+Additional reports of included studies, including protocols, implementation evaluations, and conference presentations, are detailed in @supptbl-yh-reports-included-studies.
 
 ```{r}
 #| echo: false
@@ -1880,7 +1788,7 @@ reports_included_studies_table |>
 
 ## Studies excluded at full text review {#sec-excluded-studies}
 
-Studies excluded at full-text review stage are detailed in @tbl-yh-reports-excluded-studies, with a reason and rationale for their exclusion.
+Studies excluded at full-text review stage are detailed in @supptbl-yh-reports-excluded-studies, with a reason and rationale for their exclusion.
 
 ```{r}
 #| echo: false
@@ -1918,7 +1826,7 @@ excluded_studies_table |>
 
 ## Housing First components of included interventions {#sec-hf-components}
 
-Details of Housing First components in included studies are detailed in @tbl-yh-hf-components.
+Details of Housing First components in included studies are detailed in @supptbl-yh-hf-components.
 
 ```{r}
 #| echo: false
@@ -1968,7 +1876,7 @@ components_table |>
 
 ## Instruments used in included studies {#sec-instruments}
 
-Instruments used to measure outcomes in included studies are detailed in @tbl-yh-instruments.
+Instruments used to measure outcomes in included studies are detailed in @supptbl-yh-instruments.
 
 ```{r}
 #| echo: false
@@ -2057,7 +1965,7 @@ View Full Screen
 
 ## Barriers and Facilitators {#sec-barriers-facilitators}
 
-Barriers and facilitators grouped by EPIS domain are detailed in @tbl-yh-barriers-facilitators.
+Barriers and facilitators grouped by EPIS domain are detailed in @supptbl-yh-barriers-facilitators.
 
 ```{r}
 #| echo: false
