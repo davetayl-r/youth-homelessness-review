@@ -83,8 +83,6 @@ The following information is provided here:
 
 [**Supplementary results:**](#sec-results)
 
--   [*Secondary reports of included studies*](#sec-secondary-reports) --- details additional reports of included studies
-
 -   [*Studies excluded at full text review*](#sec-excluded-studies) --- details of studies excluded at full text review with reasons for exclusion
 
 -   [*Housing First components of included interventions*](#sec-hf-components) --- includes details of how the components of each included intervention map on to Housing First components
@@ -1697,45 +1695,6 @@ write_csv(
 
 # Supplementary Results {#sec-results}
 
-## Secondary reports of included studies {#sec-secondary-reports}
-
-Additional reports of included studies, including protocols, implementation evaluations, and conference presentations, are detailed in @supptbl-yh-reports-included-studies.
-
-```{r}
-#| echo: false
-#| results: asis
-#| tbl-cap: Distinguishing between reports of included studies
-#| name: yh-supplementary-material-reports-included-studies
-#| label: tbl-yh-reports-included-studies
- 
-# read data
-reports_included_studies_file_location <- "./inputs/included_studies.xlsx"
-reports_included_studies_table <- readxl::read_excel(
-  reports_included_studies_file_location,
-  sheet = "reports")
-
-# produce table
-reports_included_studies_table |>
-  mutate(
-    `Primary Reference` = str_c("@", `Primary Reference`),
-    `Secondary Reference` = str_c("@", `Secondary Reference`),
-    ) |>
-  kbl(
-    format = "html"
-    ) |>
-  collapse_rows(
-    column = 1,
-    valign = "top"
-  ) |>
-  kable_styling(
-    bootstrap_options = c(
-      "hover", 
-      "condensed"),
-    ) |>
-  unclass() |> 
-  cat()
-```
-
 ## Studies excluded at full text review {#sec-excluded-studies}
 
 Studies excluded at full-text review stage are detailed in @supptbl-yh-reports-excluded-studies, with a reason and rationale for their exclusion.
@@ -1755,6 +1714,9 @@ excluded_studies_table <- readxl::read_excel(
 
 # produce table
 excluded_studies_table |>
+  arrange(
+    Reference
+  ) |>
   mutate(
     Reference = str_c("@", Reference)
     ) |>
