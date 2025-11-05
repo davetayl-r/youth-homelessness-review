@@ -81,8 +81,6 @@ The following information is provided here:
 
 -   [*Search methods*](#sec-search-methods) --- includes search strategies and results for each published database and grey sources
 
--   [*Data collection*](#sec-data-collection) --- includes the process used to screen titles and abstracts and full-texts
-
 -   [*Data extraction*](#sec-data-extraction) --- includes the template and information extracted from each included study used to transform into a common effect size
 
 -   [*Effect size transformation*](#sec-es-transformation) --- includes detailed description of the methods used to transform reported results into a common effect size
@@ -171,6 +169,7 @@ Additional reports of the same study were identified by a) reviewing reference l
 
 The databases and search terms are detailed in @supptbl-yh-review-search-terms below.
 
+:::{#supptbl-yh-review-search-terms float="supptbl" tbl-colwidths="\[20,40,15,15\]"}
 +-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-----------+
 | Database                                                    | Search terms                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Date searched | Record \# |
 +=============================================================+=========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+===============+===========+
@@ -319,7 +318,8 @@ The databases and search terms are detailed in @supptbl-yh-review-search-terms b
 |                                                             | 7\. 3 AND 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |               |           |
 +-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-----------+
 
-: Search terms {#supptbl-yh-review-search-terms} {tbl-colwidths="\[20,40,15,15\]"}
+Search terms used for databases 
+:::
 
 ### Search strategy and results for grey sources
 
@@ -345,14 +345,8 @@ Sources and search terms used for grey sources are detailed in @supptbl-yh-revie
 | [Washington State Institute for Public Policy (WSIPP)](https://www.wsipp.wa.gov/Publications)                     | 16 October 2023                          | Reviewed all "Publications" returned after "homeless" was searched in "any field" |
 +-------------------------------------------------------------------------------------------------------------------+------------------------------------------+-----------------------------------------------------------------------------------+
 
-Search terms
+Search terms for grey sources
 :::
-
-## Data collection {#sec-data-collection}
-
-Covidence [@veritashealthinnovationcovidencesystematicreview], and Zotero [@corporationfordigitalscholarship2022zotero] were used for deduplication, literature screening, and library storage/referencing, respectively.
-
-Two reviewers (DT and SV) independently screened each title/abstract identified by the search strategy, with a third reviewer resolving any disagreements (AS and SB). Studies deemed potentially relevant during title/abstract screening underwent full-text assessment by two independent reviewers (DT and SV) using the inclusion and exclusion criteria outlined in the protocol [@taylor2023protocolsystematicreview]. Discrepancies were resolved through discussion with an additional reviewer (SB and AS).
 
 ## Data extraction {#sec-data-extraction}
 
@@ -362,9 +356,9 @@ We developed a data extraction template using Google's Sheets app to facilitate 
 
 All reported measures corresponding to outcomes of interest at all available time points were extracted into a shared spreadsheet which is available in @supptbl-yh-instruments.
 
-### Data extraction template: study-level data
+The template in @supptbl-yh-review-de-study-level was used to extract information about the study.
 
-In the first tab (available below), we extracted information about the study.
+:::{#supptbl-yh-review-de-study-level float="supptbl"}
 
 <button id="openLightbox1">
 
@@ -379,10 +373,12 @@ View Full Screen
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSQA1hAPvuPQVQJLCjojiB8Z6cv4RiP5bRDDzjPrDN4zYmOB2cLkzrkyegmjej8fqGOaWcuIlwWRvjT/pubhtml?gid=1229044638&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
 
 </iframe>
+Data extraction template: study-level data
+:::
 
-### Data extraction template: Outcome-level data
+The template in @supptbl-yh-review-de-outcome-level was used to extract information about reported outcomes that would allow us to transform each of the reported results into a common effect size.
 
-In the second tab (available below), we extracted information about reported outcomes that would allow us to transform each of the reported results into a common effect size.
+:::{#supptbl-yh-review-de-outcome-level float="supptbl"}
 
 <button id="openLightbox2">
 
@@ -397,10 +393,12 @@ View Full Screen
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSQA1hAPvuPQVQJLCjojiB8Z6cv4RiP5bRDDzjPrDN4zYmOB2cLkzrkyegmjej8fqGOaWcuIlwWRvjT/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;chrome=false&amp;headers=false" style="width: 100%; height: 500px; border: none;">
 
 </iframe>
+Data extraction template: Outcome-level data
+:::
 
 ## Effect size transformation {#sec-es-transformation}
 
-In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize].
+In most cases, formulas from @borenstein2009introductionmetaanalysis were used to convert reported results into a common effect size (Hedges' *g*). This was done using the R Project for Statistical Computing [@rcoreteam2025languageenvironmentstatistical], and specifically the *esc* package [@ludecke2019esceffectsize].
 
 In cases where studies lacked sufficient data for effect size computation or conversion, the study’s authors were approached to obtain the missing information. If this information was unavailable or insufficient to calculate an effect size, reasonable assumptions were made.
 
@@ -1705,12 +1703,10 @@ write_csv(
 
 Studies excluded at full-text review stage are detailed in @supptbl-yh-reports-excluded-studies, with a reason and rationale for their exclusion.
 
+::: {#supptbl-yh-reports-excluded-studies float="supptbl"}
 ```{r}
 #| echo: false
 #| results: asis
-#| tbl-cap: Studies excluded at full-text review
-#| name: yh-supplementary-material-reports-excluded-studies
-#| label: tbl-yh-reports-excluded-studies
  
 # read data
 excluded_studies_file_location <- "./inputs/excluded_studies.xlsx"
@@ -1741,17 +1737,17 @@ excluded_studies_table |>
   unclass() |> 
   cat()
 ```
+Studies excluded at full-text review
+:::
 
 ## Housing First components of included interventions {#sec-hf-components}
 
 Details of Housing First components in included studies are detailed in @supptbl-yh-hf-components.
 
+::: {#supptbl-yh-hf-components float="supptbl"}
 ```{r}
 #| echo: false
 #| results: asis
-#| tbl-cap: Details of Housing First components in included studies
-#| name: yh-supplementary-material-hf-components
-#| label: tbl-yh-hf-components
  
 # read data
 components_file_location <- "./inputs/housing_first_components.xlsx"
@@ -1791,17 +1787,17 @@ components_table |>
   unclass() |> 
   cat()
 ```
+Details of Housing First components in included studies
+:::
 
 ## Instruments used in included studies {#sec-instruments}
 
 Instruments used to measure outcomes in included studies are detailed in @supptbl-yh-instruments.
 
+::: {#supptbl-yh-instruments float="supptbl"}
 ```{r}
 #| echo: false
 #| results: asis
-#| tbl-cap: Instruments used in included studies
-#| name: yh-supplementary-material-instruments
-#| label: tbl-yh-instruments
  
 # read data
 instruments_file_location <- "./inputs/instruments.xlsx"
@@ -1840,14 +1836,16 @@ instruments_table |>
   unclass() |> 
   cat()
 ```
+Instruments used in included studies
+:::
 
 ## Risk of bias in included studies {#sec-risk-of-bias}
 
 In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.
 
-### Assessing Risk of Bias in randomised controlled trials
+For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template and results are available in @supptbl-yh-review-rob2-template.
 
-For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template that we used and the results of our assessment are embedded below.
+:::{#supptbl-yh-review-rob2-template float="supptbl"}
 
 <button id="openLightbox3">
 
@@ -1863,9 +1861,12 @@ View Full Screen
 
 </iframe>
 
-### Assessing Risk of Bias in non-randomised studies of interventions
+Assessing Risk of Bias in randomised controlled trials
+:::
 
-For non-randomised studies of interventions, we used the ROBINS-I tool @sterne2016robinsitoolassessing. The template and results are embedded below.
+For non-randomised studies of interventions, we used the ROBINS-I tool @sterne2016robinsitoolassessing. The template and results are available in @supptbl-yh-review-robins-i-template.
+
+:::{#supptbl-yh-review-robins-i-template float="supptbl"}
 
 <button id="openLightbox4">
 
@@ -1881,17 +1882,18 @@ View Full Screen
 
 </iframe>
 
+Assessing Risk of Bias in non-randomised studies of interventions
+:::
+
 ## Barriers and Facilitators {#sec-barriers-facilitators}
 
 Barriers and facilitators grouped by EPIS domain are detailed in @supptbl-yh-barriers-facilitators.
 
+::: {#supptbl-yh-barriers-facilitators float="supptbl"}
 ```{r}
 #| echo: false
 #| warning: false
 #| results: asis
-#| tbl-cap: Barriers and facilitators by EPIS domain
-#| name: yh-supplementary-material-barriers-facilitators
-#| label: tbl-yh-barriers-facilitators
  
 # read data
 barriers_facilitators_file_location <- "./inputs/barriers_facilitators.xlsx"
@@ -1968,6 +1970,8 @@ barriers_facilitators_table |>
   unclass() |> 
   cat()
 ```
+Barriers and facilitators by EPIS domain
+:::
 
 <h1>References</h1>
 
