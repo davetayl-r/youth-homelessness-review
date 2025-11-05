@@ -1,13 +1,9 @@
 # Create PRISMA 2020 figure for manuscript
 
 # load packages within groundhog framework
-library("groundhog")
-
-required_packages <- c(
-  "tidyverse",
-  "readxl",
-  "PRISMA2020")
-groundhog.library(required_packages, "2024-10-09")
+library(tidyverse)
+library(PRISMA2020)
+library(magick)
 
 # read data
 raw_prisma_data_location <- "./review/inputs/yh_review_prisma_data.csv"
@@ -33,9 +29,42 @@ prisma_figure <- PRISMA_flowdiagram(
   side_boxes = TRUE
 )
 
-# export flowchart
+# export flowchart as svg
 PRISMA_save(
-  plotobj = prisma_figure, 
+  plotobj = prisma_figure,
   filename = "./review/output/visualisation/yh_review_prisma_flowchart.png",
   filetype = "png",
-  overwrite = TRUE)
+  overwrite = TRUE
+)
+
+# export flowchart as svg
+PRISMA_save(
+  plotobj = prisma_figure,
+  filename = "./review/output/visualisation/yh_review_prisma_flowchart.svg",
+  filetype = "svg",
+  overwrite = TRUE
+)
+
+# read colour image back in
+original_prisma_flowchart_location <- "./review/output/visualisation/yh_review_prisma_flowchart.svg"
+original_prisma_flowchart <- image_read_svg(original_prisma_flowchart_location)
+
+# convert to grayscale
+grayscale_prisma_flowchart <- image_modulate(
+  original_prisma_flowchart,
+  saturation = 0
+)
+
+# increase brightness
+grayscale_prisma_flowchart_light <- image_modulate(
+  grayscale_prisma_flowchart,
+  brightness = 107
+)
+grayscale_prisma_flowchart_light
+
+# export grayscale image
+image_write(
+  grayscale_prisma_flowchart_light,
+  path = "./review/output/visualisation/yh_review_prisma_flowchart_grayscale.png",
+  quality = 100
+)
