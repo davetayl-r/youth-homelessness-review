@@ -13,7 +13,7 @@ author:
   - name: Aron Shlonsky
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
-date: 2025-11-10
+date: 2025-11-21
 citation:
   doi: "10.5281/zenodo.14503767"
   url: https://davetayl-r.github.io/youth-homelessness-review
@@ -39,45 +39,6 @@ format:
     number-sections: true
     highlight-style: ayu
     css: styles.css
-    # include-in-header: 
-    #   text: |
-    #     <script src="lightbox.js"></script>
-    #     <!-- Google tag (gtag.js) -->
-    #     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJMRY7KB31"></script>
-    #     <script>
-    #       window.dataLayer = window.dataLayer || [];
-    #       function gtag(){dataLayer.push(arguments);}
-    #       gtag('js', new Date());
-    #       gtag('config', 'G-ZJMRY7KB31');
-    #     </script>
-    #      <!-- Simple GDPR cookie consent banner -->
-    #     <style>
-    #       #cookie-banner {
-    #         position: fixed; bottom: 0; left: 0; right: 0;
-    #         background: #222; color: #fff; padding: 1em;
-    #         text-align: center; font-size: 0.9em; z-index: 9999;
-    #       }
-    #       #cookie-banner button {
-    #         background: #4CAF50; border: none; color: white;
-    #         padding: 0.5em 1em; margin-left: 1em; border-radius: 4px;
-    #         cursor: pointer;
-    #       }
-    #     </style>
-    #     <div id="cookie-banner" style="display:none;">
-    #       This site uses cookies for analytics. 
-    #       <button id="accept-cookies">Accept</button>
-    #     </div>
-    #     <script>
-    #       (function() {
-    #         const consent = localStorage.getItem('cookie_consent');
-    #         const banner = document.getElementById('cookie-banner');
-    #         if (!consent) banner.style.display = 'block';
-    #         document.getElementById('accept-cookies').onclick = function() {
-    #           localStorage.setItem('cookie_consent', 'true');
-    #           banner.style.display = 'none';
-    #         };
-    #       })();
-    #     </script>
     include-in-header: 
       text: |
         <script src="lightbox.js"></script>
@@ -289,12 +250,6 @@ SWiM Checklist
 This section contains additional information on the methodology used in this review.
 
 ## Search methods {#sec-search-methods}
-
-Our search strategy encompassed 10 electronic databases (Cochrane Central Register of Trials via Ovid, CINAHL via EBSCO, EMBASE via Ovid, ERIC via ProQuest, PsycINFO via Ovid, MEDLINE via Ovid, Sociological Abstracts via ProQuest, Social Services Abstracts via ProQuest, Criminal Justice Abstracts via EBSCO, Violence and Abuse Abstracts via EBSCO) with no year of publication or language restrictions. Our strategy for identifying grey literature comprised searching six clearinghouses, government agencies and organisations known to be undertaking or consolidating research in this area (Australian Housing and Urban Research Institute (AHURI), Analysis and Policy Observatory database (APO), Australian Criminology Database (CINCH), Australian Family and Society Abstracts database (AIFS), Chapin Hall at the University of Chicago and the Washington State for Public Policy). Reference lists of included studies were reviewed as were studies included in reviews by @altena2010effectiveinterventionshomeless, @wang2019impactinterventionsyouth and @morton2020interventionsyouthhomelessness.
-
-Barriers and facilitators to implementation are not typically reported at length in the results of published RCTs or NRSs. We expanded our search to review additional reports of included studies in order to identify them. These included: study protocols, conference presentations, technical reports and process/implementation evaluations.
-
-Additional reports of the same study were identified by a) reviewing reference lists of included studies, b) reviewing the RCT registry records of included studies, c) reviewing additional publications by the authors of included studies.
 
 ### Search strategy and results for database
 
