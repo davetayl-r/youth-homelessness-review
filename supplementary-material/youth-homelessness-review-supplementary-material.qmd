@@ -13,7 +13,7 @@ author:
   - name: Aron Shlonsky
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
-date: 2025-11-21
+date: 2025-11-24
 citation:
   doi: "10.5281/zenodo.14503767"
   url: https://davetayl-r.github.io/youth-homelessness-review
@@ -631,7 +631,7 @@ cohens_d_ci_upper <- cohens_d + (1.96 * standard_error_d)
 
 #### Step 6: Calculate Hedges' g (optional)
 
-If the esc_type argument is set to 'g', the function also calculates Hedges' *g*, which applies Hedges' correction to an estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
+If the esc_type argument is set to 'g', the function also calculates Hedges' *g*, which applies Hedges' correction to an estimate of the standardised mean difference [@hedges1981distributiontheoryglasss]:
 
 $$
 g = d \times \left(1 - \frac{3}{4 \times (n_T + n_C) - 9}\right)
@@ -768,7 +768,7 @@ p_value <- 2 * (1 - pt(abs(t_stat), df))
 
 #### Step 6: Calculate Hedges' g (optional)
 
-If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
+If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglasss]:
 
 $$
 g = d \times \left(1 - \frac{3}{4 \times (n_T + n_C) - 9}\right)
@@ -1005,7 +1005,7 @@ p_value <- 2 * (1 - pnorm(abs(z_stat)))
 
 #### Step 9: Calculate Hedges' g (optional)
 
-If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglass]:
+If the `esc_type` argument is set to 'g', the function also calculates Hedges' g, which is an unbiased estimate of the standardised mean difference [@hedges1981distributiontheoryglasss]:
 
 $$
 g = d \times \left(1 - \frac{3}{4 \times (n_T + n_C) - 9}\right)
@@ -1927,7 +1927,7 @@ Instruments used in included studies
 
 In a similar fashion to the data extraction templates, we used a shared Google Sheet to assess the risk of bias in each reported result.
 
-For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019robrevisedtool. The template and results are available in @supptbl-yh-review-rob2-template.
+For randomised controlled trials, we used the Cochrane Risk of Bias 2 tool to assess the risk of bias in all reported results @sterne2019rob2revised. The template and results are available in @supptbl-yh-review-rob2-template.
 
 :::: {#supptbl-yh-review-rob2-template float="supptbl"}
 <button id="openLightbox3">
