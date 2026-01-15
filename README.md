@@ -1,5 +1,7 @@
 # Housing and Support Interventions for Homeless Youth in High-Income Countries: a Systematic Review
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18255859.svg)](https://doi.org/10.5281/zenodo.18255859)
+
 ## About
 
 This repository [hosts a site](https://davetayl-r.github.io/youth-homelessness-review) that contains supplementary material, data and analysis code for a systematic review titled "Housing and Support Interventions for Homeless Youth in High-Income Countries: a Systematic Review" which has been published in *Research on Social Work Practice*.
