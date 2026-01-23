@@ -296,6 +296,7 @@ ggsave(
   plot = summary_rob_plots_colour,
   height = 6,
   width = 14,
+  dpi = 600,
   type = "cairo-png"
 )
 
@@ -304,6 +305,7 @@ ggsave(
   plot = traffic_light_plots_colour,
   height = 3.75,
   width = 14,
+  dpi = 600,
   type = "cairo-png"
 )
 
@@ -313,6 +315,7 @@ ggsave(
   plot = summary_rob_plots_grayscale,
   height = 6,
   width = 14,
+  dpi = 600,
   type = "cairo-png"
 )
 
@@ -321,5 +324,6 @@ ggsave(
   plot = traffic_light_plots_grayscale,
   height = 3.75,
   width = 14,
+  dpi = 600,
   type = "cairo-png"
 )
